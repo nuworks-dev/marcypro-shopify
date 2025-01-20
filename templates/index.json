@@ -1,0 +1,124 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "collection_list_qrMBVh": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_j794AC": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "home-gyms"
+          }
+        },
+        "featured_collection_cKYJ3h": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "strength"
+          }
+        },
+        "featured_collection_GFDPr8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cardio"
+          }
+        },
+        "featured_collection_aQFDDc": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fitness-accessories"
+          }
+        },
+        "featured_collection_iC7P49": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "outdoor"
+          }
+        },
+        "featured_collection_LMMGPr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "retired-products"
+          }
+        },
+        "featured_collection_8yfeBW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "weightlifting-accessories"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_j794AC",
+        "featured_collection_cKYJ3h",
+        "featured_collection_GFDPr8",
+        "featured_collection_aQFDDc",
+        "featured_collection_iC7P49",
+        "featured_collection_LMMGPr",
+        "featured_collection_8yfeBW"
+      ],
+      "settings": {
+        "title": "Shop By Category",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "collection_list_qrMBVh"
+  ]
+}
