@@ -10,17 +10,18 @@
 {
   "current": {
     "logo": "shopify://shop_images/Black-logo_black-logo.png",
-    "logo_width": 90,
+    "logo_width": 190,
+    "favicon": "shopify://shop_images/MarcyPro_Favicon_Logo.png",
     "type_header_font": "montserrat_n4",
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "none",
+    "animations_hover_elements": "default",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 40,
@@ -126,7 +127,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "cart_color_scheme": "scheme-1",
+    "cart_color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

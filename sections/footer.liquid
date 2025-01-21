@@ -1,12 +1,23 @@
+{% if section.settings.footer_text_color %}
+	<style>
+	  :root {
+		--footer-text-color: {{ section.settings.footer_text_color }};
+		--footer-logo-alignment: {{ section.settings.footer_logo_aligment }}
+	  }
+	</style>
+{% endif %}
+
 {% comment %}theme-check-disable UndefinedObject{% endcomment %}
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 {{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-payment.css' | asset_url | stylesheet_tag }}
 {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+{{ 'section-footer-custom.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .footer {
+	background-color: {{ section.settings.footer_background }};
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
 
@@ -165,11 +176,26 @@
             data-cascade
           {% endif %}
         >
+
+			{%- if section.settings.footer_image_picker -%}
+				<div id="footer-logo-section">
+					<a href="/">
+						{{ section.settings.footer_image_picker | image_url: width: section.settings.footer_logo_width | image_tag }}
+					</a>
+				</div>
+			{%- endif -%}
+
           {%- if section.settings.newsletter_enable -%}
             <div class="footer-block__newsletter">
-              {%- if section.settings.newsletter_heading != blank -%}
-                <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
-              {%- endif -%}
+
+				{%- if section.settings.newsletter_heading != blank -%}
+					<h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
+				{%- endif -%}
+
+				{%- if section.settings.footer_description_top != blank -%}
+					<p id="footer-description-top">{{ section.settings.footer_description_top }}</p>
+				{%- endif -%}
+
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
@@ -178,7 +204,7 @@
                       id="NewsletterForm--{{ section.id }}"
                       type="email"
                       name="contact[email]"
-                      class="field__input"
+                      class="field__input footer-subscribe"
                       value="{{ form.email }}"
                       aria-required="true"
                       autocorrect="off"
@@ -204,9 +230,7 @@
                       id="Subscribe"
                       aria-label="{{ 'newsletter.button_label' | t }}"
                     >
-                      <span class="svg-wrapper">
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      </span>
+					Subscribe
                     </button>
                   </div>
                   {%- if form.errors -%}
@@ -234,6 +258,9 @@
                 {%- endif -%}
               {%- endform -%}
             </div>
+			{%- if section.settings.footer_description_bottom != blank -%}
+				<div id="footer-description-bottom">{{ section.settings.footer_description_bottom  }}</div>
+			{%- endif -%}
           {%- endif -%}
 
           {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
@@ -426,7 +453,8 @@
           "default": "center"
         }
       ]
-    }
+    },
+
   ],
   "settings": [
     {
@@ -554,16 +582,75 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
-    }
+    },
+
+	{
+		"type": "color",
+		"id": "footer_background",
+		"label": "Footer Background Color",
+		"default": "#ffffff"
+	},
+	{
+		"type": "color",
+		"id": "footer_text_color",
+		"label": "Footer Text Color",
+		"default": "#000"
+	},
+	{
+		"type": "textarea",
+		"id": "footer_description_top",
+		"label": "Footer Description Top"
+	},
+	{
+		"type": "richtext",
+		"id": "footer_description_bottom",
+		"label": "Footer Description Bottom"
+	},
+	{
+		"type": "image_picker",
+		"id": "footer_image_picker",
+		"label": "Footer Logo"
+	},
+	{
+		"type": "radio",
+		"id": "footer_logo_aligment",
+		"label": "Footer Logo alignment",
+		"options": [
+		  {
+			"value": "left",
+			"label": "Left"
+		  },
+		  {
+			"value": "center",
+			"label": "Center"
+		  },
+		  {
+			"value": "right",
+			"label": "Right"
+		  }
+		],
+		"default": "left"
+	},
+	{
+		"type": "range",
+		"id": "footer_logo_width",
+		"min": 50,
+		"max": 300,
+		"step": 5,
+		"unit": "px",
+		"label": "Footer Logo Width",
+		"default": 230
+	}
+
   ],
   "default": {
     "blocks": [
-      {
-        "type": "link_list"
-      },
-      {
-        "type": "text"
-      }
+		{
+			"type": "link_list"
+		},
+		{
+			"type": "text"
+		}
     ]
   }
 }
