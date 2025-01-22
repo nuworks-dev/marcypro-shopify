@@ -22,18 +22,13 @@
 	}
 {%- endstyle -%}
 
-<div id="nw-collapsible-menu">
-	<a href="{{ block.settings.utility_page_link }}">
-		Track Order
-	</a>
-</div>
-
-{% if template != 'page.contact' %}
-	<!-- Section Content -->
-	<section class="my-custom-section">
-	  <!-- Your section's HTML and content -->
-	</section>
-  {% endif %}
+{% if block.settings.utility_page_link %}
+	<div id="nw-collapsible-menu">
+		<a href="{{ block.settings.utility_page_link }}">
+			Track Order
+		</a>
+	</div>
+{% endif %}
 
 {% schema %}
 	{
