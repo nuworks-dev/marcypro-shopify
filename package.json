@@ -1,0 +1,16 @@
+{
+  "name": "marcypro-shopify",
+  "version": "1.0.0",
+  "description": "This is the repository for MarcyPro Shopify account",
+  "main": "index.js",
+  "scripts": {
+	"start": "shopify theme dev -e development",
+	"pull-staging": "shopify theme pull -e development",
+	"build-staging": "shopify theme push -e development",
+	"build": "shopify theme push -e production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

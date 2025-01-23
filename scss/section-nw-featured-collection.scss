@@ -1,0 +1,56 @@
+#nw-featured-collection {
+
+}
+
+#nw-featured-collection {
+	h2 {
+		font-family: var(--font-body-family);
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 32px;
+		text-align: left;
+		color: #231F20;
+		strong {
+			
+		}
+	}
+	p {
+		font-family: var(--font-body-family);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19.5px;
+		text-align: left;
+		color: #231F20;
+	}
+	.slider-buttons {
+		display: none;
+	}
+	.card__heading.h5{
+		font-family: var(--font-body-family);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
+		text-align: left;
+		color: #231F20;
+	}
+	.card-information {
+		.price {
+			.price__regular span {
+				font-family: var(--font-body-family);
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 21.94px;
+				text-align: left;
+				color:#231F20;
+			}
+			.price__sale span {
+				font-family: var(--font-body-family);
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 17.07px;
+				text-align: left;
+				color: #6F6F6F;
+			}
+		}
+	}
+}

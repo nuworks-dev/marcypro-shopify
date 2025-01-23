@@ -29,6 +29,16 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "pull-up-bar",
+      "namespace": "shopify",
+      "name": "Pull-up bar",
+      "description": "Specifies the type of grip on fitness equipment, such as standard or raw",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [],
