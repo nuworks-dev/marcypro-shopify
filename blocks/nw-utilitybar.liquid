@@ -1,0 +1,89 @@
+<style>
+	{{ block.settings.utility_font_picker | font_face: font_display: 'swap' }}
+</style>
+
+{%- style -%}
+	#nw-collapsible-menu {
+		height: 46px;
+		padding: 15px;
+		background-color: {{ block.settings.utility_background_color }};
+		width: 100%;
+		display: flex;
+		justify-content: {{ block.settings.utility_text_alignment }};
+		z-index: 9;
+	}
+	#nw-collapsible-menu a {
+		text-align: {{ block.settings.utility_text_alignment }};
+		font-size: {{ block.settings.utility_font_size }}px;
+		font-family: {{ block.settings.utility_font_picker.family }};
+		color: {{  block.settings.utility_font_color }};
+		font-weight: 400;
+		line-height: 16.1px;
+	}
+{%- endstyle -%}
+
+{% if block.settings.utility_page_link %}
+	<div id="nw-collapsible-menu">
+		<a href="{{ block.settings.utility_page_link }}">
+			Track Order
+		</a>
+	</div>
+{% endif %}
+
+{% schema %}
+	{
+		"name": "NW Utility Bar",
+		"blocks": [],
+		"settings": [
+			{
+				"type": "url",
+				"id": "utility_page_link",
+				"label": "Page Link"
+			},
+			{
+				"type": "font_picker",
+				"id": "utility_font_picker",
+				"label": "Font Style",
+				"default": "assistant_n4"
+			},
+			{
+				"type": "color",
+				"id": "utility_font_color",
+				"label": "Font Color",
+				"default": "#000000"
+			},
+			{
+				"type": "color",
+				"id": "utility_background_color",
+				"label": "Background Color",
+				"default": "#ffffff"
+			},
+			{
+				"type": "select",
+				"id": "utility_text_alignment",
+				"label": "Text Alignment",
+				"options": [
+					{ "value": "left", "label": "Left" },
+					{ "value": "center", "label": "Center" },
+					{ "value": "right", "label": "Right" }
+				],
+				"default": "left"
+			},
+			{
+				"type": "range",
+				"id": "utility_font_size",
+				"min": 12,
+				"max": 24,
+				"step": 1,
+				"unit": "px",
+				"label": "Font Size",
+				"default": 16
+			}
+		],
+		"presets": [
+			{
+				"name": "NW Utility Bar"
+			}
+		]
+	}
+{% endschema %}
