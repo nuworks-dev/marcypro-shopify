@@ -178,12 +178,33 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "nw_test_section_QGCe6F": {
+      "type": "nw-test-section",
+      "blocks": {
+        "text_block_7BDGYN": {
+          "type": "text_block",
+          "settings": {
+            "block_heading": "Hello World",
+            "block_text": "This is a description"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_7BDGYN"
+      ],
+      "settings": {
+        "heading": "Welcome to our store!",
+        "background_color": "#e8ff41",
+        "image_picker": "shopify://shop_images/cat.png"
+      }
     }
   },
   "order": [
     "image_banner",
     "collection_list_qrMBVh",
     "nw_featured_quotes_WCPtAN",
-    "nw_featured_collection_AdFAcf"
+    "nw_featured_collection_AdFAcf",
+    "nw_test_section_QGCe6F"
   ]
 }
