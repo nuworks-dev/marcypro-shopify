@@ -58,6 +58,10 @@
         "judge_me_reviews_review_widget_Yjfi9C": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
+        },
+        "judge_me_reviews_preview_badge_HcYgEm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
         }
       },
       "block_order": [
@@ -69,7 +73,8 @@
         "buy_buttons",
         "description",
         "share",
-        "judge_me_reviews_review_widget_Yjfi9C"
+        "judge_me_reviews_review_widget_Yjfi9C",
+        "judge_me_reviews_preview_badge_HcYgEm"
       ],
       "settings": {
         "enable_sticky_info": true,
