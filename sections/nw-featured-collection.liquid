@@ -38,6 +38,8 @@
   }
 {%- endstyle -%}
 
+{{ 'main.css' | asset_url | stylesheet_tag }}
+
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count
 
@@ -59,6 +61,7 @@
 -%}
 
 <div
+	id="nw-featured-collection"
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
   <div
