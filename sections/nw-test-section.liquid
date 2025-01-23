@@ -1,6 +1,9 @@
 {% schema %}
 {
-	"name": "nw-test-section",
+	"name": "NW Test Section",
+	"disabled_on": {
+		"groups": ["header", "footer"]
+	},
 	"settings": [
 	  {
 		"type": "text",
@@ -13,7 +16,13 @@
 		"id": "background_color",
 		"label": "Background Color",
 		"default": "#ffffff"
-	  }
+	  },
+	  {
+		"type": "image_picker",
+		"id": "image_picker",
+		"label": "Profile Photo",
+		"info": "Select an image you want to be"	
+	}
 	],
 	"blocks": [
 	  {
@@ -32,7 +41,8 @@
 			"label": "Block Text",
 			"default": "This is some sample text for this block."
 		  }
-		]
+		],
+		"limit": 1
 	  },
 	  {
 		"type": "image_block",
@@ -56,6 +66,7 @@
 
 <div style="background-color: {{ section.settings.background_color }}; padding: 20px;">
 	<h2>{{ section.settings.heading }}</h2>
+	
 	<div>
 		{% for block in section.blocks %}
 			{% if block.type == 'text_block' %}
@@ -68,4 +79,8 @@
 			{% endif %}
 		{% endfor %}
 	</div>
+
+	{{ section.settings.image_picker | image_url: width: 300 | image_tag }}
+
+
 </div>
