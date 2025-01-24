@@ -1,0 +1,25 @@
+// sass --watch scss/section-nw-image-banner.scss:assets/section-nw-image-banner.css
+
+
+@media only screen and (max-width: 480px) {
+
+	#decorative-text-wrapper {
+		#decorative-block {
+			br {
+				content: "";
+				display: block;
+				margin: -30px 0;
+			}
+		}
+	}
+
+	.nw-banner-image {
+		.banner__heading  {
+			color: red;
+		}
+	}
+	
+	.banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
+		min-height: 100vh !important;
+	}
+}

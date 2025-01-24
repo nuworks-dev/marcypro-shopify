@@ -43,6 +43,7 @@
 }
 .nw-custom-collection .card-wrapper .card__content .card__heading a span {
   display: flex;
+  align-items: center;
 }
 .nw-custom-collection .card-wrapper .card__content .card__heading a span svg {
   width: 30px;
