@@ -93,6 +93,7 @@
       ],
       "settings": {
         "title": "Shop By Category",
+        "description": "Bring the Power of Fitness to Your Space",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 4,
@@ -110,7 +111,7 @@
         "featured_image_fffaQy": {
           "type": "featured_image",
           "settings": {
-            "featured_image": "shopify://shop_images/Manifesto-Mobile.png"
+            "featured_image": "shopify://shop_images/with_gradient.png"
           }
         },
         "featured_subtitle_pGiyni": {
@@ -161,7 +162,7 @@
         "description_style": "body",
         "collection": "best-sellers",
         "products_to_show": 4,
-        "columns_desktop": 4,
+        "columns_desktop": 6,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
