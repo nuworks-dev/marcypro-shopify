@@ -53,4 +53,60 @@
 			}
 		}
 	}
+
+	.card__information {
+		h3 {
+			a {
+				color: #231F20;
+				font-family: var(--font-body-family);
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 20px;
+				text-align: left;
+			}
+		}
+	}
+
+	.card__badge {
+		align-self: auto;
+		grid-row-start: 1;
+		span {
+			font-family: var(--font-body-family);
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 20px;
+			text-align: left;
+			border-radius: 0px;
+			text-transform: uppercase;
+			background: #231F20;
+			padding: 6px 16px;
+			border-color: #231F20;
+		}
+	}
+
+	.quick-add__submit {
+		background: #C02127;
+		font-family: var(--font-body-family);
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 20px;
+		color: #fff;
+		border-color: #C02127;
+	}
+
+	@media screen and (max-width: 768px) {
+		slider-component {
+			ul {
+				display: flex;
+				gap: 16px;
+				li {
+					padding: 16px;
+					width: 300px;
+					border: 1px solid #E4E4E4;
+					border-radius: 12px;
+				}
+			}
+		}
+	}
+
 }
