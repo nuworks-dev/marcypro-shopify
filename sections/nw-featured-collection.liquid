@@ -1,3 +1,7 @@
+<style>
+	{{ block.settings.utility_font_picker | font_face: font_display: 'swap' }}
+</style>
+
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -38,7 +42,7 @@
   }
 {%- endstyle -%}
 
-{{ 'main.css' | asset_url | stylesheet_tag }}
+{{ 'section-nw-featured-collection.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign products_to_display = section.settings.collection.all_products_count

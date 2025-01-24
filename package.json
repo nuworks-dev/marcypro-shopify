@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
 	"start": "shopify theme dev -e development",
-	"pull-staging": "shopify theme pull -e development",
+	"pull": "shopify theme pull -e development",
 	"build-staging": "shopify theme push -e development",
-	"sass": "sass --watch scss/main.scss:assets/main.css",
 	"build": "shopify theme push -e production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
