@@ -183,18 +183,19 @@
       "type": "featured-blog",
       "settings": {
         "heading": "EXPORT TIPS AND FITNESS INSIGHTS",
+        "description": "Fuel your fitness journey with our newest articles, guides, and workout plans.",
         "heading_size": "h1",
         "blog": "news",
         "post_limit": 3,
         "columns_desktop": 3,
         "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
+        "nw_show_tag": true,
         "show_image": true,
         "show_date": false,
         "show_author": false,
         "show_view_all": false,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "nw_show_tag": true
+        "padding_bottom": 36
       }
     }
   },

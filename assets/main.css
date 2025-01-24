@@ -37,13 +37,25 @@
   text-align: left;
   color: #231F20;
 }
+
+.price--on-sale .price-item--regular {
+	font-family: var(--font-body-family);
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 17.07px;
+}
+
+#nw-featured-collection .card-information .price {
+	margin-bottom: 24px;
+}
+
 #nw-featured-collection .card-information .price .price__sale span {
   font-family: var(--font-body-family);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 17.07px;
   text-align: left;
-  color: #6F6F6F;
+  color: #231F20;
 }
 #nw-featured-collection .card__information h3 a {
   color: #231F20;
