@@ -1,0 +1,81 @@
+.nw-custom-collection {
+	.collection-list-wrapper {
+		padding-bottom: 80px;
+		padding-top: 80px;
+	}
+	h2 {
+		font-family: var(--font-body-family);
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 32px;
+		text-align: left;
+		text-transform: uppercase;
+		color: #231F20;
+	}
+	.nw-collection-description {
+		font-family: var(--font-body-family);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 19.5px;
+		text-align: left;
+		color: #231F20;
+	}
+	.card-wrapper {
+		position: relative;
+		.card__content {
+			position: absolute;
+			bottom: 10px;
+			left: 20px;
+			width: 90%;
+			word-break: break-word;
+			.card__heading {
+				font-family: var(--font-body-family);
+				font-size: 28px;
+				font-weight: 500;
+				line-height: 32px;
+				text-align: left;
+				color: #F7F4ED;
+				a {
+					display: flex;
+					justify-content: space-between;
+					span {
+						display: flex;
+						svg {
+							width: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+	slider-component {
+		ul.collection-list {
+			gap: 16px;
+			li.collection-list__item {
+				width: 350px !important;
+				.card__inner {
+					height: 500px;
+					.card__media {
+						.media.media--transparent {
+							display: inline-block;
+							overflow: hidden; /* Ensures the gradient stays within the container */
+							&:after {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								height: 20%; /* Adjust the height of the gradient */
+								background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); /* Subtle black gradient */
+								pointer-events: none; /* Ensures it doesn't interfere with hover effects */
+							}
+						}
+					}
+				}
+			}
+		}
+		.slider-buttons {
+			display: none;
+		}
+	}
+}
