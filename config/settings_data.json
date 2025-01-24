@@ -65,7 +65,7 @@
     "collection_card_shadow_horizontal_offset": 0,
     "collection_card_shadow_vertical_offset": 4,
     "collection_card_shadow_blur": 5,
-    "blog_card_style": "standard",
+    "blog_card_style": "card",
     "blog_card_image_padding": 0,
     "blog_card_text_alignment": "left",
     "blog_card_color_scheme": "scheme-2",
@@ -110,11 +110,11 @@
     "brand_headline": "",
     "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "google.com",
-    "social_instagram_link": "google.com",
-    "social_youtube_link": "google.com",
-    "social_tiktok_link": "google.com",
-    "social_twitter_link": "google.com",
+    "social_facebook_link": "https://www.facebook.com/mymarcyfitness/",
+    "social_instagram_link": "https://www.facebook.com/mymarcyfitness/",
+    "social_youtube_link": "https://www.youtube.com/marcypro",
+    "social_tiktok_link": "https://www.tiktok.com/@mymarcyfitness",
+    "social_twitter_link": "https://x.com/marcyfitness",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -143,6 +143,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {

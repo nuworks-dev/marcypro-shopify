@@ -173,30 +173,27 @@
         "show_vendor": false,
         "show_rating": true,
         "quick_add": "standard",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "nw_test_section_QGCe6F": {
-      "type": "nw-test-section",
-      "blocks": {
-        "text_block_7BDGYN": {
-          "type": "text_block",
-          "settings": {
-            "block_heading": "Hello World",
-            "block_text": "This is a description"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_7BDGYN"
-      ],
+    "featured_blog_T8aGke": {
+      "type": "featured-blog",
       "settings": {
-        "heading": "Welcome to our store!",
-        "background_color": "#e8ff41",
-        "image_picker": "shopify://shop_images/cat.png"
+        "heading": "EXPORT TIPS AND FITNESS INSIGHTS",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -205,6 +202,6 @@
     "collection_list_qrMBVh",
     "nw_featured_quotes_WCPtAN",
     "nw_featured_collection_AdFAcf",
-    "nw_test_section_QGCe6F"
+    "featured_blog_T8aGke"
   ]
 }

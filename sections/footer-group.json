@@ -52,7 +52,7 @@
       "settings": {
         "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
         "newsletter_enable": true,
-        "newsletter_heading": "Elevate Your Fitness Journey",
+        "newsletter_heading": "ELEVATE YOUR FITNESS JOURNEY",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
@@ -66,7 +66,7 @@
         "footer_text_color": "#f7f4ed",
         "footer_description_top": "Subscribe to our newsletter for personalized tips, updates, and exclusive deals.",
         "footer_description_bottom": "<p>Don’t worry, we won’t pass your details to anyone else. By clicking the subscribe button you agree to our <a href=\"/pages/terms-of-use\" target=\"_blank\" title=\"Terms of Use\">Terms of Use</a> and <a href=\"/pages/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\">Privacy Policy</a>. </p>",
-        "footer_image_picker": "shopify://shop_images/Black-logo_black-logo.png",
+        "footer_image_picker": "shopify://shop_images/Logo.png",
         "footer_logo_aligment": "left",
         "footer_logo_width": 230
       }
