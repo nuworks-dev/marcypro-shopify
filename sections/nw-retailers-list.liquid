@@ -1,0 +1,74 @@
+{%- comment -%}HTML Settings{%- endcomment -%}
+<div class="page-width">
+{{ section.settings.heading }}
+{{ section.settings.description | newline_to_br }}
+
+{% for block in section.blocks %}
+    {% if block.type == 'retailers_block' %}
+        {% if block.settings.imagepicker %}
+            <a href="{{ block.settings.imageurl.value.url }}" target="_blank">
+            {{ block.settings.imagepicker | image_url: width: 500, height: 450 | image_tag: class: "full-image" }}
+            </a>
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+
+</div>
+
+{%- comment -%}Settings Right{%- endcomment -%}
+{% schema %}
+    {
+        "name": "NW Retailers List", 
+        "settings": [
+
+            {
+                "type": "inline_richtext",
+                "id": "heading",
+                "label": "Title",
+                "default": "Input Text Here"
+            },
+            {
+                "type": "textarea",
+                "id": "description",
+                "label": "Description",
+                "default": "Input Text Here"
+            }
+
+        ],
+        "blocks": [
+            {
+                "type": "retailers_block",
+                "name": "Retailers Block",
+                "limit": 10,
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "imagepicker",
+                        "label": "Image Picker",
+                     },
+                     {
+                        "type": "url",
+                        "id": "imageurl",
+                        "label": "Image URL",
+                     }
+                ]
+            
+            }
+        ],
+
+
+
+
+
+        "presets": [
+            {
+                "name": "NW Retailers List"
+            }
+
+
+        ]
+
+
+    }
+{% endschema %}
