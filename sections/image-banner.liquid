@@ -132,10 +132,6 @@
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
 
-		{% style %}
-			{{ block.settings.utility_font_picker | font_face: font_display: 'swap' }}
-		{% endstyle %}
-
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
@@ -180,24 +176,17 @@
             </div>
 
 			{% when 'decorative_text' %}
-			<div id="decorative-text-wrapper">
-				{%- if block.settings.design_text -%}
-					<div id="decorative-block" style="
-						padding: 0px;
-						margin: 0px;
-						text-align: {{ block.settings.design_text_alignment }};
-						font-weight: {{ block.settings.design_text_weight }};
-						font-family: {{ block.settings.design_fontstyle.family }}; 
-						font-size: {{ block.settings.design_text_size }}px; 
-						color: {{ block.settings.design_text_color }}"
-					>{{ block.settings.design_text | newline_to_br }}</div>
-				{%- endif -%}
-			</div>
+				<div class="decorative-text-wrapper">
+					{%- if block.settings.design_text -%}
+						<div class="decorative-block">{{ block.settings.design_text | newline_to_br }}</div>
+					{%- endif -%}
+				</div>
 
         {%- endcase -%}
       {%- endfor -%}
     </div>
   </div>
+
 </div>
 
 {% schema %}
@@ -568,47 +557,10 @@
 		"name": "Decorative Text",
 		"settings": [
 			{
-				"type": "font_picker",
-				"id": "design_fontstyle",
-				"label": "Font Style",
-				"default": "assistant_n4"
-			},
-			{
-				"type": "text_alignment",
-				"id": "design_text_alignment",
-				"label": "Font Alignment",
-				"default": "left"
-			},
-			{
-				"type": "range",
-				"id": "design_text_weight",
-				"label": "Font Weight",
-				"default": 400,
-				"min": 100,
-				"max": 800,
-				"step": 100
-			},	
-			{
 				"type": "textarea",
 				"id": "design_text",
 				"label": "Font Label",
-				"default": "<h3>TEXT HERE</h3>"
-			},
-			{
-				"type": "range",
-				"id": "design_text_size",
-				"label": "Font Size",
-				"min": 12,
-				"max": 80,
-				"step": 1,
-				"default": 12,
-				"unit": "px"
-			},
-			{
-				"type": "color",
-				"id": "design_text_color",
-				"label": "Text Color",
-				"default": "#fff"
+				"default": "TEXT HERE"
 			}
 		],
 		"limit": 2
