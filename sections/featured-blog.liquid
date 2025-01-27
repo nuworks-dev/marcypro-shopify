@@ -38,6 +38,10 @@
           {{ section.settings.heading }}
         </h2>
 
+		{% if section.settings.description %}
+			<div id="blog-subtitle">{{ section.settings.description | newline_to_br }}</div>
+		{% endif %}
+
         {%- if section.settings.blog != blank
           and section.settings.show_view_all
           and section.settings.post_limit < section.settings.blog.articles_count
@@ -75,6 +79,7 @@
                 show_image: section.settings.show_image,
                 show_date: section.settings.show_date,
                 show_author: section.settings.show_author,
+				show_tag: section.settings.nw_show_tag,
                 show_excerpt: true
               %}
             </li>
@@ -204,6 +209,12 @@
       "default": "t:sections.featured-blog.settings.heading.default",
       "label": "t:sections.featured-blog.settings.heading.label"
     },
+	{
+		"type": "textarea",
+		"id": "description",
+		"default": "Your description here",
+		"label": "Description"
+	},
     {
       "type": "select",
       "id": "heading_size",
@@ -262,6 +273,12 @@
       "info": "t:sections.all.colors.has_cards_info",
       "default": "scheme-1"
     },
+	{
+		"type": "checkbox",
+		"id": "nw_show_tag",
+		"label": "Show Tag",
+		"default": false
+	},
     {
       "type": "checkbox",
       "id": "show_image",

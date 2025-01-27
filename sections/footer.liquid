@@ -666,71 +666,88 @@
 }
 {% endschema %}
 <style>
-	.grid .footer-block__heading::after {
-	  content: '';
-	  position: absolute;
-	  right: 0;
-	  top: 50%;
-	  transform: translateY(-50%);
-	  width: 20px;
-	  height: 20px;
-	  background-image: url('{{ "icon-plus-white.svg" | asset_url }}');
-	  background-size: contain;
-	  background-repeat: no-repeat;
-	}
-  
-	.grid .footer-block__heading:not(.block-collapsed)::after {
-	  background-image: url('{{ "icon-minus-white.svg" | asset_url }}');
+	@media (max-width: 749px) {
+
+		.block-collapsed + .footer-block__content {
+			display: none; /* Hide the content by default */
+		}
+		
+		.block-collapsed[aria-expanded="false"] + .footer-block__content {
+			display: none; /* Ensures proper accessibility */
+		}
+		
+		[aria-expanded="true"] + .footer-block__content {
+			display: block; /* Show content when expanded */
+		}
+
+		.grid .footer-block__heading::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+			height: 20px;
+			background-image: url('{{ "icon-plus-white.svg" | asset_url }}');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	
+		.grid .footer-block__heading:not(.block-collapsed)::after {
+			background-image: url('{{ "icon-minus-white.svg" | asset_url }}');
+		}
 	}
   </style>
 
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const headings = document.querySelectorAll('.grid .footer-block__heading');
-
-    const handleCollapse = (clickedHeading) => {
-      // Close all other headings
-      headings.forEach((heading) => {
-        if (heading !== clickedHeading) {
-          heading.classList.add('block-collapsed');
-          heading.setAttribute('aria-expanded', 'false');
-          heading.nextElementSibling.style.display = 'none'; // Collapse the content
-        }
-      });
-
-      // Toggle the clicked heading
-      const content = clickedHeading.nextElementSibling;
-      if (clickedHeading.classList.contains('block-collapsed')) {
-        clickedHeading.classList.remove('block-collapsed');
-        clickedHeading.setAttribute('aria-expanded', 'true');
-        content.style.display = 'block'; // Expand the content
-      } else {
-        clickedHeading.classList.add('block-collapsed');
-        clickedHeading.setAttribute('aria-expanded', 'false');
-        content.style.display = 'none'; // Collapse the content
-      }
-    };
-
-    headings.forEach((heading, index) => {
-      heading.classList.add('block-collapsed');
-      heading.setAttribute('role', 'button');
-      heading.setAttribute('aria-expanded', 'false');
-      heading.setAttribute('tabindex', '0');
-
-      const content = heading.nextElementSibling;
-      content.setAttribute('id', `footer-block-index-${index}`);
-      heading.setAttribute('aria-controls', `footer-block-index-${index}`);
-      content.style.display = 'none'; // Ensure content is initially collapsed
-
-      heading.addEventListener('click', () => {
-        handleCollapse(heading);
-      });
-
-      heading.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-          handleCollapse(heading);
-        }
-      });
-    });
-  });
+	
+	window.addEventListener('DOMContentLoaded', () => {
+		// Check if the screen width is less than 750px (mobile view)
+		if (window.matchMedia('(min-width: 750px)').matches) {
+			return; // Exit early for non-mobile views
+		}
+	
+		const handleCollapse = (heading) => {
+			const allHeadings = document.querySelectorAll('.grid .footer-block__heading');
+	
+			// Close all other headings except the one being toggled
+			allHeadings.forEach((otherHeading) => {
+				if (otherHeading !== heading) {
+					otherHeading.classList.add('block-collapsed');
+					otherHeading.setAttribute('aria-expanded', 'false');
+					otherHeading.nextElementSibling.style.display = 'none';
+				}
+			});
+	
+			// Toggle the clicked heading
+			const isCollapsed = heading.classList.contains('block-collapsed');
+			heading.classList.toggle('block-collapsed', !isCollapsed);
+			heading.setAttribute('aria-expanded', !isCollapsed);
+			heading.nextElementSibling.style.display = isCollapsed ? 'block' : 'none';
+		};
+	
+		document.querySelectorAll('.grid .footer-block__heading').forEach((heading, index) => {
+			// Set up the default collapsed state for mobile
+			heading.classList.add('block-collapsed'); // Closed by default
+			heading.setAttribute('role', 'button');
+			heading.setAttribute('aria-expanded', 'false'); // Accessibility attribute
+			heading.setAttribute('tabindex', '0'); // Make it focusable
+	
+			// Associate the heading with its corresponding content
+			heading.nextElementSibling.setAttribute('id', `footer-block-index-${index}`);
+			heading.setAttribute('aria-controls', `footer-block-index-${index}`);
+			heading.nextElementSibling.style.display = 'none'; // Ensure content is hidden by default
+	
+			// Add event listeners for click and keyboard interaction
+			heading.addEventListener('click', () => handleCollapse(heading));
+			heading.addEventListener('keypress', (event) => {
+				if (event.key === 'Enter' || event.key === ' ') {
+					event.preventDefault(); // Prevent scrolling on Space key
+					handleCollapse(heading);
+				}
+			});
+		});
+	});
+	
+	
 </script>

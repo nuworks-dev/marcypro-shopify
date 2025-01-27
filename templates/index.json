@@ -93,6 +93,7 @@
       ],
       "settings": {
         "title": "Shop By Category",
+        "description": "Bring the Power of Fitness to Your Space",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 4,
@@ -103,10 +104,107 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "nw_featured_quotes_WCPtAN": {
+      "type": "nw-featured-quotes",
+      "blocks": {
+        "featured_image_fffaQy": {
+          "type": "featured_image",
+          "settings": {
+            "featured_image": "shopify://shop_images/with_gradient.png"
+          }
+        },
+        "featured_subtitle_pGiyni": {
+          "type": "featured_subtitle",
+          "settings": {
+            "featured_subtitle": "Whatever your goal,"
+          }
+        },
+        "featured_title_4TEWrX": {
+          "type": "featured_title",
+          "settings": {
+            "featured_title": "we’re here to make it happen."
+          }
+        },
+        "featured_description_HAigFP": {
+          "type": "featured_description",
+          "settings": {
+            "featured_description": "At Marcy Fitness, it's more than just working out— We offer innovative, personalized fitness solutions that easily fit into your lifestyle. Our focus is on maximizing your results while transforming your space. With our high-quality products at competitive prices, we make it easier for you to achieve your goals every day.\n\nTogether, we make fitness happen."
+          }
+        },
+        "featured_url_pixKaK": {
+          "type": "featured_url",
+          "settings": {
+            "featured_url": "shopify://blogs/finess/what-is-a-stack-home-gym-how-is-each-model-different",
+            "featured_url_label": "Learn more about Marcy"
+          }
+        }
+      },
+      "block_order": [
+        "featured_image_fffaQy",
+        "featured_subtitle_pGiyni",
+        "featured_title_4TEWrX",
+        "featured_description_HAigFP",
+        "featured_url_pixKaK"
+      ],
+      "settings": {
+        "featured_background": "#231f20",
+        "featured_text_color": "#ffffff"
+      }
+    },
+    "nw_featured_collection_AdFAcf": {
+      "type": "nw-featured-collection",
+      "settings": {
+        "title": "<strong>BEST SELLER</strong>",
+        "heading_size": "h1",
+        "description": "<p>Kick off your fitness journey with these Marcy Fitness community favorites</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "columns_desktop": 6,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_blog_T8aGke": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "EXPORT TIPS AND FITNESS INSIGHTS",
+        "description": "Fuel your fitness journey with our newest articles, guides, and workout plans.",
+        "heading_size": "h1",
+        "blog": "news",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
+        "nw_show_tag": true,
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_view_all": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
-    "collection_list_qrMBVh"
+    "collection_list_qrMBVh",
+    "nw_featured_quotes_WCPtAN",
+    "nw_featured_collection_AdFAcf",
+    "featured_blog_T8aGke"
   ]
 }

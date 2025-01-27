@@ -1,0 +1,38 @@
+<style>
+	{{ block.settings.utility_font_picker | font_face: font_display: 'swap' }}
+</style>
+
+{%- style -%}
+{%- endstyle -%}
+
+{% schema %}
+{
+	"name": "NW Decorative Title",
+	"blocks": [],
+	"settings": [
+		{
+			"type": "color",
+			"id": "color_1",
+			"default": "#fff",
+			"label": "Title 1 Color"
+		},
+		{
+			"type": "text",
+			"id": "label_fill",
+			"default": "t:sections.image-banner.blocks.heading.settings.heading.default",
+			"label": "Title 1"
+		},
+		{
+			"type": "text",
+			"id": "label_stroke",
+			"default": "WORLD",
+			"label": "Title 2"
+		},
+	],
+	"presets": [
+		{
+			"name": "NW Decorative Title"
+		}
+	]
+}
+{% endschema %}
