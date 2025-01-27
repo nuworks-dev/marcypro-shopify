@@ -17,6 +17,7 @@
 	text-stroke: 1px white;
 }
 
+
 .decorative-text-wrapper {
 	.decorative-block {
 		margin-top: 0px;
@@ -67,7 +68,7 @@
   
 /* Mobile Banner */
 @media screen and (max-width: 480px) {
-	#Banner-template--19210675716332__image_banner_JDj7CU {
+	#Banner-template--19210675716332__image_banner_RAmtdR {
 		display: block !important;
 		.banner__text {
 			p {
@@ -84,12 +85,30 @@
 			width: 100%;
 			a {
 				text-align: left;
+				margin-top: 32px;
+				margin-bottom: 40px;
+				border-radius: 100px;
+				background: #C02127;
+
+				font-family: var(--font-body-family);
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 20px;
+				text-align: center;
+				color: #fff;
+				border: 0px;
+				opacity: 1;
+
+				&::before, &:after {
+					box-shadow: none;
+				}
+
 			}
 			
 		}
 	}
 }
-#Banner-template--19210675716332__image_banner_JDj7CU {
+#Banner-template--19210675716332__image_banner_RAmtdR {
 	display: none;
 }
 
@@ -113,6 +132,12 @@
 	}
 
 	.banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
-		min-height: 100vh !important;
+		min-height: 90vh !important;
+	}
+
+	.banner__box {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 0px;
 	}
 }
