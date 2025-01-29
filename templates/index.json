@@ -12,26 +12,95 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "decorative_text_bfJ3CT": {
+          "type": "decorative_text",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "design_text": "MAKE IT\nHAPPEN"
+          }
+        },
+        "text_rM7i9V": {
+          "type": "text",
+          "settings": {
+            "text": "Elevate your fitness journey from the comfort of your home ",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_9qtjYU": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "heading"
+        "decorative_text_bfJ3CT",
+        "text_rM7i9V",
+        "buttons_9qtjYU"
       ],
       "settings": {
+        "image": "shopify://shop_images/Homepage-Desktop.png",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
+        "mobile_desktop_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "image_banner_RAmtdR": {
+      "type": "image-banner",
+      "blocks": {
+        "decorative_text_RkDfYX": {
+          "type": "decorative_text",
+          "settings": {
+            "design_text": "MAKE IT\nHAPPEN"
+          }
+        },
+        "text_rDmKqn": {
+          "type": "text",
+          "settings": {
+            "text": "Elevate your fitness journey from the comfort of your home ",
+            "text_style": "subtitle"
+          }
+        },
+        "buttons_zw4iEk": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Now",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "decorative_text_RkDfYX",
+        "text_rDmKqn",
+        "buttons_zw4iEk"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Homepage-Mobile.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "mobile_desktop_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
@@ -202,6 +271,7 @@
   },
   "order": [
     "image_banner",
+    "image_banner_RAmtdR",
     "collection_list_qrMBVh",
     "nw_featured_quotes_WCPtAN",
     "nw_featured_collection_AdFAcf",

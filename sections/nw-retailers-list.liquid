@@ -1,20 +1,44 @@
 {%- comment -%}HTML Settings{%- endcomment -%}
 <div class="page-width">
-{{ section.settings.heading }}
-{{ section.settings.description | newline_to_br }}
-
-{% for block in section.blocks %}
-    {% if block.type == 'retailers_block' %}
-        {% if block.settings.imagepicker %}
-            <a href="{{ block.settings.imageurl.value.url }}" target="_blank">
-            {{ block.settings.imagepicker | image_url: width: 500, height: 450 | image_tag: class: "full-image" }}
-            </a>
-        {% endif %}
-    {% endif %}
-{% endfor %}
-
-
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.description | newline_to_br }}</p>
 </div>
+    
+
+<div class="retailers-grid">
+    {% for block in section.blocks %}
+        {% if block.type == 'retailers_block' %}
+            {% if block.settings.imagepicker %}
+                <div class="retailer-item">
+                    <a href="{{ block.settings.imageurl }}" target="_blank">
+                        {{ block.settings.imagepicker | image_url: width: 150, height: 150 | image_tag: class: "full-image" }}
+                    </a>
+                </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
+
+<style>
+    .retailers-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px; /* Spacing between items */
+    }
+
+    .retailer-item {
+        text-align: center;
+    }
+
+    .retailer-item img {
+        width: 100%; /* Ensure images take full width of their container */
+        aspect-ratio: 1 / 1; /* Make images square */
+        object-fit: cover; /* Ensure images are cropped to fit the square */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for better design */
+    }
+</style>
+
 
 {%- comment -%}Settings Right{%- endcomment -%}
 {% schema %}
