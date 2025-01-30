@@ -15,6 +15,11 @@
         "id": "logo",
         "label": "t:settings_schema.logo.settings.logo_image.label"
       },
+	  {
+        "type": "image_picker",
+        "id": "logo_alternate",
+        "label": "Alternate Logo"
+      },
       {
         "type": "range",
         "id": "logo_width",
@@ -30,7 +35,7 @@
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",
         "info": "t:settings_schema.logo.settings.favicon.info"
-      }
+      },
     ]
   },
   {

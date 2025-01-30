@@ -2357,10 +2357,58 @@ input[type='checkbox'] {
   align-items: center;
 }
 
+/** Costumization Header **/
+.header:not(.site-header-transparent) img {
+    /* filter: invert(1); */
+}
+img.header__heading-logo.motion-reduce {
+    /* filter: invert(1) !important; */
+}
+.sticky-header.header-wrapper.color-background-1.gradient {
+    background: black !important;
+}
+.list-menu.list-menu--inline span, .tmenu_submenu.tmenu_submenu_type_automatic.tmenu_submenu--desktop {
+    color: white !important;
+}
+.header__icon .icon {
+    color: white !important;
+}
+
+/* Default (White icons) */
+.header__icon .icon,
+.list-menu.list-menu--inline span,
+.tmenu_submenu.tmenu_submenu_type_automatic.tmenu_submenu--desktop {
+    color: white !important;
+}
+
+/* Change to Black on Scroll */
+.header-wrapper.scrolled .header__icon .icon,
+.header-wrapper.scrolled .list-menu.list-menu--inline span,
+.header-wrapper.scrolled .tmenu_submenu.tmenu_submenu_type_automatic.tmenu_submenu--desktop {
+    color: black !important;
+}
+
+#menu-drawer {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 90vw !important; /* Full screen width */
+    height: 100vh !important; /* Full screen height */
+    background-color: #fff; /* Ensure it has a background */
+    z-index: 1000; /* Ensure it appears above other elements */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
 @media screen and (max-width: 749px) {
   .header--has-app {
     grid-template-columns: auto 1fr auto;
   }
+}
+
+.drawer-container {
+    height: 100%;
+    overflow-y: auto;
 }
 
 @media screen and (min-width: 990px) {
