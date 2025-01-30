@@ -379,8 +379,9 @@
 		<script src="{{ 'nw-custom.js' | asset_url }}" defer></script>
 
 		<style>
+
 			.shopify-section-group-header-group.announcement-bar-section {
-				height: 5px;
+				height: 46px;
 			}
 			
 			.header-wrapper {
@@ -400,15 +401,31 @@
 			}
 		</style>
 		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-			const header = document.querySelector('.header-wrapper');
-			window.addEventListener('scroll', function () {
-				if (window.scrollY > 20) {
-				header.classList.add('scrolled');
-				} else {
-				header.classList.remove('scrolled');
+			document.addEventListener("DOMContentLoaded", function () {
+				const header = document.querySelector(".header-wrapper");
+				const logo = document.querySelector(".header__heading-logo");
+			
+				if (!header || !logo) return; // Prevent errors if elements are missing
+			
+				const originalLogo = logo.src;
+				const alternateLogo = logo.dataset.altLogo;
+				let lastScrollY = 0;
+			
+				function handleScroll() {
+					const scrolled = window.scrollY > 20;
+					
+					// Only update if there's a change (prevents unnecessary reflows)
+					if (scrolled !== lastScrollY) {
+						header.classList.toggle("scrolled", scrolled);
+						logo.src = scrolled ? alternateLogo : originalLogo;
+						lastScrollY = scrolled;
+					}
+					
+					requestAnimationFrame(handleScroll);
 				}
-			});
+			
+				// Start listening for scroll events efficiently
+				requestAnimationFrame(handleScroll);
 			});
 		</script>
 	{% endif %}
