@@ -133,7 +133,7 @@
         "featured_image_fffaQy": {
           "type": "featured_image",
           "settings": {
-            "featured_image": "shopify://shop_images/with_gradient.png"
+            "featured_image": "shopify://shop_images/Manifesto-Mobile_1.png"
           }
         },
         "featured_subtitle_pGiyni": {
@@ -205,7 +205,7 @@
     "featured_blog_T8aGke": {
       "type": "featured-blog",
       "settings": {
-        "heading": "EXPORT TIPS AND FITNESS INSIGHTS",
+        "heading": "EXPERT TIPS AND FITNESS INSIGHTS",
         "description": "Fuel your fitness journey with our newest articles, guides, and workout plans.",
         "heading_size": "h1",
         "blog": "news",

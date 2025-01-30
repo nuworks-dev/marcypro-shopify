@@ -13,6 +13,22 @@
   "sections": {
     "header": {
       "type": "header",
+      "blocks": {
+        "nw_utilitybar_naezRR": {
+          "type": "nw-utilitybar",
+          "settings": {
+            "utility_page_link": "shopify://pages/track-order",
+            "utility_font_picker": "helvetica_n4",
+            "utility_font_color": "#f3f3f3",
+            "utility_background_color": "#121212",
+            "utility_text_alignment": "right",
+            "utility_font_size": 14
+          }
+        }
+      },
+      "block_order": [
+        "nw_utilitybar_naezRR"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
