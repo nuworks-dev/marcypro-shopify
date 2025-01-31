@@ -59,7 +59,7 @@
         "collapsible_row_3eCUPA": {
           "type": "collapsible_row",
           "settings": {
-            "heading": " Do your products require assembly?",
+            "heading": "Do your products require assembly?",
             "icon": "none",
             "row_content": "<p>Yes, virtually all products on <a href=\"https://marcypro.com/\" target=\"_blank\">MarcyPro.com</a> require assembly with very few exceptions.</p><p>You can follow the simple step-by-step instruction manual that was provided with your product.</p><p>Some basic tools may be required to assemble your product. MarcyPro.com does not provide a technician to assemble products.</p><p>To download your specific Owners Manual or Assembly Manual, see the <a href=\"https://www.marcypro.com/product-manuals\" target=\"_blank\">Product Manual Page</a>.</p>",
             "page": ""
@@ -68,7 +68,7 @@
         "collapsible_row_fkwqYh": {
           "type": "collapsible_row",
           "settings": {
-            "heading": " Do Marcy products require lubrication / grease?",
+            "heading": "Do Marcy products require lubrication / grease?",
             "icon": "none",
             "row_content": "<p>Adding oil based or silicone based lubricant to cables and all moving parts of our smith machines / home gyms will ensure a longer lifetime for those parts.</p>",
             "page": ""
@@ -104,27 +104,27 @@
         "collapsible_row_ynBwpd": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Updating an Order, Cancelling Orders, Missing Part, Order Issues, & Order Status",
+            "icon": "none",
+            "row_content": "<p><strong>For any issues with your order</strong> - please reach out to us via live chat on Marcypro.com, via ticket at <a href=\"http://marcypro.com/support\" target=\"_blank\">marcypro.com/support</a>, or via message if you have a Marcypro.com account. Issues include:</p><p>Updating a Shipping Address</p><p>Updating a Phone Number</p><p>General Order Questions</p><p></p><p></p><p><br/></p><p><strong>Order</strong> <strong>Status </strong>– If you created a Marcypro.com account, please log in to see your order status. Otherwise, please reach out to us via Live Chat during business hours to receive an update.</p><p><br/></p><p><strong>Canceling an order</strong> – If the order is in transit or the order is cancelled due to buyer’s remorse (which includes “does not fit,”) we charge a 15% restocking fee and the cost of shipping both ways.<br/></p><p>To start your cancellation, please reach out to us via live chat on Marcypro.com, via ticket at marcypro.com/support, or via message if you have a Marcypro.com account.</p><p><br/></p><p><strong>Missing Part With 2 year-Warranty</strong> – If your order is missing a part, the fastest way to get a replacement part free of charge under warranty would be to fill out the following form: <a href=\"https://www.marcypro.com/replacement-parts-request\" target=\"_blank\">https://www.marcypro.com/replacement-parts-request</a><br/></p><p>Please allow 1 - 2 business days for a representative to respond.<br/></p><p><br/></p><p><strong>Missing Part Not under Warranty</strong> - If you are not under warranty, please request your part at <a href=\"https://marcypro.freshdesk.com/support/tickets/new\" target=\"_blank\">https://marcypro.freshdesk.com/support/tickets/new</a> and a customer rep will reach out to you with availability / pricing</p>",
             "page": ""
           }
         },
         "collapsible_row_hj3HCB": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "When will an item Restock? Can I be notified? Can I Pre-Order?",
+            "icon": "none",
+            "row_content": "<p><strong>When will an item restock? – </strong>Restock dates vary heavily from item to item. To see if we have a restock window for an item, please reach out to us via Live Chat.</p><p><strong>Can I be notified when an item restock? – </strong>Please reach out to us via live chat with your e-mail and the model number you are interested in to be added to an in-stock notification list.</p><p><strong>Can I Pre-Order an Item? – </strong>Please accept our sincerest apologies, we are currently unable to accept pre-orders. We apologize for any inconvenience this may cause.</p>",
             "page": ""
           }
         },
         "collapsible_row_kmzJEa": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "When will my Order Ship? How does the Shipping Process work?",
+            "icon": "none",
+            "row_content": "<p>Insert image</p>",
             "page": ""
           }
         },
@@ -132,7 +132,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
+            "icon": "none",
             "row_content": "",
             "page": ""
           }
