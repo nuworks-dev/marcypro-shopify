@@ -1,0 +1,61 @@
+{% schema %}
+{
+  "name": "NW Spacer",
+  "settings": [
+    {
+      "type": "range",
+      "id": "spacer_height",
+      "label": "Spacer Height (Desktop)",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "spacer_height_mobile",
+      "label": "Spacer Height (Mobile)",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "NW Spacer"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .nw-spacer {
+    width: 100%;
+    background-color: {{ section.settings.background_color }};
+  }
+  
+  @media (min-width: 768px) {
+    .nw-spacer {
+      height: {{ section.settings.spacer_height }}px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .nw-spacer {
+      height: {{ section.settings.spacer_height_mobile }}px;
+    }
+  }
+</style>
+
+<div class="nw-spacer">
+	&nbsp;
+</div>
