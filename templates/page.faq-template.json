@@ -86,7 +86,7 @@
       "settings": {
         "caption": "",
         "heading": "<strong>General</strong>",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "heading_alignment": "left",
         "layout": "none",
         "color_scheme": "",
