@@ -20,6 +20,15 @@
     "collapsible_content_yjiNpG": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_pmqHcf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
         "collapsible_row_K9hdeB": {
           "type": "collapsible_row",
           "settings": {
@@ -58,6 +67,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_pmqHcf",
         "collapsible_row_K9hdeB",
         "collapsible_row_mQP9JF",
         "collapsible_row_AJAYft",
