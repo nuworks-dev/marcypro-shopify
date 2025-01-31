@@ -1,0 +1,122 @@
+<!-- Begin Accordion Snippet -->
+<style>
+	.so-tab {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		margin: 25px 0;
+	}
+
+	.so-tab label {
+		position: relative;
+		display: block;
+		padding: 0 25px 0 0;
+		margin-bottom: 15px;
+		line-height: normal;
+		cursor: pointer;
+	}
+
+	.so-tab input {
+		position: absolute;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	.so-tab-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .35s;
+	}
+
+	/* :checked */
+	.so-tab input:checked~.so-tab-content {
+		max-height: none;
+	}
+
+	/* Icon */
+	.so-tab label::after {
+		position: absolute;
+		right: 0;
+		top: -20px;
+		display: block;
+		width: 3em;
+		height: 3em;
+		line-height: 3;
+		text-align: center;
+		-webkit-transition: all .35s;
+		-o-transition: all .35s;
+		transition: all .35s;
+	}
+
+	.so-tab input[type=checkbox]+label::after {
+		content: "+";
+	}
+
+	.so-tab input[type=radio]+label::after {
+		content: "\25BC";
+	}
+
+	.so-tab input[type=checkbox]:checked+label::after {
+		transform: rotate(315deg);
+	}
+
+	.so-tab input[type=radio]:checked+label::after {
+		transform: rotateX(180deg);
+	}
+</style>
+<div class="so-accordion-wrapper">
+	<div class="so-tab"><input id="so-tab-1" type="checkbox" name="tabs" /> <label for="so-tab-1">Question Number 1 is
+			here?</label>
+		<div class="so-tab-content">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+				industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+			</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	<div class="so-tab"><input id="so-tab-2" type="checkbox" name="tabs" /> <label for="so-tab-2">Question Number 2 is
+			here?</label>
+		<div class="so-tab-content">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+				industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+			</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	<div class="so-tab"><input id="so-tab-3" type="checkbox" name="tabs" /> <label for="so-tab-3">Question Number 3 is
+			here?</label>
+		<div class="so-tab-content">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+				industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+			</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	<div class="so-tab"><input id="so-tab-4" type="checkbox" name="tabs" /> <label for="so-tab-4">Question Number 4 is
+			here?</label>
+		<div class="so-tab-content">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+				industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+			</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	<div class="so-tab"><input id="so-tab-5" type="checkbox" name="tabs" /> <label for="so-tab-5">Question Number 5 is
+			here?</label>
+		<div class="so-tab-content">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+				industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+			</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+	<div class="so-tab"><input id="so-tab-6" type="checkbox" name="tabs" /> <label for="so-tab-6">Question Number 6 is
+			here?</label>
+		<div class="so-tab-content">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+				industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+			</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+		</div>
+	</div>
+</div>

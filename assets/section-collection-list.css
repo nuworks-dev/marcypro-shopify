@@ -75,8 +75,5 @@
   pointer-events: none;
   /* Ensures it doesn't interfere with hover effects */
 }
-.nw-custom-collection slider-component .slider-buttons {
-  display: none;
-}
 
 /*# sourceMappingURL=section-collection-list.css.map */
