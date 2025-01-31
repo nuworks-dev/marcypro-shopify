@@ -11,13 +11,158 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collapsible_content_jqxyyr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BtiX7e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I Request a Missing / Damaged Part?",
+            "icon": "none",
+            "row_content": "<p>To order replacement parts (warranty & non-warranty,) please click <a href=\"https://www.marcypro.com/parts\" target=\"_blank\">PARTS</a> at the top of our homepage. There will be instructions on how to submit your request for parts.<br/></p><p>Our trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_R6BTnF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I find a Digital Version of my Owner's and Assembly Manuals?",
+            "icon": "none",
+            "row_content": "<p>Owner and Assembly manuals can be downloaded by visiting our <a href=\"https://www.marcypro.com/product-manuals\" target=\"_blank\">Product Manual Page</a>.</p><p>If you are unable to locate your model from our selection, please contact our customer service department <a href=\"https://marcypro.com/support\" target=\"_blank\">via ticket system</a> and they will be happy to assist.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9w7etK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " I have allergic reactions to Latex products. Do your products use a Latex material on their seat pads?",
+            "icon": "none",
+            "row_content": "<p>No, all the seats on our Home Gyms and Weight Benches are constructed from high-density foam rubber and top grade vinyl.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9UnqYK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the details regarding your 2-year limited warranty?",
+            "icon": "none",
+            "row_content": "<p><strong>IMPEX® INC. Manufactured Products Limited 2-Year Warranty</strong></p><h2></h2><p>IMPEX Inc. (\"IMPEX® \") warrants it's products to be free from defects in workmanship and material, under normal use and service conditions, for a period of two years on the Frame from the date of purchase. This warranty extends only to the original purchaser. IMPEX's obligation under this Warranty is limited to replacing or repairing, at IMPEX's option.</p><p>All returns must be pre-authorized by IMPEX. Pre-authorization may be obtained by calling IMPEX Customer Service Department at 1-800-999-8899 or opening a ticket at https://marcypro.freshdesk.com/support/tickets/new. All freights for products return to IMPEX must be prepaid by the customer. This warranty does not extend to any product or damage to a product caused by or attributable to freight damage, abuse, misuse, improper or abnormal usage or repairs not provided by an IMPEX authorized service center or for products used for commercial or rental purposes. No other warranty beyond that specifically set forth above is authorized by IMPEX</p><p>IMPEX is not responsible or liable for indirect, special or consequential damages arising out of or in connection with the use or performance of the product or other damages with respect to any economic loss, loss of property, loss of revenues or profits, loss of enjoyments or use, costs of removal, installation or other consequential damages or whatsoever natures. Some states do not allow the exclusion or limitation of incidental or consequential damages. Accordingly, the above limitation may not apply to you.</p><p>The warranty extended hereunder is in lieu of any and all other warranties and any implied warranties of merchantability or fitness for a particular purpose is limited in its scope and duration to the terms set forth herein. Some states do not allow limitations on how long an implied warranty lasts. Accordingly, the above limitation may not apply to you.</p><p>This warranty gives you specific legal right. You may also have other rights which vary from state to state. Register your product online at www.impex-fitness.com or www.marcypro.com</p><p><strong>IMPEX® INC.</strong></p><p><strong>2801 S. Towne Ave.</strong></p><p><strong>Pomona, CA 91766</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3eCUPA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " Do your products require assembly?",
+            "icon": "none",
+            "row_content": "<p>Yes, virtually all products on <a href=\"https://marcypro.com/\" target=\"_blank\">MarcyPro.com</a> require assembly with very few exceptions.</p><p>You can follow the simple step-by-step instruction manual that was provided with your product.</p><p>Some basic tools may be required to assemble your product. MarcyPro.com does not provide a technician to assemble products.</p><p>To download your specific Owners Manual or Assembly Manual, see the <a href=\"https://www.marcypro.com/product-manuals\" target=\"_blank\">Product Manual Page</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_fkwqYh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " Do Marcy products require lubrication / grease?",
+            "icon": "none",
+            "row_content": "<p>Adding oil based or silicone based lubricant to cables and all moving parts of our smith machines / home gyms will ensure a longer lifetime for those parts.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BtiX7e",
+        "collapsible_row_R6BTnF",
+        "collapsible_row_9w7etK",
+        "collapsible_row_9UnqYK",
+        "collapsible_row_3eCUPA",
+        "collapsible_row_fkwqYh"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "<strong>General</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_LUqT8h": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_ynBwpd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_hj3HCB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_kmzJEa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_4T8NRT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_ynBwpd",
+        "collapsible_row_hj3HCB",
+        "collapsible_row_kmzJEa",
+        "collapsible_row_4T8NRT"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "<strong>ORDERS</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collapsible_content_jqxyyr",
+    "collapsible_content_LUqT8h"
   ]
 }
