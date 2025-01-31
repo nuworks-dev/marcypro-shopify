@@ -5,14 +5,14 @@ footer .footer__blocks-wrapper {
 footer .footer__blocks-wrapper .footer-block.grid__item h2 {
 	font-family: var(--font-body-family);
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 21.94px;
 	text-align: left;
 	text-transform: uppercase;
 }
 
 footer .footer__blocks-wrapper .footer-block.grid__item ul li a {
-	color: #fff;
+	color: #231F20;
 	font-size: 16px;
 }
 
@@ -117,7 +117,7 @@ footer .footer__blocks-wrapper .footer-block.grid__item ul li a {
 }
 
 .footer__list-social .list-social__item .icon {
-	color: #fff;
+	color: #231F20;
 	width: 4rem;
     height: 4rem;
 }
@@ -133,8 +133,8 @@ footer .footer__blocks-wrapper .footer-block.grid__item ul li a {
 
 .footer__copyright {
 	text-align: left;
-	color: #fff;
-	padding-left: calc(2rem / var(--font-body-scale));
+	color: #231F20;
+	/* padding-left: calc(2rem / var(--font-body-scale)); */
 	padding-right: calc(2rem / var(--font-body-scale));
 }
 
@@ -147,16 +147,59 @@ footer .copyright__content {
 	text-align: left;
 }
 
+.footer__content-top {
+	display: flex;
+	flex-direction: row !important;
+	gap: 32px;
+}
+
+.footer__content-top .footer-block--newsletter {
+	width: 400px !important;
+}
+
+.footer-block__newsletter {
+	flex-grow: unset !important;
+}
+
+.footer-block__newsletter h2 {
+	font-family: var(--font-body-family);
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 32px;
+	text-align: left;
+}
+
+.footer__content-top .footer__blocks-wrapper {
+	flex: 1;
+}
+
+.footer__content-bottom {
+	border: 0px;
+}
+
 @media (max-width: 749px) {
+	.footer__content-bottom-wrapper,
+	.nw-social {
+		padding-left: calc(4rem / var(--font-body-scale));
+        padding-right: calc(4rem / var(--font-body-scale));
+    }
+
+	.footer__content-top .footer-block--newsletter {
+		width: 100% !important;
+	}
+
+	.footer__content-top {
+		flex-direction: column !important;
+	}	
 
 	footer .footer__blocks-wrapper .footer-block.grid__item {
-		border-top: 1px solid #fff;
-		border-bottom: 1px solid #fff;
+		border-top: 1px solid #231F20;
+		border-bottom: 1px solid #231F20;
 	}
 
 	.grid .footer-block.grid__item {
 		margin: 0;
-		}
+	}
 	.grid .footer-block__heading {
 		position: relative;
 		margin: 0;

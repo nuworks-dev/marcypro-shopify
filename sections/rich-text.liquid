@@ -19,10 +19,24 @@
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
       <div class="rich-text__blocks {{ section.settings.content_alignment }}">
         {%- for block in section.blocks -%}
+
+			<style>
+				.nw-richtext-block {
+					font-family: {{ block.settings.font_style.family }};
+					font-size: {{ block.settings.font_size }}px;
+				}
+				.nw-richtext-p {
+					font-family: {{ block.settings.font_style.family }};
+					font-size: {{ block.settings.font_size_p }}px;
+					font-weight: 400;
+					line-height: 19.5px;
+				}
+			</style>
+
           {%- case block.type -%}
             {%- when 'heading' -%}
               <h2
-                class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="nw-richtext-block rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -44,7 +58,7 @@
               </p>
             {%- when 'text' -%}
               <div
-                class="rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="nw-richtext-p rich-text__text rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
@@ -220,7 +234,23 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
-        }
+        },
+		{
+			"type": "font_picker",
+			"id": "font_style",
+			"default": "assistant_n4",
+			"label": "Font Style"
+		},
+		{
+			"type": "range",
+			"id": "font_size",
+			"label": "Font Size",
+			"default": 28,
+			"step": 1,
+			"min": 12,
+			"max": 50,
+			"unit": "px"
+		}
       ]
     },
     {
@@ -282,7 +312,17 @@
           "id": "text",
           "default": "t:sections.rich-text.blocks.text.settings.text.default",
           "label": "t:sections.rich-text.blocks.text.settings.text.label"
-        }
+        },
+		{
+			"type": "range",
+			"id": "font_size_p",
+			"label": "Font Size",
+			"default": 28,
+			"step": 1,
+			"min": 12,
+			"max": 50,
+			"unit": "px"
+		}
       ]
     },
     {

@@ -162,7 +162,7 @@
   font-family: var(--font-heading-family);
   font-weight: 700;
   line-height: 32px;
-  color: #F7F4ED;
+  color: #231F20;
   text-align: left;
 }
 
@@ -183,7 +183,7 @@
 }
 
 .footer__list-social.list-social:only-child {
-  justify-content: center;
+  justify-content: start;
 }
 
 .footer-block__newsletter {

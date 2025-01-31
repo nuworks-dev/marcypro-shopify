@@ -276,13 +276,15 @@
 			</div>
 		  {%- endif -%}
 
-		  {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
-
       </div>
     {%- endunless -%}
   {%- endif -%}
+
+	{%- if section.settings.show_social and has_social_icons -%}
+		<div class="page-width nw-social">
+			{%- render 'social-icons', class: 'footer__list-social' -%}
+		</div>
+	{%- endif -%}
 
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -691,6 +693,7 @@
 			background-image: url('{{ "icon-plus-white.svg" | asset_url }}');
 			background-size: contain;
 			background-repeat: no-repeat;
+			filter: invert(1);
 		}
 	
 		.grid .footer-block__heading:not(.block-collapsed)::after {
