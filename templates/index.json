@@ -221,13 +221,46 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_UHwrJa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_KMYFgw": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>EMPOWERED BY MARCY FITNESS</strong>",
+            "heading_size": "h1",
+            "font_style": "montserrat_n4",
+            "font_size": 28
+          }
+        },
+        "text_XLtR38": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Discover authentic experiences shared by our community of fitness enthusiasts.</p>",
+            "font_size_p": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading_KMYFgw",
+        "text_XLtR38"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-50f88799-722f-44c4-879c-3212aa4b3bc9",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "173797665520ae1a24": {
       "type": "apps",
       "blocks": {
         "instafeed_app_block_qb6yJq": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "title": "Empowered by Marcy Fitness",
+            "title": "",
             "title_color": "#ffffff",
             "title_size": 28,
             "alignment": "left",
@@ -244,6 +277,14 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "nw_spacer_nzDaKf": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 60,
+        "spacer_height_mobile": 30,
+        "background_color": "#231f20"
+      }
     }
   },
   "order": [
@@ -252,6 +293,8 @@
     "nw_featured_quotes_WCPtAN",
     "nw_featured_collection_AdFAcf",
     "featured_blog_T8aGke",
-    "173797665520ae1a24"
+    "rich_text_UHwrJa",
+    "173797665520ae1a24",
+    "nw_spacer_nzDaKf"
   ]
 }
