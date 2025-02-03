@@ -2392,14 +2392,14 @@
   
   /* On Scroll (Change to Black) */
   .header-wrapper.scrolled .icon-caret {
-	  color: black !important;
+	  color: #231F20 !important;
   }
   
   /* Change to Black on Scroll */
   .header-wrapper.scrolled .header__icon .icon,
   .header-wrapper.scrolled .list-menu.list-menu--inline span,
   .header-wrapper.scrolled .tmenu_submenu.tmenu_submenu_type_automatic.tmenu_submenu--desktop {
-	  color: black !important;
+	  color: #231F20 !important;
   }
   
   #menu-drawer {
