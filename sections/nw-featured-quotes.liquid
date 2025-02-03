@@ -1,4 +1,46 @@
 {%- style -%}
+	
+	#featured-card {
+		display: flex;
+		flex-direction: row; /* Default for desktop */
+		height: 650px;
+
+		background-image: url("{{ section.settings.featured_desktop_image | image_url }}");
+		background-size: cover;
+		background-position: left center;
+		background-repeat: no-repeat;
+	}
+
+	#featured-card .left {
+		flex: 1;
+	}
+
+	#featured-card .left img {
+		display: none;
+	}
+
+	/* Right section (content) */
+	#featured-card .right {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 40px;
+		position: relative;
+	}
+
+	#featured-card .right img {
+		position: absolute;
+		left: 20px;
+		top: 20%;
+		transform: translateY(-50%);
+	}
+
+	#featured-card .content {
+		max-width: 500px;
+		text-align: center;
+	}
+	
 	#nw-featured-quotes {
 		background-color: {{ section.settings.featured_background }};
 		min-height: 300px;
@@ -6,19 +48,7 @@
 		display: flex;
 		flex-direction: column;
 	}
-
-	#featured-card {
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
 	
-	@media screen and (max-width: 768px) {
-		#featured-card {
-			padding-left: 24px;
-			padding-right: 24px;
-		}
-	}
-
 	#featured-img {
 		position: relative;
 		overflow: hidden;
@@ -95,10 +125,59 @@
 		height: auto;
 	}
 
+	@media (max-width: 1024px) {
+		#featured-card {
+			background: none;
+		}
+		#featured-card .left {
+			position: relative;
+			overflow: hidden;
+		}
+		#featured-card .left img {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			object-fit: cover;
+			object-position: left;
+		}
+		#featured-card .right img {
+			top: 15%;
+			left: 40px;
+		}
+	}
+
+	/* Mobile Styles */
 	@media (max-width: 768px) {
+
 		#featured-img {
 			max-width: unset;
 			margin: 0px;
+		}
+
+		#featured-card .left img {
+			display: none;
+		}
+
+		#featured-card {
+			flex-direction: column;
+			background-image: url("{{ section.settings.featured_mobile_image | image_url }}");
+			background-position: top center;
+			background-size: cover;
+			height: 1060px;
+			padding-bottom: 50px;
+			background-repeat: no-repeat;
+		}
+
+		.left {}
+
+		#featured-card .right {
+			position: relative;
+			flex: 1;
+			padding: 20px;
+		}
+
+		#featured-card .right img {
+			top: 2%;
 		}
 	}
 
@@ -106,35 +185,44 @@
 
 <div id="nw-featured-quotes">
 	{% for block in section.blocks %}
-	  {% if block.type == 'featured_image' and block.settings.featured_image %}
+
+	  {% comment %} {% if block.type == 'featured_image' and block.settings.featured_image %}
 		<div id="featured-img" class="page-width">
 		  {{ block.settings.featured_image | image_url: width: 500, height: 450 | image_tag: class: "full-image" }}
 		</div>
-	  {% endif %}
+	  {% endif %} {% endcomment %}
+
 	{% endfor %}
   
-	<div id="featured-card" class="page-width">
+	<div id="featured-card">
 
-		<img src="{{ 'quote.png' | asset_url }}" alt="Quote Image" width="300" height="300" class="quote-img" />
+		<div class="left">
+			{{ section.settings.featured_tablet_image | image_url: width: 500, height: 450 | image_tag: class: "full-image" }}
+		</div>
+		<div class="right">
+			<div class="content">
+				<img src="{{ 'quote.png' | asset_url }}" alt="Quote Image" width="300" height="300" class="quote-img" />
+				{% for block in section.blocks %}
+					{% if block.type == 'featured_subtitle' and block.settings.featured_subtitle %}
+						<h5>{{ block.settings.featured_subtitle }}</h5>
+					{% elsif block.type == 'featured_title' and block.settings.featured_title %}
+						<h3>{{ block.settings.featured_title }}</h3>
+					{% elsif block.type == 'featured_description' and block.settings.featured_description %}
+						<p>{{ block.settings.featured_description | newline_to_br }}</p>
+					{% elsif block.type == 'featured_url' and block.settings.featured_url %}
+						{% if block.settings.featured_url %}
+							<a href="{{ block.settings.featured_url }}">
+								{{ block.settings.featured_url_label }}
+								<span class="svg-wrapper">
+									{{- 'icon-arrow.svg' | inline_asset_content -}}
+								</span>
+							</a>
+						{% endif %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
 		
-		{% for block in section.blocks %}
-			{% if block.type == 'featured_subtitle' and block.settings.featured_subtitle %}
-				<h5>{{ block.settings.featured_subtitle }}</h5>
-			{% elsif block.type == 'featured_title' and block.settings.featured_title %}
-				<h3>{{ block.settings.featured_title }}</h3>
-			{% elsif block.type == 'featured_description' and block.settings.featured_description %}
-				<p>{{ block.settings.featured_description | newline_to_br }}</p>
-			{% elsif block.type == 'featured_url' and block.settings.featured_url %}
-				{% if block.settings.featured_url %}
-					<a href="{{ block.settings.featured_url }}">
-						{{ block.settings.featured_url_label }}
-						<span class="svg-wrapper">
-							{{- 'icon-arrow.svg' | inline_asset_content -}}
-						</span>
-					</a>
-				{% endif %}
-			{% endif %}
-		{% endfor %}
 	</div>
 </div>   
 
@@ -157,7 +245,22 @@
 				"type": "color",
 				"id": "featured_text_color",
 				"label": "Text Color"
-			}
+			},
+			{
+				"type": "image_picker",
+				"id": "featured_desktop_image",
+				"label": "Desktop Image"
+			},
+			{
+				"type": "image_picker",
+				"id": "featured_tablet_image",
+				"label": "Tablet Image"
+			},
+			{
+				"type": "image_picker",
+				"id": "featured_mobile_image",
+				"label": "Mobile Image"
+			},
 		],
 		"blocks": [
 			{
@@ -199,18 +302,7 @@
 				],
 				"limit": 1
 			},
-			{
-				"type": "featured_image",
-				"name": "Featured Image",
-				"settings": [
-					{
-						"type": "image_picker",
-						"id": "featured_image",
-						"label": "Featured Image"
-					},
-				],
-				"limit": 1
-			},
+			
 			{
 				"type": "featured_url",
 				"name": "Featured URL",
