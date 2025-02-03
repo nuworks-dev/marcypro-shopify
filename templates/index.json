@@ -130,12 +130,6 @@
     "nw_featured_quotes_WCPtAN": {
       "type": "nw-featured-quotes",
       "blocks": {
-        "featured_image_fffaQy": {
-          "type": "featured_image",
-          "settings": {
-            "featured_image": "shopify://shop_images/Manifesto-Mobile_1.png"
-          }
-        },
         "featured_subtitle_pGiyni": {
           "type": "featured_subtitle",
           "settings": {
@@ -163,7 +157,6 @@
         }
       },
       "block_order": [
-        "featured_image_fffaQy",
         "featured_subtitle_pGiyni",
         "featured_title_4TEWrX",
         "featured_description_HAigFP",
@@ -171,7 +164,10 @@
       ],
       "settings": {
         "featured_background": "#231f20",
-        "featured_text_color": "#ffffff"
+        "featured_text_color": "#ffffff",
+        "featured_desktop_image": "shopify://shop_images/testimonial-desktop.png",
+        "featured_tablet_image": "shopify://shop_images/Manifesto-Desktop.png",
+        "featured_mobile_image": "shopify://shop_images/testimonial-mobile.png"
       }
     },
     "nw_featured_collection_AdFAcf": {
