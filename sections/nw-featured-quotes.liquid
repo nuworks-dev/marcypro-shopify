@@ -31,7 +31,7 @@
 
 	#featured-card .right img {
 		position: absolute;
-		left: 20px;
+		left: -2%;
 		top: 20%;
 		transform: translateY(-50%);
 	}
@@ -125,6 +125,30 @@
 		height: auto;
 	}
 
+	@media (min-width: 1660px) {
+		#featured-card .right .content img {
+			left: 15%;
+		}
+	}
+
+	@media (max-width: 1366px) {
+		#featured-card {
+			background-position: -130px center;
+		}
+	}
+
+	/* @media (max-width: 1220px) {
+		#featured-card {
+			background-position: -100px center;
+		}
+		#featured-card .right img {
+			position: absolute;
+			left: -11px;
+			top: 20%;
+			transform: translateY(-50%);
+		}
+	} */
+
 	@media (max-width: 1024px) {
 		#featured-card {
 			background: none;
@@ -178,6 +202,7 @@
 
 		#featured-card .right img {
 			top: 2%;
+			left: 5%;
 		}
 	}
 
@@ -197,7 +222,9 @@
 	<div id="featured-card">
 
 		<div class="left">
-			{{ section.settings.featured_tablet_image | image_url: width: 500, height: 450 | image_tag: class: "full-image" }}
+			{% if section.settings.featured_tablet_image %}
+				{{ section.settings.featured_tablet_image | image_url: width: 500, height: 450 | image_tag: class: "full-image" }}
+			{% endif %}
 		</div>
 		<div class="right">
 			<div class="content">
