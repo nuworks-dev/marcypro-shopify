@@ -52,7 +52,7 @@
   gap: 16px;
 }
 .nw-custom-collection slider-component ul.collection-list li.collection-list__item {
-  width: 307px !important;
+  width: 350px !important;
 }
 .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner {
   height: 500px;
@@ -74,6 +74,9 @@
   /* Subtle black gradient */
   pointer-events: none;
   /* Ensures it doesn't interfere with hover effects */
+}
+.nw-custom-collection slider-component .slider-buttons {
+  display: none;
 }
 
 /*# sourceMappingURL=section-collection-list.css.map */
