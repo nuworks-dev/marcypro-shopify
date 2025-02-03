@@ -18,9 +18,6 @@
   text-align: left;
   color: #231F20;
 }
-#nw-featured-collection .slider-buttons {
-  display: none;
-}
 #nw-featured-collection .card__heading.h5 {
   font-family: var(--font-body-family);
   font-size: 16px;

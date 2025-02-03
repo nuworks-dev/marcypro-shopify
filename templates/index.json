@@ -58,46 +58,46 @@
         "show_text_below": false
       }
     },
-    "collection_list_qrMBVh": {
-      "type": "collection-list",
+    "nw_collection_list_3wxgaP": {
+      "type": "nw-collection-list",
       "blocks": {
-        "featured_collection_j794AC": {
+        "featured_collection_aAQpN6": {
           "type": "featured_collection",
           "settings": {
             "collection": "home-gyms"
           }
         },
-        "featured_collection_cKYJ3h": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "strength"
-          }
-        },
-        "featured_collection_GFDPr8": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "cardio"
-          }
-        },
-        "featured_collection_aQFDDc": {
+        "featured_collection_RFN8VX": {
           "type": "featured_collection",
           "settings": {
             "collection": "fitness-accessories"
           }
         },
-        "featured_collection_iC7P49": {
+        "featured_collection_e8dEDz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "strength"
+          }
+        },
+        "featured_collection_GyyVVe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "cardio"
+          }
+        },
+        "featured_collection_VB4ihT": {
           "type": "featured_collection",
           "settings": {
             "collection": "outdoor"
           }
         },
-        "featured_collection_LMMGPr": {
+        "featured_collection_ex7RiH": {
           "type": "featured_collection",
           "settings": {
             "collection": "retired-products"
           }
         },
-        "featured_collection_8yfeBW": {
+        "featured_collection_QkgyKW": {
           "type": "featured_collection",
           "settings": {
             "collection": "weightlifting-accessories"
@@ -105,24 +105,24 @@
         }
       },
       "block_order": [
-        "featured_collection_j794AC",
-        "featured_collection_cKYJ3h",
-        "featured_collection_GFDPr8",
-        "featured_collection_aQFDDc",
-        "featured_collection_iC7P49",
-        "featured_collection_LMMGPr",
-        "featured_collection_8yfeBW"
+        "featured_collection_aAQpN6",
+        "featured_collection_RFN8VX",
+        "featured_collection_e8dEDz",
+        "featured_collection_GyyVVe",
+        "featured_collection_VB4ihT",
+        "featured_collection_ex7RiH",
+        "featured_collection_QkgyKW"
       ],
       "settings": {
-        "title": "Shop By Category",
+        "title": "SHOP BY CATEGORY",
         "description": "Bring the Power of Fitness to Your Space",
         "heading_size": "h1",
         "image_ratio": "square",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
         "columns_mobile": "1",
-        "swipe_on_mobile": true,
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -289,7 +289,7 @@
   },
   "order": [
     "image_banner",
-    "collection_list_qrMBVh",
+    "nw_collection_list_3wxgaP",
     "nw_featured_quotes_WCPtAN",
     "nw_featured_collection_AdFAcf",
     "featured_blog_T8aGke",
