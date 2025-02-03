@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+{%- if request.page_type != 'index' -%}
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const header = document.querySelector(".header-wrapper");
+			const logo = document.querySelector(".header__heading-logo");
+			const alternateLogo = logo.dataset.altLogo;
+			logo.src = alternateLogo;
+		});
+	</script>
+{% endif %}
+
 <style>
   header-drawer {
     justify-self: start;
@@ -96,6 +107,17 @@
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+
+{%- if request.page_type != 'index' -%}
+	<style>
+		.list-menu.list-menu--inline span {
+			color: #231F20 !important;
+		}
+		.header__icon .icon {
+			color: #231F20 !important;
+		}
+	</style>
+{% endif %}
 
 {%- liquid
   for block in section.blocks

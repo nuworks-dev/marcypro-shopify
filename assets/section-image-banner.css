@@ -386,6 +386,10 @@
   }
 }
 
+.banner__media img {
+	object-position: top;
+}
+
 .banner::after,
 .banner__media::after {
   content: '';
