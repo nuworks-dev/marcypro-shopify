@@ -41,7 +41,7 @@
         "collapsible_row_9w7etK": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "have allergic reactions to Latex products. Do your products use a Latex material on their seat pads?",
+            "heading": "I have allergic reactions to Latex products. Do your products use a Latex material on their seat pads?",
             "icon": "none",
             "row_content": "<p>No, all the seats on our Home Gyms and Weight Benches are constructed from high-density foam rubber and top grade vinyl.</p>",
             "page": ""
@@ -83,6 +83,7 @@
         "collapsible_row_3eCUPA",
         "collapsible_row_fkwqYh"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>General</strong>",
@@ -204,6 +205,7 @@
         "collapsible_row_NKMkUn",
         "collapsible_row_EiB8zW"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>ORDERS</strong>",
@@ -245,6 +247,7 @@
         "collapsible_row_c77itz",
         "collapsible_row_wkTTHk"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
@@ -326,6 +329,7 @@
         "collapsible_row_X88Dp6",
         "collapsible_row_kJnGyE"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Exercise Bike Troubleshooting</strong>",
@@ -347,36 +351,54 @@
         "collapsible_row_4XLXfz": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How do I Request a Missing / Damaged Part?",
             "icon": "none",
-            "row_content": "<p>test</p>\n<ul>\n<li>test</li>\n<li>test</li>\n</ul>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0742/4629/1692/files/mg_4496-ff.webp?v=1738047251\" width=\"400\" height=\"400\" style=\"width: 100%; height: auto;\" />",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nTo order replacement parts (warranty & non-warranty,) please click <a style=\"color:red;\"  href=\"https://www.marcypro.com/parts\"> PARTS </a> at the top of our homepage. There will be instructions on how to submit your request for parts.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">Our trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.</p>",
             "page": ""
           }
         },
         "collapsible_row_9TRhV4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "Where can I find a Digital Version of my Owner's and Assembly Manuals?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nOwner and Assembly manuals can be downloaded by visiting our <a style=\"color:red\" href=\"https://www.marcypro.com/product-manuals\">Product Manual Page.</a>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">\nIf you are unable to locate your model from our selection, please contact our customer service department <a style=\"color:red\" href=\"https://marcypro.com/support\">via ticket system</a> and they will be happy to assist</p>",
             "page": ""
           }
         },
         "collapsible_row_iRJkKU": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "I have allergic reactions to Latex products. Do your products use a Latex material on their seat pads?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nNo, all the seats on our Home Gyms and Weight Benches are constructed from high-density foam rubber and top grade vinyl.</p>",
             "page": ""
           }
         },
         "collapsible_row_p8ijY3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "What are the details regarding your 2-year limited warranty?",
+            "icon": "none",
+            "row_content": "<p style=\"text-align: center; font-size: 15px; margin-top: 10px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>IMPEX® INC. Manufactured Products Limited 2-Year Warranty</strong>\n</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">\nIMPEX Inc. (\"IMPEX® \") warrants it's products to be free from defects in workmanship and material, under normal use and service conditions, for a period of two years on the Frame from the date of purchase. This warranty extends only to the original purchaser. IMPEX's obligation under this Warranty is limited to replacing or repairing, at IMPEX's option.</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">\nAll returns must be pre-authorized by IMPEX. Pre-authorization may be obtained by calling IMPEX Customer Service Department at 1-800-999-8899 or opening a ticket at https://marcypro.freshdesk.com/support/tickets/new. All freights for products return to IMPEX must be prepaid by the customer. This warranty does not extend to any product or damage to a product caused by or attributable to freight damage, abuse, misuse, improper or abnormal usage or repairs not provided by an IMPEX authorized service center or for products used for commercial or rental purposes. No other warranty beyond that specifically set forth above is authorized by IMPEX</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">IMPEX is not responsible or liable for indirect, special or consequential damages arising out of or in connection with the use or performance of the product or other damages with respect to any economic loss, loss of property, loss of revenues or profits, loss of enjoyments or use, costs of removal, installation or other consequential damages or whatsoever natures. Some states do not allow the exclusion or limitation of incidental or consequential damages. Accordingly, the above limitation may not apply to you.</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px; overflow-wrap: break-word; hyphens: auto;\">The warranty extended hereunder is in lieu of any and all other warranties and any implied warranties of merchantability or fitness for a particular purpose is limited in its scope and duration to the terms set forth herein. Some states do not allow limitations on how long an implied warranty lasts. Accordingly, the above limitation may not apply to you.</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">This warranty gives you specific legal right. You may also have other rights which vary from state to state. Register your product online at www.impex-fitness.com or www.marcypro.com</p>\n\n<p style=\"text-align: center;   margin-top: 35px; font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>IMPEX® INC.<br>\n2801 S. Towne Ave.<br>\nPomona, CA 91766\n</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gq7GRJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do your products require assembly?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nYes, virtually all products on <a style=\"color:red;\"  href=\"https://marcypro.com/\">MarcyPro.com</a> require assembly with very few exceptions.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">\nYou can follow the simple step-by-step instruction manual that was provided with your product.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">Some basic tools may be required to assemble your product. MarcyPro.com does not provide a technician to assemble products.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">\nTo download your specific Owners Manual or Assembly Manual, see the <a style=\"color:red\" href=\"https://www.marcypro.com/product-manuals\">Product Manual Page.</a>",
+            "page": ""
+          }
+        },
+        "collapsible_row_74xTVm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do Marcy products require lubrication / grease?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">Adding oil based or silicone based lubricant to cables and all moving parts of our smith machines / home gyms will ensure a longer lifetime for those parts.</p>",
             "page": ""
           }
         }
@@ -385,13 +407,15 @@
         "collapsible_row_4XLXfz",
         "collapsible_row_9TRhV4",
         "collapsible_row_iRJkKU",
-        "collapsible_row_p8ijY3"
+        "collapsible_row_p8ijY3",
+        "collapsible_row_gq7GRJ",
+        "collapsible_row_74xTVm"
       ],
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
+        "heading": "<strong>GENERAL</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
         "layout": "none",
         "color_scheme": "",
         "container_color_scheme": "",
