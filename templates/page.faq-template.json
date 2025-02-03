@@ -340,6 +340,67 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "nw_collapsible_content_EmcbdC": {
+      "type": "nw-collapsible-content",
+      "blocks": {
+        "collapsible_row_4XLXfz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "<p>test</p>\n<ul>\n<li>test</li>\n<li>test</li>\n</ul>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0742/4629/1692/files/mg_4496-ff.webp?v=1738047251\" width=\"400\" height=\"400\" style=\"width: 100%; height: auto;\" />",
+            "page": ""
+          }
+        },
+        "collapsible_row_9TRhV4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_iRJkKU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_p8ijY3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4XLXfz",
+        "collapsible_row_9TRhV4",
+        "collapsible_row_iRJkKU",
+        "collapsible_row_p8ijY3"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Collapsible content",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -347,6 +408,7 @@
     "collapsible_content_jqxyyr",
     "collapsible_content_LUqT8h",
     "collapsible_content_NKJPeJ",
-    "collapsible_content_aLbTJi"
+    "collapsible_content_aLbTJi",
+    "nw_collapsible_content_EmcbdC"
   ]
 }

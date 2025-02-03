@@ -1,3 +1,7 @@
+.nw-collection-list .slider-buttons {
+  display: flex;
+}
+
 .nw-custom-collection .collection-list-wrapper {
   padding-bottom: 80px;
   padding-top: 80px;
@@ -49,17 +53,18 @@
   width: 30px;
 }
 .nw-custom-collection slider-component ul.collection-list {
-  gap: 16px;
+  gap: 28px;
 }
-.nw-custom-collection slider-component ul.collection-list li.collection-list__item {
-  width: 350px !important;
+.nw-custom-collection slider-component ul.collection-list li:first-child {
+  margin-left: 0px !important;
 }
 .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner {
   height: 500px;
+  width: 300px;
 }
 .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner .card__media .media.media--transparent {
   display: inline-block;
-  overflow: hidden;
+  overflow: unset;
   /* Ensures the gradient stays within the container */
 }
 .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner .card__media .media.media--transparent:after {
@@ -75,8 +80,23 @@
   pointer-events: none;
   /* Ensures it doesn't interfere with hover effects */
 }
-.nw-custom-collection slider-component .slider-buttons {
-  display: none;
+@media screen and (max-width: 480px) {
+  .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner .card__media .media.media--transparent {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nw-custom-collection slider-component ul.collection-list {
+    gap: 15px;
+  }
+  .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nw-custom-collection slider-component .slider-buttons {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=section-collection-list.css.map */
