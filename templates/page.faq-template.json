@@ -353,7 +353,7 @@
           "settings": {
             "heading": "How do I Request a Missing / Damaged Part?",
             "icon": "none",
-            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nTo order replacement parts (warranty & non-warranty,) please click <a style=\"color:red;\"  href=\"https://www.marcypro.com/parts\"> PARTS </a> at the top of our homepage. There will be instructions on how to submit your request for parts.</p>\n\n<p style=\"font-size: 16px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">Our trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.</p>",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nTo order replacement parts (warranty & non-warranty,) please click <a style=\"color:red;\"  href=\"https://www.marcypro.com/parts\"> PARTS </a> at the top of our homepage. There will be instructions on how to submit your request for parts.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">Our trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.</p>",
             "page": ""
           }
         },
