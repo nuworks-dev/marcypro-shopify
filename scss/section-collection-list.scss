@@ -1,4 +1,9 @@
 // sass --watch scss/section-collection-list.scss:assets/section-collection-list.css
+.nw-collection-list {
+	.slider-buttons {
+		display: flex;
+	}
+}
 .nw-custom-collection {
 	.collection-list-wrapper {
 		padding-bottom: 80px;
@@ -52,15 +57,18 @@
 	}
 	slider-component {
 		ul.collection-list {
-			gap: 16px;
+			gap: 28px;
+			li:first-child {
+				margin-left: 0px !important;
+			}
 			li.collection-list__item {
-				width: 350px !important;
 				.card__inner {
 					height: 500px;
+					// width: 300px;
 					.card__media {
 						.media.media--transparent {
 							display: inline-block;
-							overflow: hidden; /* Ensures the gradient stays within the container */
+							overflow: unset; /* Ensures the gradient stays within the container */
 							&:after {
 								content: "";
 								position: absolute;
@@ -71,13 +79,29 @@
 								background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); /* Subtle black gradient */
 								pointer-events: none; /* Ensures it doesn't interfere with hover effects */
 							}
+							@media screen and (max-width: 480px){
+								overflow: hidden;
+							}
 						}
 					}
 				}
 			}
+			@media screen and (max-width: 480px){
+				gap: 15px;
+				li.collection-list__item {
+					.card__inner {
+						width: 360px;
+					}
+				}
+			}
 		}
-		.slider-buttons {
-			display: none;
+		// .slider-buttons {
+		// 	display: none;
+		// }
+		@media screen and (max-width: 480px) {
+			.slider-buttons {
+				display: none;
+			}
 		}
 	}
 }

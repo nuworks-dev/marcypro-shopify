@@ -18,6 +18,9 @@
   text-align: left;
   color: #231F20;
 }
+#nw-featured-collection .slider-buttons {
+  display: none;
+}
 #nw-featured-collection .card__heading.h5 {
   font-family: var(--font-body-family);
   font-size: 16px;
@@ -78,11 +81,10 @@
 @media screen and (max-width: 768px) {
   #nw-featured-collection slider-component ul {
     display: flex;
-    gap: 16px;
+    gap: 10px;
   }
   #nw-featured-collection slider-component ul li {
     padding: 16px;
-    width: 300px;
     border: 1px solid #E4E4E4;
     border-radius: 12px;
   }

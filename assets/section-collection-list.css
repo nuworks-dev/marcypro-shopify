@@ -60,7 +60,6 @@
 }
 .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner {
   height: 500px;
-  width: 300px;
 }
 .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner .card__media .media.media--transparent {
   display: inline-block;
