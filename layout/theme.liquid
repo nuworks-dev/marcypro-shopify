@@ -248,12 +248,38 @@
         font-weight: var(--font-body-weight);
       }
 
+	  .horizontal-mega-menu>li>a>.mm-angle-down {
+		display: none !important;
+	  }
+
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;
         }
       }
     {% endstyle %}
+
+	{% if template.name == "index" %} 
+	  <style>
+		sticky-header.gradient {
+			border-bottom: 0px;
+		}
+	  </style>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const header = document.querySelector("sticky-header.gradient");
+				if (header) {
+					window.addEventListener("scroll", function () {
+						if (window.scrollY > 50) {
+							header.style.borderBottom = "1px solid rgba(0, 0, 0, 0.1)"; // Adjust as needed
+						} else {
+							header.style.borderBottom = "0px";
+						}
+					});
+				}
+			});
+		</script>
+	{% endif %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
