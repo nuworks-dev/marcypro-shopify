@@ -141,11 +141,97 @@
     endif
   -%}
 
+	{% if template != 'index' %}
+		<style>
+			{% comment %} #MainContent {
+				padding-top: 150px;
+			} {% endcomment %}
+		</style>
+	{% endif %}
+
+	{% if template == 'index' or template == 'collection' or template == 'blog'  %}
+
+		<style>
+			#MainContent {
+				padding-top: 0px;
+			}
+		</style>
+
+		<script src="{{ 'nw-custom.js' | asset_url }}" defer></script>
+
+		<style>
+
+			.shopify-section-group-header-group.announcement-bar-section {
+				height: 46px;
+			}
+			
+			.header-wrapper {
+				position: absolute;
+				width: 100%;
+				background: transparent;
+				transition: background 0.3s ease; /* Smooth transition */
+			}
+			.header-wrapper.scrolled {
+				background: #fff; /* Set your non-transparent background color */
+				position: fixed; /* Optional: to keep the header fixed on scroll */
+				top: 0;
+				z-index: 1000;
+			}
+			.header-wrapper .header {
+				margin-top: 0px; /* 20px standard */
+			}
+		</style>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const header = document.querySelector(".header-wrapper");
+				const logo = document.querySelector(".header__heading-logo");
+			
+				if (!header || !logo) return; // Prevent errors if elements are missing
+			
+				const originalLogo = logo.src;
+				const alternateLogo = logo.dataset.altLogo;
+				let lastScrollY = 0;
+			
+				function handleScroll() {
+					const scrolled = window.scrollY > 20;
+					
+					// Only update if there's a change (prevents unnecessary reflows)
+					if (scrolled !== lastScrollY) {
+						header.classList.toggle("scrolled", scrolled);
+						logo.src = scrolled ? alternateLogo : originalLogo;
+						lastScrollY = scrolled;
+					}
+					
+					requestAnimationFrame(handleScroll);
+				}
+			
+				// Start listening for scroll events efficiently
+				requestAnimationFrame(handleScroll);
+
+				let items = document.querySelector(".header__inline-menu").querySelectorAll("details");
+				console.log(items)
+				items.forEach(item => {
+					item.addEventListener("mouseover", () => {
+					item.setAttribute("open", true);
+					item.querySelector("ul").addEventListener("mouseleave", () => {
+						item.removeAttribute("open");
+					});
+					item.addEventListener("mouseleave", () => {
+					item.removeAttribute("open");
+					});
+				});
+				
+				});
+			});
+		</script>
+
+	{% endif %}
+
   
 	{% content_for 'blocks' %}
 
 
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="nw-template-name-{{ template.name }} header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
 	{%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
@@ -552,6 +638,19 @@
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
     },
+	{
+		"type": "color",
+		"id": "static_color",
+		"default": "#fff",
+		"label": "Header Background Color"
+	},
+	{
+		"type": "color",
+		"id": "static_child_color",
+		"default": "#fff",
+		"label": "Subpages Header Color"
+	},
+
     {
       "type": "header",
       "content": "t:sections.header.settings.header__1.content"
