@@ -305,7 +305,7 @@
         "retailers_block_ExC3DM"
       ],
       "settings": {
-        "columns": 5,
+        "columns": 4,
         "mobile_columns": 2,
         "gap": 30,
         "retailer_image_fit": "contain"
