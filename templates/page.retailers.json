@@ -193,6 +193,13 @@
             "imageurl": "https://www.playitagainsports.com/Locations"
           }
         },
+        "retailers_block_WhnhFA": {
+          "type": "retailers_block",
+          "settings": {
+            "imagepicker": "shopify://shop_images/image-19.png",
+            "imageurl": "https://shop.pricesmart.com/"
+          }
+        },
         "retailers_block_H8WLkh": {
           "type": "retailers_block",
           "settings": {
@@ -292,6 +299,7 @@
         "retailers_block_tFCQCL",
         "retailers_block_7fUfJw",
         "retailers_block_ria3gh",
+        "retailers_block_WhnhFA",
         "retailers_block_H8WLkh",
         "retailers_block_weL6qR",
         "retailers_block_MHrT3j",
