@@ -19,6 +19,7 @@
   max-width: unset;
   padding-bottom: 0px;
   height: 95vh;
+  min-height: 800px;
 }
 
 .nw-banner-image .banner__box {

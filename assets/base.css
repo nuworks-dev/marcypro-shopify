@@ -2413,6 +2413,7 @@
 	  overflow-y: auto; /* Enable scrolling if content exceeds height */
 	  display: flex;
 	  flex-direction: column; /* Stack items vertically */
+	  z-index: 9999;
   }
   @media screen and (max-width: 749px) {
 	.header--has-app {
@@ -3685,7 +3686,6 @@
   details[open]>.header__menu-item .icon-caret {
 	  transform: rotate(90deg);
   }
-  
   
   
   
