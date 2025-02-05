@@ -307,7 +307,7 @@
       "settings": {
         "columns": 4,
         "mobile_columns": 2,
-        "gap": 30,
+        "gap": 50,
         "retailer_image_fit": "contain"
       }
     }
