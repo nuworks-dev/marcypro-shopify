@@ -20,17 +20,17 @@
             display: grid;
             grid-template-columns: repeat({{ section.settings.columns }}, 1fr);
             gap: {{ section.settings.gap }}px;" data-mobile-columns="{{ section.settings.mobile_columns }}">
-            {% for block in section.blocks %}
-                {% if block.type == 'retailers_block' %}
-                    {% if block.settings.imagepicker %}
-                        <a href="{{ block.settings.imageurl }}" target="_blank">
-                            {{ block.settings.imagepicker | image_url: width: 500, height: 450 | image_tag: class: "full-image-block" }}
-                        </a>
-                    {% endif %}
-                {% endif %}
-            {% endfor %}
+           
+			{% for retailer in shop.metaobjects.retailers.values %}
+				<a href="{{ retailer.retailer_link.value.url }}" target="_blank">
+					{{ retailer.retailer_image | image_url: width: 500, height: 450 | image_tag: class: "full-image-block" }}
+				</a>
+			{% endfor %}		
+
         </div>
     </div>
+
+
 </div>
 
 <script>
@@ -90,24 +90,7 @@
 			"label": "Image Fit"
 		}
     ],
-    "blocks": [
-        {
-            "type": "retailers_block",
-            "name": "Retailers Block",
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "imagepicker",
-                    "label": "Image Picker"
-                },
-                {
-                    "type": "url",
-                    "id": "imageurl",
-                    "label": "Image URL"
-                }
-            ]
-        }
-    ],
+    "blocks": [],
     "presets": [
         {
             "name": "NW Retailers List"
