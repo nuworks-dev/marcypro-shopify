@@ -9,18 +9,20 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Black-logo_black-logo.png",
-    "logo_width": 90,
+    "logo": "shopify://shop_images/Logo_10f3ddb3-75b9-48d9-b832-810ed956c9ed.png",
+    "logo_alternate": "shopify://shop_images/Black-logo_black-logo.png",
+    "logo_width": 190,
+    "favicon": "shopify://shop_images/MarcyPro_Favicon_Logo.png",
     "type_header_font": "montserrat_n4",
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "none",
+    "animations_hover_elements": "default",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 40,
@@ -45,7 +47,7 @@
     "card_style": "standard",
     "card_image_padding": 0,
     "card_text_alignment": "left",
-    "card_color_scheme": "scheme-2",
+    "card_color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
     "card_border_thickness": 0,
     "card_border_opacity": 10,
     "card_corner_radius": 0,
@@ -56,10 +58,10 @@
     "collection_card_style": "standard",
     "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
-    "collection_card_color_scheme": "scheme-2",
+    "collection_card_color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
     "collection_card_border_thickness": 0,
     "collection_card_border_opacity": 10,
-    "collection_card_corner_radius": 0,
+    "collection_card_corner_radius": 8,
     "collection_card_shadow_opacity": 0,
     "collection_card_shadow_horizontal_offset": 0,
     "collection_card_shadow_vertical_offset": 4,
@@ -109,11 +111,11 @@
     "brand_headline": "",
     "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "",
-    "social_instagram_link": "",
-    "social_youtube_link": "",
-    "social_tiktok_link": "",
-    "social_twitter_link": "",
+    "social_facebook_link": "https://www.facebook.com/mymarcyfitness/",
+    "social_instagram_link": "https://www.facebook.com/mymarcyfitness/",
+    "social_youtube_link": "https://www.youtube.com/marcypro",
+    "social_tiktok_link": "https://www.tiktok.com/@mymarcyfitness",
+    "social_twitter_link": "https://x.com/marcyfitness",
     "social_snapchat_link": "",
     "social_pinterest_link": "",
     "social_tumblr_link": "",
@@ -121,12 +123,12 @@
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "currency_code_enabled": true,
+    "currency_code_enabled": false,
     "cart_type": "drawer",
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "cart_color_scheme": "scheme-1",
+    "cart_color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -142,6 +144,23 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "1232542678405107163": {
+        "type": "shopify://apps/instafeed/blocks/head-block/c447db20-095d-4a10-9725-b5977662c9d5",
+        "disabled": false,
+        "settings": {}
+      },
+      "9901917232353999808": {
+        "type": "shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -207,6 +226,17 @@
           "button_label": "#ffffff",
           "secondary_button_label": "#c02127",
           "shadow": "#c02127"
+        }
+      },
+      "scheme-50f88799-722f-44c4-879c-3212aa4b3bc9": {
+        "settings": {
+          "background": "#231f20",
+          "background_gradient": "",
+          "text": "#f7f4ed",
+          "button": "#f7f4ed",
+          "button_label": "#231f20",
+          "secondary_button_label": "#f7f4ed",
+          "shadow": "#121212"
         }
       }
     }

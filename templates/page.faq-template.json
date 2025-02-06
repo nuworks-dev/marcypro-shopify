@@ -1,0 +1,438 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "collapsible_content_jqxyyr": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_BtiX7e": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I Request a Missing / Damaged Part?",
+            "icon": "none",
+            "row_content": "<p>To order replacement parts (warranty & non-warranty,) please click <a href=\"https://www.marcypro.com/parts\" target=\"_blank\">PARTS</a> at the top of our homepage. There will be instructions on how to submit your request for parts.<br/></p><p>Our trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_R6BTnF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I find a Digital Version of my Owner's and Assembly Manuals?",
+            "icon": "none",
+            "row_content": "<p>Owner and Assembly manuals can be downloaded by visiting our <a href=\"https://www.marcypro.com/product-manuals\" target=\"_blank\">Product Manual Page</a>.</p><p>If you are unable to locate your model from our selection, please contact our customer service department <a href=\"https://marcypro.com/support\" target=\"_blank\">via ticket system</a> and they will be happy to assist.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9w7etK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I have allergic reactions to Latex products. Do your products use a Latex material on their seat pads?",
+            "icon": "none",
+            "row_content": "<p>No, all the seats on our Home Gyms and Weight Benches are constructed from high-density foam rubber and top grade vinyl.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9UnqYK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the details regarding your 2-year limited warranty?",
+            "icon": "none",
+            "row_content": "<p><strong>IMPEX® INC. Manufactured Products Limited 2-Year Warranty</strong></p><h2></h2><p>IMPEX Inc. (\"IMPEX® \") warrants it's products to be free from defects in workmanship and material, under normal use and service conditions, for a period of two years on the Frame from the date of purchase. This warranty extends only to the original purchaser. IMPEX's obligation under this Warranty is limited to replacing or repairing, at IMPEX's option.</p><p>All returns must be pre-authorized by IMPEX. Pre-authorization may be obtained by calling IMPEX Customer Service Department at 1-800-999-8899 or opening a ticket at https://marcypro.freshdesk.com/support/tickets/new. All freights for products return to IMPEX must be prepaid by the customer. This warranty does not extend to any product or damage to a product caused by or attributable to freight damage, abuse, misuse, improper or abnormal usage or repairs not provided by an IMPEX authorized service center or for products used for commercial or rental purposes. No other warranty beyond that specifically set forth above is authorized by IMPEX</p><p>IMPEX is not responsible or liable for indirect, special or consequential damages arising out of or in connection with the use or performance of the product or other damages with respect to any economic loss, loss of property, loss of revenues or profits, loss of enjoyments or use, costs of removal, installation or other consequential damages or whatsoever natures. Some states do not allow the exclusion or limitation of incidental or consequential damages. Accordingly, the above limitation may not apply to you.</p><p>The warranty extended hereunder is in lieu of any and all other warranties and any implied warranties of merchantability or fitness for a particular purpose is limited in its scope and duration to the terms set forth herein. Some states do not allow limitations on how long an implied warranty lasts. Accordingly, the above limitation may not apply to you.</p><p>This warranty gives you specific legal right. You may also have other rights which vary from state to state. Register your product online at www.impex-fitness.com or www.marcypro.com</p><p><strong>IMPEX® INC.</strong></p><p><strong>2801 S. Towne Ave.</strong></p><p><strong>Pomona, CA 91766</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_3eCUPA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do your products require assembly?",
+            "icon": "none",
+            "row_content": "<p>Yes, virtually all products on <a href=\"https://marcypro.com/\" target=\"_blank\">MarcyPro.com</a> require assembly with very few exceptions.</p><p>You can follow the simple step-by-step instruction manual that was provided with your product.</p><p>Some basic tools may be required to assemble your product. MarcyPro.com does not provide a technician to assemble products.</p><p>To download your specific Owners Manual or Assembly Manual, see the <a href=\"https://www.marcypro.com/product-manuals\" target=\"_blank\">Product Manual Page</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_fkwqYh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do Marcy products require lubrication / grease?",
+            "icon": "none",
+            "row_content": "<p>Adding oil based or silicone based lubricant to cables and all moving parts of our smith machines / home gyms will ensure a longer lifetime for those parts.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_BtiX7e",
+        "collapsible_row_R6BTnF",
+        "collapsible_row_9w7etK",
+        "collapsible_row_9UnqYK",
+        "collapsible_row_3eCUPA",
+        "collapsible_row_fkwqYh"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "<strong>General</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_LUqT8h": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_ynBwpd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Updating an Order, Cancelling Orders, Missing Part, Order Issues, & Order Status",
+            "icon": "none",
+            "row_content": "<p><strong>For any issues with your order</strong> - please reach out to us via live chat on Marcypro.com, via ticket at <a href=\"http://marcypro.com/support\" target=\"_blank\">marcypro.com/support</a>, or via message if you have a Marcypro.com account. Issues include:</p><p>Updating a Shipping Address</p><p>Updating a Phone Number</p><p>General Order Questions</p><p></p><p></p><p><br/></p><p><strong>Order</strong> <strong>Status </strong>– If you created a Marcypro.com account, please log in to see your order status. Otherwise, please reach out to us via Live Chat during business hours to receive an update.</p><p><br/></p><p><strong>Canceling an order</strong> – If the order is in transit or the order is cancelled due to buyer’s remorse (which includes “does not fit,”) we charge a 15% restocking fee and the cost of shipping both ways.<br/></p><p>To start your cancellation, please reach out to us via live chat on Marcypro.com, via ticket at marcypro.com/support, or via message if you have a Marcypro.com account.</p><p><br/></p><p><strong>Missing Part With 2 year-Warranty</strong> – If your order is missing a part, the fastest way to get a replacement part free of charge under warranty would be to fill out the following form: <a href=\"https://www.marcypro.com/replacement-parts-request\" target=\"_blank\">https://www.marcypro.com/replacement-parts-request</a><br/></p><p>Please allow 1 - 2 business days for a representative to respond.<br/></p><p><br/></p><p><strong>Missing Part Not under Warranty</strong> - If you are not under warranty, please request your part at <a href=\"https://marcypro.freshdesk.com/support/tickets/new\" target=\"_blank\">https://marcypro.freshdesk.com/support/tickets/new</a> and a customer rep will reach out to you with availability / pricing</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hj3HCB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When will an item Restock? Can I be notified? Can I Pre-Order?",
+            "icon": "none",
+            "row_content": "<p><strong>When will an item restock? – </strong>Restock dates vary heavily from item to item. To see if we have a restock window for an item, please reach out to us via Live Chat.</p><p><strong>Can I be notified when an item restock? – </strong>Please reach out to us via live chat with your e-mail and the model number you are interested in to be added to an in-stock notification list.</p><p><strong>Can I Pre-Order an Item? – </strong>Please accept our sincerest apologies, we are currently unable to accept pre-orders. We apologize for any inconvenience this may cause.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kmzJEa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "When will my Order Ship? How does the Shipping Process work?",
+            "icon": "none",
+            "row_content": "<p>Insert image</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4T8NRT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Orders Shipped Via UPS / FedEx / USPS",
+            "icon": "none",
+            "row_content": "<p><strong>Only Received one box for a multi-box shipment -</strong> If you purchased multiple items that shipped via UPS, please use your tracking number on <a href=\"https://www.ups.com/us/en/Home.page\" target=\"_blank\">UPS.com</a> – once the number is tracked, please scroll to the bottom of that page to see your additional tracking numbers.</p><p>Please note, models shipping in multiple boxes may arrive on separate dates.<br/></p><p><strong>UPS Tracking Status is “Damaged” or “Issue Reported” –</strong> contact us if you see this and we would be happy to reach out to UPS on your behalf; reaching out to our team instead of UPS allows us determine the issue with your order and address it quickly.</p><p><br/></p><p><strong>How do I track my order? – </strong>Once your order is shipped, the tracking number will be sent to your e-mail automatically through our system along with a link to your carrier’s website tracking page.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qgd9rj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Orders Shipped via LTL Freight Carrier",
+            "icon": "none",
+            "row_content": "<p><strong>Does my order ship freight?</strong> – Our large items ship via LTL freight carrier. Once the order is picked up, our system will e-mail the tracking number and a link to the LTL freight carrier's tracking website.</p><p>Anything other than UPS, FedEx, or USPS ships via LTL Freight Carrier and will be delivered curbside on a pallet.</p><p>The following models ship via LTL freight on a pallet due to the size of their boxes: MD-9010G, SM-4033, SM-4008, SM-4903, MKM-81010</p><p><br/></p><p><strong>Missing Box</strong> – If a box is missing from your LTL freight order, please reach out to us via live chat on Marcypro.com, via ticket at <a href=\"http://marcypro.com/support\" target=\"_blank\">marcypro.com/support</a>, or via message if you have a Marcypro.com account.</p><p>Often, the box is just left behind at your local terminal and we can contact the freight company to retrieve it quickly.</p><p><br/></p><p><strong>My freight order has an estimated delivery date</strong> – Freight orders will not deliver until the freight company calls you to schedule a delivery date. The estimated delivery date on freight tracking websites is the estimated date the unit will reach your local freight terminal.</p><p><br/></p><p><strong>How do I track my order?</strong> – Once your order is shipped, the tracking number will be sent to your e-mail automatically through our system along with a link to your carrier’s website tracking page.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BUGwhT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you Offer Assembly? How do I Register / Activate my Warranty?",
+            "icon": "none",
+            "row_content": "<p><strong>Does MarcyPro offer assembly? –</strong> We sincerely apologize, we do not offer set up / assembly of our products.</p><p>If you decide to use a third party to assemble your item, please refrain from scheduling an assembler until after you receive your product in order to avoid any scheduling mishaps</p><p><strong>Register / Activate Warranty –</strong> To register your product and activate your 2-year limited warranty, please follow this link and fill out the registration form: <a href=\"https://www.marcypro.com/product-registration\" target=\"_blank\">https://www.marcypro.com/product-registration</a></p><p>Can't see the form? Try turning off your ad blocker or using an alternative web browser.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wzR8wd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I purchased an item that is now out of stock, will my order still ship?",
+            "icon": "none",
+            "row_content": "<p><strong>I purchased an item that is now out of stock, will my order still ship? – </strong>If you placed an order and have an order number, the out of stock notification does not apply to you.</p><p>The out of stock notification on product listings only applies to those who have not made a purchase yet.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Hhk8bL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Problems Checking Out on MarcyPro.com",
+            "icon": "none",
+            "row_content": "<p><strong>I Purchased an Item, but did not Receive an Order Number</strong></p><p>If you placed an order but did not receive an order number in your e-mail, it is likely the transaction did not actually go through and the charge you are seeing is a hold.</p><p></p><p>If this occurs, we recommend reaching out to us via live chat on Marcypro.com during business hours to confirm if the purchase went through in our system.</p><p><strong>I had an item in my cart but could not complete checkout, how do I pay for the item in my cart?</strong></p><p>We sincerely apologize, for security reasons, we are unable to guarantee items that are in your cart. An item is not guaranteed and secured until checkout is completed.</p><p><strong>The website is not allowing me to complete checkout</strong></p><p>When this occurs, the website should provide the reason for not completing the transaction.</p><p>Please reach out via Live Chat during business hours with the reason provided by the website and they will be happy to help</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NKMkUn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is Price Matching Available? How Can I find out about Upcoming Promotions?",
+            "icon": "none",
+            "row_content": "<p><strong>Is price matching available?</strong></p><p>Please accept our sincerest apologies, we do not match pricing.</p><p><br/></p><p><strong>How can I find out about any upcoming sales on Marcypro.com?</strong></p><p><a href=\"https://marcypro.us10.list-manage.com/subscribe?u=c1c63e8b7fa8ce993f6e244f9&id=32b914aa72\" target=\"_blank\">Sign up for the MarcyPro.com newsletter</a> and receive updates contests, future promotions, fitness tips, and more.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_EiB8zW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you ship to my Country?",
+            "icon": "none",
+            "row_content": "<p><strong>For item orders</strong>, we only ship within the Contiguous United States (we do not ship to Hawaii, Alaska, military bases, and U.S. territories / Possessions) and we do not ship internationally.</p><p><strong>For Parts orders, </strong>we ship to Mexico and Canada when the order is placed through our ticket system at <a href=\"https://marcypro.com/support\" target=\"_blank\">https://marcypro.com/support</a></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_ynBwpd",
+        "collapsible_row_hj3HCB",
+        "collapsible_row_kmzJEa",
+        "collapsible_row_4T8NRT",
+        "collapsible_row_qgd9rj",
+        "collapsible_row_BUGwhT",
+        "collapsible_row_wzR8wd",
+        "collapsible_row_Hhk8bL",
+        "collapsible_row_NKMkUn",
+        "collapsible_row_EiB8zW"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "<strong>ORDERS</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_NKJPeJ": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_c77itz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I adjust the cable tension or slack on my Home Gym?",
+            "icon": "none",
+            "row_content": "<p>Most Home Gyms have an adjustable Double Floating Pulley Bracket within the cable routing of the workout machine.</p><p>You will need to identify this part on your <a href=\"https://www.marcypro.com/product-manuals\" target=\"_blank\">assembly manual</a> as it may vary from one machine to the next. Re-position the lower pulley on the Double Floating Pulley Bracket by moving the pulley up or down.</p><p>To increase cable tension, move the lower pulley up to the next vacant hole position. To add more slack to the cable, move the lower pulley down to the next vacant hole position.</p><p>For additional assistance, please reach out to our customer service team via ticket system: <a href=\"https://marcypro.com/support\" target=\"_blank\">marcypro.com/support</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wkTTHk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the small pin and lock used for? (Select Stack Home Gym Models)",
+            "icon": "none",
+            "row_content": "<p>The small pin and lock included with our stack home gyms is used to lock the weights plates in place. (Image below.)</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_c77itz",
+        "collapsible_row_wkTTHk"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_aLbTJi": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_6yM8ry": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do you connect the tension cables together on my exercise bike?",
+            "icon": "none",
+            "row_content": "<p>Please click the following link for instructions on how to connect the upper tension wire to the lower tension wire:<a href=\"https://www.youtube.com/watch?v=l_69QARxnzg\" target=\"_blank\">https://www.youtube.com/watch?v=l_69QARxnzg</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_8U6cCc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is there a guide for removing the crank from your Stationary Bikes?",
+            "icon": "none",
+            "row_content": "<p>For instructions on how to use the crank remover tool please download the guide: <a href=\"https://www.marcypro.com/content/Product_Manuals/Exercise_Bikes/Crank%20Removal.pdf\" target=\"_blank\">Crank Removal Guide</a>.</p><p>Additionally we have produced a video illustrating the removal process to accompany our Crank Removal Guide. Please visit this link: <a href=\"https://www.youtube.com/watch?v=3cueGTBhrC8\" target=\"_blank\">Pedal Removal Instructional Video</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CAEwcL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I select a mode on my bike?",
+            "icon": "none",
+            "row_content": "<p>For most models, press the mode key until you reach your desired mode.</p><p>Then, press the set key to set the desired mode.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_CttVke": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I install the pedals on my bike?",
+            "icon": "none",
+            "row_content": "<p>On most models, the right pedal can be mounted on to the crank arm by twisting the pedal clockwise.</p><p>The left pedal can be mounted on to the crank arm by twisting the pedal counter clockwise</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_X88Dp6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "The Tension cable for my bike is too short, how do I connect it?",
+            "icon": "none",
+            "row_content": "<p>Pull up hard on the cable to get it to release and sit on the bracket. You will not damage the tension cable (it is very strong.)</p><p>Though the computer will work, the bike will not have any tension if the tension cables are not connected.</p><p>If there is a zip tie/ rubber band on parts 11 and 12 please carefully remove it.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_kJnGyE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I reduce the tension on my bike?",
+            "icon": "none",
+            "row_content": "<p>Remove front post (part# 4) from main frame.</p><p></p><p>On the lower tension cable, turn the nut downward (you can find the nut right below the L shape connector.) Make sure that the L shape connector is flush with the nut.</p><p></p><p>Please see picture below.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_6yM8ry",
+        "collapsible_row_8U6cCc",
+        "collapsible_row_CAEwcL",
+        "collapsible_row_CttVke",
+        "collapsible_row_X88Dp6",
+        "collapsible_row_kJnGyE"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Exercise Bike Troubleshooting</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "nw_collapsible_content_EmcbdC": {
+      "type": "nw-collapsible-content",
+      "blocks": {
+        "collapsible_row_4XLXfz": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I Request a Missing / Damaged Part?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nTo order replacement parts (warranty & non-warranty,) please click <a style=\"color:red;\"  href=\"https://www.marcypro.com/parts\"> PARTS </a> at the top of our homepage. There will be instructions on how to submit your request for parts.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">Our trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9TRhV4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Where can I find a Digital Version of my Owner's and Assembly Manuals?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nOwner and Assembly manuals can be downloaded by visiting our <a style=\"color:red\" href=\"https://www.marcypro.com/product-manuals\">Product Manual Page.</a>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">\nIf you are unable to locate your model from our selection, please contact our customer service department <a style=\"color:red\" href=\"https://marcypro.com/support\">via ticket system</a> and they will be happy to assist</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_iRJkKU": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I have allergic reactions to Latex products. Do your products use a Latex material on their seat pads?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nNo, all the seats on our Home Gyms and Weight Benches are constructed from high-density foam rubber and top grade vinyl.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_p8ijY3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are the details regarding your 2-year limited warranty?",
+            "icon": "none",
+            "row_content": "<p style=\"text-align: center; font-size: 15px; margin-top: 10px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>IMPEX® INC. Manufactured Products Limited 2-Year Warranty</strong>\n</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">\nIMPEX Inc. (\"IMPEX® \") warrants it's products to be free from defects in workmanship and material, under normal use and service conditions, for a period of two years on the Frame from the date of purchase. This warranty extends only to the original purchaser. IMPEX's obligation under this Warranty is limited to replacing or repairing, at IMPEX's option.</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">\nAll returns must be pre-authorized by IMPEX. Pre-authorization may be obtained by calling IMPEX Customer Service Department at 1-800-999-8899 or opening a ticket at https://marcypro.freshdesk.com/support/tickets/new. All freights for products return to IMPEX must be prepaid by the customer. This warranty does not extend to any product or damage to a product caused by or attributable to freight damage, abuse, misuse, improper or abnormal usage or repairs not provided by an IMPEX authorized service center or for products used for commercial or rental purposes. No other warranty beyond that specifically set forth above is authorized by IMPEX</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">IMPEX is not responsible or liable for indirect, special or consequential damages arising out of or in connection with the use or performance of the product or other damages with respect to any economic loss, loss of property, loss of revenues or profits, loss of enjoyments or use, costs of removal, installation or other consequential damages or whatsoever natures. Some states do not allow the exclusion or limitation of incidental or consequential damages. Accordingly, the above limitation may not apply to you.</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px; overflow-wrap: break-word; hyphens: auto;\">The warranty extended hereunder is in lieu of any and all other warranties and any implied warranties of merchantability or fitness for a particular purpose is limited in its scope and duration to the terms set forth herein. Some states do not allow limitations on how long an implied warranty lasts. Accordingly, the above limitation may not apply to you.</p>\n\n<p style=\"font-size: 15px;   margin-top: 35px;\noverflow-wrap: break-word; hyphens: auto;\">This warranty gives you specific legal right. You may also have other rights which vary from state to state. Register your product online at www.impex-fitness.com or www.marcypro.com</p>\n\n<p style=\"text-align: center;   margin-top: 35px; font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>IMPEX® INC.<br>\n2801 S. Towne Ave.<br>\nPomona, CA 91766\n</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_gq7GRJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do your products require assembly?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\nYes, virtually all products on <a style=\"color:red;\"  href=\"https://marcypro.com/\">MarcyPro.com</a> require assembly with very few exceptions.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">\nYou can follow the simple step-by-step instruction manual that was provided with your product.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">Some basic tools may be required to assemble your product. MarcyPro.com does not provide a technician to assemble products.</p>\n\n<p style=\"font-size: 15px;   margin-top: 20px;\noverflow-wrap: break-word; hyphens: auto;\">\nTo download your specific Owners Manual or Assembly Manual, see the <a style=\"color:red\" href=\"https://www.marcypro.com/product-manuals\">Product Manual Page.</a>",
+            "page": ""
+          }
+        },
+        "collapsible_row_74xTVm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do Marcy products require lubrication / grease?",
+            "icon": "none",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">Adding oil based or silicone based lubricant to cables and all moving parts of our smith machines / home gyms will ensure a longer lifetime for those parts.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4XLXfz",
+        "collapsible_row_9TRhV4",
+        "collapsible_row_iRJkKU",
+        "collapsible_row_p8ijY3",
+        "collapsible_row_gq7GRJ",
+        "collapsible_row_74xTVm"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "<strong>GENERAL</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_content_jqxyyr",
+    "collapsible_content_LUqT8h",
+    "collapsible_content_NKJPeJ",
+    "collapsible_content_aLbTJi",
+    "nw_collapsible_content_EmcbdC"
+  ]
+}

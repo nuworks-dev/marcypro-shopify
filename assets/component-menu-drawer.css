@@ -86,6 +86,11 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__navigation {
   padding: 3rem 0;
+  padding-top: 10rem;
+}
+
+#link-shop-all, .menu-drawer__submenu {
+	padding-top: 8rem;
 }
 
 .menu-drawer__inner-submenu {
@@ -150,17 +155,21 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__close-button {
-  margin-top: 1.5rem;
-  padding: 1.2rem 2.6rem 1.2rem 3rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  font-size: 1.4rem;
-  width: 100%;
-  background-color: transparent;
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  text-align: left;
+	margin-top: 1.5rem;
+	padding: 1.2rem 2.6rem 1.2rem 3rem;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	font-size: 1.4rem;
+	width: 100%;
+	background-color: transparent;
+	font-family: var(--font-body-family);
+	font-style: var(--font-body-style);
+	text-align: left;
+
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 32px;
 }
 
 .menu-drawer__close-button .svg-wrapper {

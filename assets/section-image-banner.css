@@ -23,6 +23,9 @@
   .banner--content-align-mobile-left .banner__box {
     text-align: left;
   }
+  .nw-desktop-img-1 {
+	display: none;
+  }
 }
 
 @media only screen and (min-width: 750px) {
@@ -381,6 +384,10 @@
   .banner--mobile-bottom .banner__media::after {
     display: none;
   }
+}
+
+.banner__media img {
+	object-position: top;
 }
 
 .banner::after,

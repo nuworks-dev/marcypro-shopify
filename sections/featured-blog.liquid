@@ -24,7 +24,7 @@
     assign posts_displayed = section.settings.post_limit
   endif
 -%}
-<div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
+<div class="nw-blog-featured blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
   <div class="page-width-desktop isolate{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
@@ -37,6 +37,10 @@
         >
           {{ section.settings.heading }}
         </h2>
+
+		{% if section.settings.description %}
+			<div id="blog-subtitle">{{ section.settings.description | newline_to_br }}</div>
+		{% endif %}
 
         {%- if section.settings.blog != blank
           and section.settings.show_view_all
@@ -75,6 +79,7 @@
                 show_image: section.settings.show_image,
                 show_date: section.settings.show_date,
                 show_author: section.settings.show_author,
+				show_tag: section.settings.nw_show_tag,
                 show_excerpt: true
               %}
             </li>
@@ -204,6 +209,12 @@
       "default": "t:sections.featured-blog.settings.heading.default",
       "label": "t:sections.featured-blog.settings.heading.label"
     },
+	{
+		"type": "textarea",
+		"id": "description",
+		"default": "Your description here",
+		"label": "Description"
+	},
     {
       "type": "select",
       "id": "heading_size",
@@ -262,6 +273,12 @@
       "info": "t:sections.all.colors.has_cards_info",
       "default": "scheme-1"
     },
+	{
+		"type": "checkbox",
+		"id": "nw_show_tag",
+		"label": "Show Tag",
+		"default": false
+	},
     {
       "type": "checkbox",
       "id": "show_image",
