@@ -9,38 +9,10 @@
  */
 {
   "sections": {
-    "nw_image_banner_VAXFLg": {
-      "type": "nw-image-banner",
-      "blocks": {
-        "heading_4iyeyc": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_4iyeyc"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/20e2d7d5caece3175e9ecd4ae245394a.png",
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "main": {
       "type": "main-blog",
       "settings": {
-        "layout": "grid",
+        "layout": "collage",
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
@@ -51,7 +23,6 @@
     }
   },
   "order": [
-    "nw_image_banner_VAXFLg",
     "main"
   ]
 }
