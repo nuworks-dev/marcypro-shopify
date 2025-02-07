@@ -72,6 +72,7 @@
           endif
         -%}
         {%- for block in section.blocks -%}
+			{%- assign collection_thumbnail = block.settings.collection_list_item -%}  
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="collection-list__item grid__item{% if show_mobile_slider %} slider__slide{% endif %}{% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -80,6 +81,9 @@
               data-cascade
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
+
+			data-attr="{{ block.settings.metaobject }}"
+
           >
             {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
             {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
@@ -87,7 +91,8 @@
               card_collection: block.settings.collection,
               media_aspect_ratio: section.settings.image_ratio,
               columns: columns,
-              placeholder_image: placeholder_image
+              placeholder_image: placeholder_image,
+			  image: collection_thumbnail.collection_image
             %}
           </li>
         {%- endfor -%}
@@ -297,7 +302,13 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
-        }
+        },
+		{
+			"type": "metaobject",
+			"id": "collection_list_item",
+			"label": "Category",
+			"metaobject_type": "collection_thumbnail"
+		}
       ]
     }
   ],
