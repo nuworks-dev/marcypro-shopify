@@ -11,10 +11,19 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
         "color_scheme": "scheme-1"
+      }
+    },
+    "nw_main_collection_banner_cakUxg": {
+      "type": "nw-main-collection-banner",
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": true,
+        "color_scheme": ""
       }
     },
     "product-grid": {
@@ -30,7 +39,7 @@
         "show_rating": true,
         "quick_add": "standard",
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
@@ -40,6 +49,7 @@
   },
   "order": [
     "banner",
+    "nw_main_collection_banner_cakUxg",
     "product-grid"
   ]
 }
