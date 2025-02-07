@@ -64,43 +64,50 @@
         "featured_collection_aAQpN6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "home-gyms"
+            "collection": "home-gyms",
+            "collection_list_item": "home-gym"
           }
         },
         "featured_collection_RFN8VX": {
           "type": "featured_collection",
           "settings": {
-            "collection": "fitness-accessories"
+            "collection": "fitness-accessories",
+            "collection_list_item": "fitness-accessories"
           }
         },
         "featured_collection_e8dEDz": {
           "type": "featured_collection",
           "settings": {
-            "collection": "strength"
+            "collection": "strength",
+            "collection_list_item": "strength"
           }
         },
         "featured_collection_GyyVVe": {
           "type": "featured_collection",
           "settings": {
-            "collection": "cardio"
+            "collection": "cardio",
+            "collection_list_item": "cardio"
           }
         },
         "featured_collection_VB4ihT": {
           "type": "featured_collection",
           "settings": {
-            "collection": "outdoor"
+            "collection": "outdoor",
+            "collection_list_item": "outdoor"
           }
         },
         "featured_collection_ex7RiH": {
           "type": "featured_collection",
           "settings": {
-            "collection": "retired-products"
+            "collection": "retired-products",
+            "collection_list_item": "retired-products"
           }
         },
         "featured_collection_QkgyKW": {
           "type": "featured_collection",
           "settings": {
-            "collection": "weightlifting-accessories"
+            "collection": "weightlifting-accessories",
+            "collection_list_item": "weightlifting-accessories"
           }
         }
       },
