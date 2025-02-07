@@ -25,7 +25,7 @@
 {% if block.settings.utility_page_link %}
 	<div id="nw-collapsible-menu">
 		<a href="{{ block.settings.utility_page_link }}">
-			Track Order
+			{{ block.settings.utility_text_footer_linklist_title_test }}
 		</a>
 	</div>
 {% endif %}
@@ -78,7 +78,13 @@
 				"unit": "px",
 				"label": "Font Size",
 				"default": 16
-			}
+			},
+			{
+				"type": "text",
+				"id": "utility_text_footer_linklist_title_test",
+				"label": "Utility Label",
+				"default": "Quick links"
+			  }
 		],
 		"presets": [
 			{
