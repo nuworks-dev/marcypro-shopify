@@ -1,0 +1,113 @@
+{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+
+{% if template.name == 'collection' %}
+	<style>
+		.collection-hero__title {
+			color: #fff;
+			font-family: Montserrat;
+			font-size: 74px;
+			font-weight: 700;
+			line-height: 78px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	</style>
+{% endif %}
+
+{%- style -%}
+  .collection-hero {
+    position: relative;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* Ensure text is visible */
+  }
+
+  .collection-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+  }
+
+  .collection-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    .collection-hero {
+      min-height: 350px; /* Adjust height for mobile */
+    }
+  }
+{%- endstyle -%}
+
+<div 
+  class="nw-collection-banner collection-hero color-{{ section.settings.color_scheme }} gradient"
+  {% if section.settings.show_collection_image and collection.image %}
+    style="background-image: url('{{ collection.image | image_url: width: 2000 }}');"
+  {% endif %}
+>
+  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="collection-hero__text-wrapper">
+      <h1 class="collection-hero__title">
+        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        {{- collection.title | escape -}}
+      </h1>
+
+      {%- if section.settings.show_collection_description -%}
+        <div class="collection-hero__description rte">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+	"name": "NW Collection Banner",
+	"class": "section",
+	"disabled_on": {
+		"groups": ["header", "footer"]
+	},
+	"settings": [
+	{
+		"type": "paragraph",
+		"content": "t:sections.main-collection-banner.settings.paragraph.content"
+	},
+	{
+		"type": "checkbox",
+		"id": "show_collection_description",
+		"default": true,
+		"label": "t:sections.main-collection-banner.settings.show_collection_description.label"
+	},
+	{
+		"type": "checkbox",
+		"id": "show_collection_image",
+		"default": false,
+		"label": "t:sections.main-collection-banner.settings.show_collection_image.label",
+		"info": "t:sections.main-collection-banner.settings.show_collection_image.info"
+	},
+	{
+		"type": "color_scheme",
+		"id": "color_scheme",
+		"label": "t:sections.all.colors.label",
+		"default": "scheme-1"
+	}
+	],
+	"presets": [
+	{
+		"name": "NW Collection Banner"
+	}
+	]
+}
+{% endschema %}
+

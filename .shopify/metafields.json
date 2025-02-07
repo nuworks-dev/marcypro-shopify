@@ -1,5 +1,16 @@
 {
-  "article": [],
+  "article": [
+    {
+      "key": "thumbnail",
+      "namespace": "custom",
+      "name": "Thumbnail",
+      "description": "Thumbnail image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
   "blog": [],
   "brand": [],
   "collection": [],
