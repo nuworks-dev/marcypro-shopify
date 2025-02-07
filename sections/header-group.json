@@ -35,7 +35,6 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "show_line_separator": true,
-        "static_color": "rgba(0,0,0,0)",
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": true,
