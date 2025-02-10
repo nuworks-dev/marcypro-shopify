@@ -22,7 +22,8 @@
             "utility_font_color": "#f3f3f3",
             "utility_background_color": "#121212",
             "utility_text_alignment": "right",
-            "utility_font_size": 14
+            "utility_font_size": 14,
+            "utility_text_footer_linklist_title_test": "Quick links"
           }
         }
       },
@@ -39,8 +40,8 @@
         "static_child_color": "#ffffff",
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
-        "enable_country_selector": true,
-        "enable_language_selector": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
         "enable_customer_avatar": true,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
