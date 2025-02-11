@@ -23,7 +23,7 @@
             "utility_background_color": "#121212",
             "utility_text_alignment": "right",
             "utility_font_size": 14,
-            "utility_text_footer_linklist_title_test": "test label"
+            "utility_text_footer_linklist_title_test": "Track Order"
           }
         }
       },
@@ -36,8 +36,8 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "show_line_separator": true,
-        "static_color": "#fff",
-        "static_child_color": "#fff",
+        "static_color": "#ffffff",
+        "static_child_color": "#ffffff",
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": true,

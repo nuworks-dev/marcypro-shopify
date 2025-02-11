@@ -19,7 +19,38 @@
   "location": [],
   "market": [],
   "order": [],
-  "page": [],
+  "page": [
+    {
+      "key": "banner_image",
+      "namespace": "custom",
+      "name": "Banner Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "banner_title",
+      "namespace": "custom",
+      "name": "Banner Title",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "is_title_hide",
+      "namespace": "custom",
+      "name": "Is Title Hide",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    }
+  ],
   "product": [
     {
       "key": "color-pattern",
@@ -138,6 +169,16 @@
       "description": null,
       "type": {
         "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_video",
+      "namespace": "custom",
+      "name": "Product Video",
+      "description": "This is product video",
+      "type": {
+        "name": "file_reference",
         "category": "REFERENCE"
       }
     }
