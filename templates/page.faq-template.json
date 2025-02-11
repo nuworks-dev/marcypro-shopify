@@ -443,7 +443,7 @@
           "settings": {
             "heading": "When will an item Restock? Can I be notified? Can I Pre-Order?",
             "icon": "none",
-            "row_content": "<p style=\"font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>When will an item restock?</strong> – Restock dates vary heavily from item to item. To see if we have a restock window for an item, please reach out to us via Live Chat.</br></p>\n\n<br><p style=\"font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>Can I be notified when an item restock?</strong> – Please reach out to us via live chat with your e-mail and the model number you are interested in to be added to an in-stock notification list.</br></p>\n\n<br><p style=\"font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>Can I Pre-Order an Item?</strong> – Please accept our sincerest apologies, we are currently unable to accept pre-orders. We apologize for any inconvenience this may cause.</br></p>",
+            "row_content": "<p style=\"font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>When will an item restock?</strong> – Restock dates vary heavily from item to item. To see if we have a restock window for an item, please reach out to us via Live Chat.</br></p>\n\n<p style=\"font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>Can I be notified when an item restock?</strong> – Please reach out to us via live chat with your e-mail and the model number you are interested in to be added to an in-stock notification list.</p>\n\n<br><p style=\"font-size: 15px; overflow-wrap: break-word; hyphens: auto;\">\n<strong>Can I Pre-Order an Item?</strong> – Please accept our sincerest apologies, we are currently unable to accept pre-orders. We apologize for any inconvenience this may cause.</br></p>",
             "page": ""
           }
         },
@@ -459,9 +459,9 @@
         "collapsible_row_7bDVee": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Orders Shipped Via UPS / FedEx / USPS",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\n<strong>Only Received one box for a multi-box shipment</strong> - If you purchased multiple items that shipped via UPS, please use your tracking number on UPS.com – once the number is tracked, please scroll to the bottom of that page to see your additional tracking numbers.\n\nPlease note, models shipping in multiple boxes may arrive on separate dates.</p>\n\n<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\n<strong>UPS Tracking Status is “Damaged” or “Issue Reported”</strong> – contact us if you see this and we would be happy to reach out to UPS on your behalf; reaching out to our team instead of UPS allows us determine the issue with your order and address it quickly.</p>\n\n<p style=\"font-size: 15px;   margin-top: 10px;\noverflow-wrap: break-word; hyphens: auto;\">\n<strong>How do I track my order?</strong> – Once your order is shipped, the tracking number will be sent to your e-mail automatically through our system along with a link to your carrier’s website tracking page.</p>",
             "page": ""
           }
         },
