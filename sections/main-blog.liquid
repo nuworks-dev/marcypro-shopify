@@ -97,7 +97,7 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: unset;
-		gap: 40px;
+		gap: 15px;
 		margin-bottom: 60px;
 	}
 	ul#BlogTagFilter li {
@@ -113,11 +113,17 @@
 		font-size: 16px;
 		line-height: 19.5px;
 		color: #6F6F6F;
-		
 		border-radius: 0px;
+		padding: 10px 15px;
+		margin: 0px;
+		width: auto;
+		display: flex;
+		min-width: min-content;
+		min-height: min-content;
 	}
 	ul#BlogTagFilter li .button.active {
-		border-bottom: 2px solid red;
+		border-bottom: 4px solid #C02127;
+		color: #C02127;
 	}
 	ul#BlogTagFilter li .button:before,
 	ul#BlogTagFilter li .button:after {
@@ -132,6 +138,23 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 50px;
+	}
+
+	@media (max-width: 480px) {
+		.nw-main-blog .blog-articles {
+			grid-template-columns: repeat(1, minmax(0, 1fr)); /* 1 column for mobile */
+		}
+		ul#BlogTagFilter {
+			gap: 0px;
+			margin-left: 0px;
+			padding-left: 0px;
+		}
+		ul#BlogTagFilter li .button {
+			width: auto;
+			min-width: unset;
+			font-size: 16px;
+			padding: 5px 10px;
+		}
 	}
 </style>
 
@@ -166,7 +189,7 @@
 		</div>
     {% endif %}
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+    <div class="page-width blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
