@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-{%- if request.page_type != 'index' and template.name != 'blog' -%}
+{%- if request.page_type != 'index' and template.name != 'blog' and page.metafields.custom.class == 'common-page' -%}
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const header = document.querySelector(".header-wrapper");
@@ -108,7 +108,7 @@
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
-{%- if request.page_type != 'index' and template.name != 'blog' -%}
+{%- if request.page_type != 'index' and template.name != 'blog' or page.metafields.custom.class == 'common-page' -%}
 	<style>
 		.list-menu.list-menu--inline span {
 			color: #231F20 !important;
@@ -239,7 +239,7 @@
 	{% content_for 'blocks' %}
 
 
-  <header class="nw-template-name-{{ template.name }} header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="nw-template-name-{{ template.name }} nw-page-class-{{ page.metafields.custom.class }} header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
 	{%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
