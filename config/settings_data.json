@@ -159,6 +159,11 @@
         "type": "shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
         "disabled": false,
         "settings": {}
+      },
+      "2367010369087667184": {
+        "type": "shopify://apps/customer-account-deluxe/blocks/cad/b059626d-05f0-44bc-b55f-d2fc6d268902",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
