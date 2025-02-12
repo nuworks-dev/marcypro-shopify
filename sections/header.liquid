@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-{%- if request.page_type != 'index' -%}
+{%- if request.page_type != 'index' and template.name != 'blog' -%}
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const header = document.querySelector(".header-wrapper");
@@ -185,15 +185,17 @@
 		</style>
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
+				
 				const header = document.querySelector(".header-wrapper");
 				const logo = document.querySelector(".header__heading-logo");
+				const template_name = "{{ template }}";
 			
 				if (!header || !logo) return; // Prevent errors if elements are missing
 			
 				const originalLogo = logo.src;
 				const alternateLogo = logo.dataset.altLogo;
 				let lastScrollY = 0;
-			
+
 				function handleScroll() {
 					const scrolled = window.scrollY > 20;
 					
@@ -209,9 +211,8 @@
 			
 				// Start listening for scroll events efficiently
 				requestAnimationFrame(handleScroll);
-
+			
 				let items = document.querySelector(".header__inline-menu").querySelectorAll("details");
-				console.log(items)
 				items.forEach(item => {
 					item.addEventListener("mouseover", () => {
 					item.setAttribute("open", true);
@@ -224,6 +225,11 @@
 				});
 				
 				});
+
+				
+				if(template_name == 'blog') {
+					logo.src = alternateLogo;
+				}
 			});
 		</script>
 
@@ -251,11 +257,12 @@
 			<a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
 				{%- if settings.logo != blank -%}
 				<div class="header__heading-logo-wrapper">
+					
 					{%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
 					{%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
 					{% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
 					{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-
+				
 					<img src="{{ settings.logo | image_url: width: 600 }}"
 						data-alt-logo="{{ settings.logo_alternate | image_url: width: 600 }}"
 						class="header__heading-logo motion-reduce nw-heading-logo"
@@ -264,6 +271,7 @@
 						alt="{{ logo_alt }}"
 						sizes="{{ sizes }}"
 						preload="true">
+			
 				</div>
 				{%- else -%}
 				<span class="h2">{{ shop.name }}</span>
