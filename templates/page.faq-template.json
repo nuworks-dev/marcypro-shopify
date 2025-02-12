@@ -329,6 +329,7 @@
         "collapsible_row_X88Dp6",
         "collapsible_row_kJnGyE"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Exercise Bike Troubleshooting</strong>",
@@ -410,7 +411,6 @@
         "collapsible_row_gq7GRJ",
         "collapsible_row_74xTVm"
       ],
-      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>GENERAL</strong>",
@@ -532,7 +532,6 @@
         "collapsible_row_4YWa4d",
         "collapsible_row_bwjCeb"
       ],
-      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>ORDERS</strong>",
@@ -574,7 +573,6 @@
         "collapsible_row_yygRdw",
         "collapsible_row_x4hPbG"
       ],
-      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
@@ -641,9 +639,9 @@
         "collapsible_row_Qzj8Jh": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "How do I reduce the tension on my bike?",
+            "icon": "none",
+            "row_content": "Remove front post (part# 4) from main frame.On the lower tension cable, turn the nut downward (you can find the nut right below the L shape connector.) Make sure that the L shape connector is flush with the nut.Please see picture below.",
             "page": ""
           }
         }
