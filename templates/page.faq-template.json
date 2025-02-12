@@ -247,6 +247,7 @@
         "collapsible_row_c77itz",
         "collapsible_row_wkTTHk"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
@@ -328,7 +329,6 @@
         "collapsible_row_X88Dp6",
         "collapsible_row_kJnGyE"
       ],
-      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Exercise Bike Troubleshooting</strong>",
@@ -410,6 +410,7 @@
         "collapsible_row_gq7GRJ",
         "collapsible_row_74xTVm"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>GENERAL</strong>",
@@ -531,6 +532,7 @@
         "collapsible_row_4YWa4d",
         "collapsible_row_bwjCeb"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>ORDERS</strong>",
@@ -572,9 +574,91 @@
         "collapsible_row_yygRdw",
         "collapsible_row_x4hPbG"
       ],
+      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "nw_collapsible_content_ARbdWF": {
+      "type": "nw-collapsible-content",
+      "blocks": {
+        "collapsible_row_HTMPYC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do you connect the tension cables together on my exercise bike?",
+            "icon": "none",
+            "row_content": "Please click the following link for instructions on how to connect the upper tension wire to the lower tension wire: <a style=\"color:red;\"  href=\"https://www.youtube.com/watch?v=l_69QARxnzg\"> https://www.youtube.com/watch?v=l_69QARxnzg </a>",
+            "page": ""
+          }
+        },
+        "collapsible_row_RUUB49": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is there a guide for removing the crank from your Stationary Bikes?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_qejkgn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_4xj366": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_mEQanE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qzj8Jh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_HTMPYC",
+        "collapsible_row_RUUB49",
+        "collapsible_row_qejkgn",
+        "collapsible_row_4xj366",
+        "collapsible_row_mEQanE",
+        "collapsible_row_Qzj8Jh"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Exercise Bike Troubleshooting</strong>",
         "heading_size": "h2",
         "heading_alignment": "left",
         "layout": "none",
@@ -596,6 +680,7 @@
     "collapsible_content_aLbTJi",
     "nw_collapsible_content_EmcbdC",
     "nw_collapsible_content_ccXrqW",
-    "nw_collapsible_content_p96QXt"
+    "nw_collapsible_content_p96QXt",
+    "nw_collapsible_content_ARbdWF"
   ]
 }
