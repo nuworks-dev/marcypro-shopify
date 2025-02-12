@@ -108,7 +108,7 @@
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
-{%- if request.page_type != 'index' -%}
+{%- if request.page_type != 'index' and template.name != 'blog' -%}
 	<style>
 		.list-menu.list-menu--inline span {
 			color: #231F20 !important;
