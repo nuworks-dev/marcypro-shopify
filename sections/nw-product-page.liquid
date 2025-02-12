@@ -1,250 +1,104 @@
-{% assign max_quantity = product.metafields.custom.max_quantity | default: 5 %}
-{% assign rating = product.metafields.custom.rating | default: 4.5 %}
-
-<div class="product-detail-container">
-  <!-- Product Title -->
-  <h1 class="product-title">{{ product.title }}</h1>
-
-  <!-- Product Price -->
-  <p class="product-price">${{ product.price | money }}</p>
-
-  <!-- Ratings (Stars) -->
-  <div class="product-rating">
-    {% for i in (1..5) %}
-      {% if i <= rating %}
-        <span class="star full">&#9733;</span> <!-- Full Star -->
-      {% elsif i == rating | round and rating > i %}
-        <span class="star half">&#9733;</span> <!-- Half Star -->
-      {% else %}
-        <span class="star empty">&#9734;</span> <!-- Empty Star -->
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <!-- Quantity Selector -->
-  <div class="quantity-selector">
-    <button class="qty-btn minus">-</button>
-    <input type="number" class="qty-input" value="1" min="1" max="{{ max_quantity }}" step="1">
-    <button class="qty-btn plus">+</button>
-  </div>
-
-  <!-- Add to Cart Button -->
-  <form method="post" action="/cart/add">
-    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-    <button type="submit" class="add-to-cart">Add to Cart</button>
-  </form>
-
-  <!-- Wishlist Button -->
-  <button class="wishlist-btn">&#10084;</button>
-
-  <!-- Additional Info -->
-  <div class="product-info">
-    <p><strong>UPC:</strong> {{ product.metafields.custom.upc | default: "N/A" }}</p>
-    <p><strong>Availability:</strong> {% if product.available %} In Stock {% else %} Out of Stock {% endif %}</p>
-    <p><strong>Max Purchase:</strong> {{ max_quantity }}</p>
-    <p><strong>Shipping:</strong> Free Shipping</p>
-  </div>
-
-  <!-- Expandable Sections -->
-  <div class="product-sections">
-    <div class="section">
-      <h3 class="toggle-btn" onclick="toggleSection('desc')">Product Description +</h3>
-      <div id="desc" class="section-content">{{ product.description }}</div>
-    </div>
-    <div class="section">
-      <h3 class="toggle-btn" onclick="toggleSection('specs')">Specifications +</h3>
-      <div id="specs" class="section-content">{{ product.metafields.custom.specifications | default: "No specifications available." }}</div>
-    </div>
-    <div class="section">
-      <h3 class="toggle-btn" onclick="toggleSection('manuals')">Manuals & Charts +</h3>
-      <div id="manuals" class="section-content">{{ product.metafields.custom.manuals | default: "No manuals available." }}</div>
-    </div>
-  </div>
-</div>
-
-<!-- CSS -->
-<style>
-.product-detail-container {
-  max-width: 550px;
-  margin: auto;
-  font-family: 'Montserrat', sans-serif;
-}
-.product-title { font-size: 20px; font-weight: 500; }
-.product-price { font-size: 24px; font-weight: 500; color: #C02127; }
-.product-rating .star { font-size: 20px; color: #FFD700; }
-.quantity-selector { display: flex; align-items: center; }
-.qty-btn { border: 1px solid #CFCFCF; padding: 5px 10px; }
-.qty-input { width: 50px; text-align: center; }
-.add-to-cart { background: #C02127; color: white; border-radius: 50px; padding: 10px 20px; }
-.wishlist-btn { background: none; border: none; font-size: 24px; cursor: pointer; }
-.product-sections .section-content { display: none; }
-</style>
-
-<!-- JavaScript -->
-<script>
-function toggleSection(id) {
-  var section = document.getElementById(id);
-  section.style.display = (section.style.display === "block") ? "none" : "block";
-}
-</script>
-{% assign max_quantity = product.metafields.custom.max_quantity | default: 5 %}
-{% assign rating = product.metafields.custom.rating | default: 4.5 %}
-
-<div class="product-detail-container">
-  <!-- Product Title -->
-  <h1 class="product-title">{{ product.title }}</h1>
-
-  <!-- Product Price -->
-  <p class="product-price">${{ product.price | money }}</p>
-
-  <!-- Ratings (Stars) -->
-  <div class="product-rating">
-    {% for i in (1..5) %}
-      {% if i <= rating %}
-        <span class="star full">&#9733;</span> <!-- Full Star -->
-      {% elsif i == rating | round and rating > i %}
-        <span class="star half">&#9733;</span> <!-- Half Star -->
-      {% else %}
-        <span class="star empty">&#9734;</span> <!-- Empty Star -->
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <!-- Quantity Selector -->
-  <div class="quantity-selector">
-    <button class="qty-btn minus">-</button>
-    <input type="number" class="qty-input" value="1" min="1" max="{{ max_quantity }}" step="1">
-    <button class="qty-btn plus">+</button>
-  </div>
-
-  <!-- Add to Cart Button -->
-  <form method="post" action="/cart/add">
-    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-    <button type="submit" class="add-to-cart">Add to Cart</button>
-  </form>
-
-  <!-- Wishlist Button -->
-  <button class="wishlist-btn">&#10084;</button>
-
-  <!-- Additional Info -->
-  <div class="product-info">
-    <p><strong>UPC:</strong> {{ product.metafields.custom.upc | default: "N/A" }}</p>
-    <p><strong>Availability:</strong> {% if product.available %} In Stock {% else %} Out of Stock {% endif %}</p>
-    <p><strong>Max Purchase:</strong> {{ max_quantity }}</p>
-    <p><strong>Shipping:</strong> Free Shipping</p>
-  </div>
-
-  <!-- Expandable Sections -->
-  <div class="product-sections">
-    <div class="section">
-      <h3 class="toggle-btn" onclick="toggleSection('desc')">Product Description +</h3>
-      <div id="desc" class="section-content">{{ product.description }}</div>
-    </div>
-    <div class="section">
-      <h3 class="toggle-btn" onclick="toggleSection('specs')">Specifications +</h3>
-      <div id="specs" class="section-content">{{ product.metafields.custom.specifications | default: "No specifications available." }}</div>
-    </div>
-    <div class="section">
-      <h3 class="toggle-btn" onclick="toggleSection('manuals')">Manuals & Charts +</h3>
-      <div id="manuals" class="section-content">{{ product.metafields.custom.manuals | default: "No manuals available." }}</div>
-    </div>
-  </div>
-</div>
-
-<!-- CSS -->
-<style>
-.product-detail-container {
-  max-width: 550px;
-  margin: auto;
-  font-family: 'Montserrat', sans-serif;
-}
-.product-title { font-size: 20px; font-weight: 500; }
-.product-price { font-size: 24px; font-weight: 500; color: #C02127; }
-.product-rating .star { font-size: 20px; color: #FFD700; }
-.quantity-selector { display: flex; align-items: center; }
-.qty-btn { border: 1px solid #CFCFCF; padding: 5px 10px; }
-.qty-input { width: 50px; text-align: center; }
-.add-to-cart { background: #C02127; color: white; border-radius: 50px; padding: 10px 20px; }
-.wishlist-btn { background: none; border: none; font-size: 24px; cursor: pointer; }
-.product-sections .section-content { display: none; }
-</style>
-
-<!-- JavaScript -->
-<script>
-function toggleSection(id) {
-  var section = document.getElementById(id);
-  section.style.display = (section.style.display === "block") ? "none" : "block";
-}
-</script>
 {% schema %}
-    {
-      "name": "Product Details",
-      "settings": [
-        {
-          "type": "range",
-          "id": "max_quantity",
-          "label": "Max Purchase Quantity",
-          "min": 1,
-          "max": 10,
-          "default": 5
-        },
-        {
-          "type": "checkbox",
-          "id": "show_rating",
-          "label": "Show Product Rating",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "show_upc",
-          "label": "Show UPC Code",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "show_specs",
-          "label": "Show Specifications",
-          "default": true
-        },
-        {
-          "type": "checkbox",
-          "id": "show_manuals",
-          "label": "Show Manuals & Charts",
-          "default": true
-        },
-        {
-          "type": "text",
-          "id": "custom_shipping_text",
-          "label": "Custom Shipping Message",
-          "default": "Free Shipping"
-        }
-      ],
-      "blocks": [
-        {
-          "type": "text",
-          "name": "Additional Information",
-          "settings": [
-            {
-              "type": "text",
-              "id": "info_title",
-              "label": "Title",
-              "default": "Important Note"
-            },
-            {
-              "type": "textarea",
-              "id": "info_content",
-              "label": "Content",
-              "default": "This product has a limited warranty."
-            }
-          ]
-        }
-      ],
-      "presets": [
-        {
-          "name": "Product Details Section",
-          "settings": {}
-        }
-      ]
+  {
+    "name": "NW Product Page",
+    "tag": "section",
+    "class": "nw-product-page",
+    "settings": [],
+    "blocks": [
+      { "type": "title", "name": "Product Title", "limit": 1 },
+      { "type": "price", "name": "Product Price", "limit": 1 },
+      { "type": "rating", "name": "Star Rating", "limit": 1 },
+      { "type": "quantity_selector", "name": "Quantity Selector", "limit": 1 },
+      { "type": "add_to_cart", "name": "Add to Cart Button", "limit": 1 },
+      { "type": "wishlist", "name": "Wishlist Icon", "limit": 1 },
+      { "type": "product_info", "name": "Product Information", "limit": 1 },
+      { "type": "accordion", "name": "Accordion Sections", "limit": 3 }
+    ]
+  }
+  {% endschema %}
+  
+  <section class="product">
+    <div class="product__media">
+      {% for image in product.images %}
+        <img src="{{ image | image_url: '1024x1024' }}" 
+             alt="{{ image.alt | escape }}" 
+             width="1024" height="1024" 
+             loading="lazy">
+      {% endfor %}
+    </div>
+    <div class="product__info">
+      <h1 class="product__title">{{ product.title }}</h1>
+      <p class="product__price">{{ product.price | money }}</p>
+  
+      {% if product.metafields.reviews.rating %}
+        <div class="product__rating">
+          {% for i in (1..5) %}
+            {% if i <= product.metafields.reviews.rating %}
+              ⭐
+            {% else %}
+              ☆
+            {% endif %}
+          {% endfor %}
+          ({{ product.metafields.reviews.rating | round: 1 }})
+        </div>
+      {% endif %}
+  
+      <div class="product__quantity">
+        <button class="qty-btn" onclick="updateQty(-1)">-</button>
+        <input type="number" value="1" min="1" id="quantity" readonly>
+        <button class="qty-btn" onclick="updateQty(1)">+</button>
+      </div>
+  
+      {% form 'product', product %}
+        <button type="submit" class="product__add-to-cart">Add to Cart</button>
+        <span class="product__wishlist">♡</span>
+      {% endform %}
+  
+      <div class="product__details">
+        <p><strong>UPC:</strong> {{ product.metafields.custom.upc }}</p>
+        <p><strong>Availability:</strong> Limited Stock Available</p>
+        <p><strong>Maximum Purchase:</strong> 1 unit</p>
+        <p><strong>Shipping:</strong> Free Shipping</p>
+      </div>
+  
+      <div class="product__accordion">
+        <details>
+          <summary>PRODUCT DESCRIPTION</summary>
+          <p>{{ product.description }}</p>
+        </details>
+        <details>
+          <summary>SPECIFICATIONS</summary>
+          <p>{{ product.metafields.custom.specifications }}</p>
+        </details>
+        <details>
+          <summary>MANUALS & WORKOUT CHARTS</summary>
+          <p>{{ product.metafields.custom.manuals }}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+     .product { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+    .product__media img { max-width: 100%; border-radius: 8px; }
+    .product__title { font-size: 22px; font-weight: bold; }
+    .product__price { font-size: 20px; color: black; font-weight: bold; }
+    .product__rating { font-size: 16px; color: #f39c12; margin-bottom: 10px; }
+    .product__quantity { display: flex; justify-content: center; gap: 10px; margin: 10px 0; }
+    .qty-btn { padding: 5px 10px; border: 1px solid black; cursor: pointer; }
+    #quantity { text-align: center; width: 40px; border: 1px solid black; }
+    .product__add-to-cart { background: #c00; color: white; padding: 10px 20px; border-radius: 50px; border: none; cursor: pointer; }
+    .product__wishlist { font-size: 24px; cursor: pointer; margin-left: 10px; }
+    .product__details p { margin: 5px 0; font-size: 14px; }
+    details { border-bottom: 1px solid #ccc; padding: 10px; cursor: pointer; }
+    summary { font-weight: bold; }
+  </style>
+  
+  <script>
+    function updateQty(change) {
+      let qtyInput = document.getElementById('quantity');
+      let newQty = parseInt(qtyInput.value) + change;
+      if (newQty > 0) qtyInput.value = newQty;
     }
-    {% endschema %}
-    
+  </script>
+  

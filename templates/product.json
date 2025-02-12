@@ -76,7 +76,6 @@
         "judge_me_reviews_review_widget_Yjfi9C",
         "judge_me_reviews_preview_badge_HcYgEm"
       ],
-      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -91,6 +90,34 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
+      }
+    },
+    "nw_featured_collection_Vk9AXh": {
+      "type": "nw-featured-collection",
+      "settings": {
+        "title": "Related Products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-sellers",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "nw_trust_badge_wMyFzm": {
@@ -174,6 +201,7 @@
   },
   "order": [
     "main",
+    "nw_featured_collection_Vk9AXh",
     "nw_trust_badge_wMyFzm",
     "related-products",
     "173762477832b50e7f"
