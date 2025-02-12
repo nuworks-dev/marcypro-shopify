@@ -247,7 +247,6 @@
         "collapsible_row_c77itz",
         "collapsible_row_wkTTHk"
       ],
-      "disabled": true,
       "settings": {
         "caption": "",
         "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
@@ -546,6 +545,47 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "nw_collapsible_content_p96QXt": {
+      "type": "nw-collapsible-content",
+      "blocks": {
+        "collapsible_row_yygRdw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How do I adjust the cable tension or slack on my Home Gym?",
+            "icon": "none",
+            "row_content": "Most Home Gyms have an adjustable Double Floating Pulley Bracket within the cable routing of the workout machine.\n<br>\n<br>\nYou will need to identify this part on your <a style=\"color:red;\"  href=\"assembly manual\">assembly manual </a> as it may vary from one machine to the next. Re-position the lower pulley on the Double Floating Pulley Bracket by moving the pulley up or down.\n<br>\n<br>\nTo increase cable tension, move the lower pulley up to the next vacant hole position. To add more slack to the cable, move the lower pulley down to the next vacant hole position.\n<br>\n<br>\nFor additional assistance, please reach out to our customer service team via ticket system: <a style=\"color:red;\"  href=\"marcypro.com/support\"> marcypro.com/support </a>\n</br>",
+            "page": ""
+          }
+        },
+        "collapsible_row_x4hPbG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is the small pin and lock used for? (Select Stack Home Gym Models)",
+            "icon": "none",
+            "row_content": "The small pin and lock included with our stack home gyms is used to lock the weights plates in place. (Image below.)\n<br>\n<br>\n<img src=\"https://cdn.shopify.com/s/files/1/0742/4629/1692/files/app_images_resizable_Marcy-Stac_19992a81_1617401070802.jpg?v=1739356942\" width=\"400\" height=\"400\">",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_yygRdw",
+        "collapsible_row_x4hPbG"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -555,6 +595,7 @@
     "collapsible_content_NKJPeJ",
     "collapsible_content_aLbTJi",
     "nw_collapsible_content_EmcbdC",
-    "nw_collapsible_content_ccXrqW"
+    "nw_collapsible_content_ccXrqW",
+    "nw_collapsible_content_p96QXt"
   ]
 }
