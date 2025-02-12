@@ -76,6 +76,7 @@
         "judge_me_reviews_review_widget_Yjfi9C",
         "judge_me_reviews_preview_badge_HcYgEm"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -92,8 +93,13 @@
         "padding_bottom": 12
       }
     },
+    "nw_trust_badge_wMyFzm": {
+      "type": "nw-trust-badge",
+      "settings": {}
+    },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -121,6 +127,7 @@
       "block_order": [
         "judge_me_reviews_review_widget_nrAyMh"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -128,6 +135,7 @@
   },
   "order": [
     "main",
+    "nw_trust_badge_wMyFzm",
     "related-products",
     "173762477832b50e7f"
   ]

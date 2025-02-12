@@ -1,108 +1,105 @@
-<section class="trust-badges">
-  <div class="trust-badge">
-    <i class="icon-truck"></i>
-    <div class="trust-details">
-      <div class="trust-badge-header">Free Ground Shipping</div>
-      <div class="trust-badge-info">For All New Orders</div>
-    </div>
-  </div>
-  
-  <div class="trust-badge">
-    <i class="icon-shield"></i>
-    <div class="trust-details">
-      <div class="trust-badge-header">2-Year Limited Warranty</div>
-      <div class="trust-badge-info">From Your Delivery Date</div>
-    </div>
-  </div>
-  
-  <div class="trust-badge">
-    <i class="icon-lock"></i>
-    <div class="trust-details">
-      <div class="trust-badge-header">Safe Payments</div>
-      <div class="trust-badge-info">Trusted SSL Protection</div>
-    </div>
+<section class="trust-badges" style="background: {{ section.settings.background_color }};">
+  <div class="trust-badges-container">
+    {% for block in section.blocks %}
+      <div class="trust-badge">
+        <div class="trust-badge-icon">
+          {% if block.settings.icon_image %}
+            {{ block.settings.icon_image | image_url: height: 34 | image_tag: class: "trust-icon" }}
+          {% endif %}
+        </div>
+        <div class="trust-details">
+          <div class="trust-badge-header">{{ block.settings.title }}</div>
+          <div class="trust-badge-info">{{ block.settings.description }}</div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </section>
 
 <style>
   .trust-badges {
     display: flex;
-    justify-content: space-around;
-    background: #f9f6f2;
-    padding: 20px;
-    text-align: center;
+    justify-content: center;
+    padding: 50px 0;
   }
-  
-  @media (max-width: 425px) {
-    .trust-badges {
-      flex-direction: column;
-      align-items: start;
-      gap: 12px;
-    }
+
+  .trust-badges-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 440px;
+    background: #F7F4ED;
+    padding: 50px 20px;
+    border-radius: 8px;
   }
-  
+
   .trust-badge {
-    flex: 1;
-    max-width: 300px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    background-color: blanchedalmond;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
   }
-  
+
+  .trust-badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  .trust-icon {
+ 
+    min-width: 31px;
+    height: 34px;
+  }
+
   .trust-details {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    max-width: 208px;
-    @media (max-width: 425px){
-      mix-width: 185;
-      max-width: 208px;
-      height: 40;
-
-
-    }
   }
-  
-  .trust-badge i {
-    font-size: 24px;
-    color: #ff6600;
-  }
-  
+
   .trust-badge-header {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0%;
-    font-weight: bold;
-    flex-wrap: nowrap;
+    color: #231F20;
   }
-  
-  .trust-badge-info{
-    font-family: Montserrat;
+
+  .trust-badge-info {
+    font-family: Montserrat, sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
-    letter-spacing: 0%;
     color: #555;
-    text-align: left;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .trust-badges-container {
+      max-width: 100%;
+      padding: 30px;
+    }
+
+    .trust-badge {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .trust-details {
+      text-align: left;
+    }
   }
 </style>
 
 {% schema %}
 {
   "name": "Trust Badges Section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
   "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Section Heading",
-      "default": "Why Shop With Us?"
-    },
     {
       "type": "color",
       "id": "background_color",
@@ -110,14 +107,77 @@
       "default": "#f9f6f2"
     }
   ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Trust Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Badge Title",
+          "default": "Free Ground Shipping"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Badge Description",
+          "default": "For All New Orders"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "number",
+          "id": "icon_width",
+          "label": "Icon Width (px)",
+          "default": 40
+        },
+        {
+          "type": "number",
+          "id": "icon_height",
+          "label": "Icon Height (px)",
+          "default": 40
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Trust Badges Section"
+      "name": "Trust Badges Section",
+      "blocks": [
+        {
+          "type": "badge",
+          "settings": {
+            "title": "Free Ground Shipping",
+            "description": "For All New Orders",
+            "icon_width": 53,
+            "icon_height": 34
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "title": "2-Year Limited Warranty",
+            "description": "From Your Delivery Date",
+            "icon_width": 31,
+            "icon_height": 34
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "title": "Safe Payments",
+            "description": "Trusted SSL Protection",
+            "icon_width": 39,
+            "icon_height": 34
+          }
+        }
+      ]
     }
   ]
 }
-{% endschema %}
 
-<div style="background-color: {{ section.settings.background_color }}; padding: 20px; text-align: center;">
-  <h2>{{ section.settings.heading }}</h2>
-</div>
+{% endschema %}

@@ -49,6 +49,16 @@
         "name": "boolean",
         "category": "TRUE_FALSE"
       }
+    },
+    {
+      "key": "class",
+      "namespace": "custom",
+      "name": "Class",
+      "description": "Class definition used for styling",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
   "product": [
