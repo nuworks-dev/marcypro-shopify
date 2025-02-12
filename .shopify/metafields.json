@@ -9,9 +9,30 @@
         "name": "file_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "class",
+      "namespace": "custom",
+      "name": "Class",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
     }
   ],
-  "blog": [],
+  "blog": [
+    {
+      "key": "class",
+      "namespace": "custom",
+      "name": "Class",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
   "brand": [],
   "collection": [],
   "company": [],
@@ -44,6 +65,26 @@
       "key": "is_title_hide",
       "namespace": "custom",
       "name": "Is Title Hide",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "class",
+      "namespace": "custom",
+      "name": "Class",
+      "description": "Class definition used for styling",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "is_banner_hide",
+      "namespace": "custom",
+      "name": "Is Banner Hide",
       "description": "",
       "type": {
         "name": "boolean",
