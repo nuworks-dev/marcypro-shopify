@@ -607,34 +607,34 @@
           "settings": {
             "heading": "Is there a guide for removing the crank from your Stationary Bikes?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "For instructions on how to use the crank remover tool please download the guide: <a style=\"color:red;\"  href=\"https://www.marcypro.com/content/Product_Manuals/Exercise_Bikes/Crank%20Removal.pdf\"> Crank Removal Guide.</a>\n<br>\n<br>\nAdditionally we have produced a video illustrating the removal process to accompany our Crank Removal Guide. Please visit this link:  <a style=\"color:red;\"  href=\"https://www.youtube.com/watch?v=3cueGTBhrC8\"> Pedal Removal Instructional Video </a>",
             "page": ""
           }
         },
         "collapsible_row_qejkgn": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "How do I select a mode on my bike?",
+            "icon": "none",
+            "row_content": "For most models, press the mode key until you reach your desired mode.\n<br>\n<br>\nThen, press the set key to set the desired mode.",
             "page": ""
           }
         },
         "collapsible_row_4xj366": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "How do I install the pedals on my bike?",
+            "icon": "none",
+            "row_content": "On most models, the right pedal can be mounted on to the crank arm by twisting the pedal clockwise.\n<br>\n<br>\nThe left pedal can be mounted on to the crank arm by twisting the pedal counter clockwise",
             "page": ""
           }
         },
         "collapsible_row_mEQanE": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "The Tension cable for my bike is too short, how do I connect it?",
+            "icon": "none",
+            "row_content": "Pull up hard on the cable to get it to release and sit on the bracket. You will not damage the tension cable (it is very strong.)\n<br>\n<br>\nThough the computer will work, the bike will not have any tension if the tension cables are not connected.\n<br>\n<br>\nIf there is a zip tie/ rubber band on parts 11 and 12 please carefully remove it.\n\n<br>\n<br>\n<img src=\"https://cdn.shopify.com/s/files/1/0742/4629/1692/files/app_images_resizable_Marcy-Exer_3ad147c0_1617651237518.jpg?v=1739357447\" width=\"400\" height=\"400\">",
             "page": ""
           }
         },
