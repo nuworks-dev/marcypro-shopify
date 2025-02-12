@@ -25,14 +25,15 @@
 
   .trust-badges-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center; /* Changed to center items */
     gap: 20px;
     width: 100%;
-    max-width: 440px;
     background: #F7F4ED;
-    padding: 50px 20px;
+    padding: 50px;
     border-radius: 8px;
+    border: #231F20;
   }
 
   .trust-badge {
@@ -81,6 +82,9 @@
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
     .trust-badges-container {
+      display: flex;
+      flex-direction: column;
+     
       max-width: 100%;
       padding: 30px;
     }
@@ -91,6 +95,7 @@
     }
 
     .trust-details {
+      max-width: 100%;
       text-align: left;
     }
   }

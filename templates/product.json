@@ -95,7 +95,46 @@
     },
     "nw_trust_badge_wMyFzm": {
       "type": "nw-trust-badge",
-      "settings": {}
+      "blocks": {
+        "badge_E4feYq": {
+          "type": "badge",
+          "settings": {
+            "title": "Free Ground Shipping",
+            "description": "For All New Orders",
+            "icon_image": "shopify://shop_images/trust_badge_shipping.png",
+            "icon_width": 40,
+            "icon_height": 40
+          }
+        },
+        "badge_bDeFcR": {
+          "type": "badge",
+          "settings": {
+            "title": "2-Year Limited Warranty",
+            "description": "From Your Delivery Date",
+            "icon_image": "shopify://shop_images/trust_badge_warranty.png",
+            "icon_width": 40,
+            "icon_height": 40
+          }
+        },
+        "badge_NA8VQm": {
+          "type": "badge",
+          "settings": {
+            "title": "Safe Payments",
+            "description": "Trusted SSL Protection",
+            "icon_image": "shopify://shop_images/trust_badge_payment.png",
+            "icon_width": 40,
+            "icon_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "badge_E4feYq",
+        "badge_bDeFcR",
+        "badge_NA8VQm"
+      ],
+      "settings": {
+        "background_color": "#f9f6f2"
+      }
     },
     "related-products": {
       "type": "related-products",
