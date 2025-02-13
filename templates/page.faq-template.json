@@ -17,6 +17,17 @@
         "padding_bottom": 28
       }
     },
+    "nw_heading_PTpVbe": {
+      "type": "nw-heading",
+      "settings": {
+        "input_text": "Hello World",
+        "input_font": "montserrat_n4",
+        "input_alignment": "center",
+        "input_color": "#ec2222",
+        "input_size": 47,
+        "input_weight": 900
+      }
+    },
     "nw_collapsible_content_EmcbdC": {
       "type": "nw-collapsible-content",
       "blocks": {
@@ -344,6 +355,7 @@
   },
   "order": [
     "main",
+    "nw_heading_PTpVbe",
     "nw_collapsible_content_EmcbdC",
     "nw_collapsible_content_ccXrqW",
     "nw_collapsible_content_p96QXt",
