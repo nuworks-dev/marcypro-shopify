@@ -1,0 +1,77 @@
+<div id="nw-heading" class="page-width">
+	<h2>{{ section.settings.input_text }}</h2>
+</div>
+<style>
+	{{ section.settings.utility_font_picker | font_face: font_display: 'swap' }}
+	#nw-heading {
+		width: 100%;
+		display: block;
+	}
+	#nw-heading h2 {
+		text-align: {{ section.settings.input_alignment }};
+		color: {{ section.settings.input_color }};
+		font-family: {{ section.settings.input_font.family }};
+		font-size: {{ section.settings.input_size }}px;
+		font-weight: {{ section.settings.input_weight }};
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+</style>
+{% schema %}
+	{
+		"name": "NW Heading",
+		"disabled_on": {
+    		"groups": ["header", "footer"]
+  		},
+		"settings": [
+			{
+				"type": "text",
+				"id": "input_text",
+				"label": "Label",
+				"default": "Hello World"
+			},
+			{
+				"type": "font_picker",
+				"id": "input_font",
+				"label": "Font Style",
+				"default": "assistant_n4"
+			},
+			{
+				"type": "text_alignment",
+				"id": "input_alignment",
+				"label": "Text Alignment"
+			},
+			{
+				"type": "color",
+				"id": "input_color",
+				"label": "Text Color"
+			},
+			{
+				"type": "range",
+				"id": "input_size",
+				"label": "Text Size",
+				"min": 12,
+				"max": 80,
+				"step": 1,
+				"default": 16,
+				"unit": "px"
+			},
+			{
+				"type": "range",
+				"id": "input_weight",
+				"label": "Text Weight",
+				"min": 100,
+				"max": 900,
+				"step": 100,
+				"default": 400
+			}
+		],
+		"presets": [
+			{
+				"name": "NW Heading"
+			}
+		]
+	}
+{% endschema %}
