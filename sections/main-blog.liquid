@@ -3,26 +3,193 @@
 {{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+	.section-{{ section.id }}-padding {
+		padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+		padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+	}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
+	.nw-main-blog {
+		margin-bottom: 40px;
+	}
+
+	.nw-main-blog .nw-tag {
+		font-family: Montserrat;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 20.47px;
+		border-radius: 100px;
+		background-color: #6F6F6F;
+		color: #fff;
+		padding: 5px 12px;
+		text-transform: capitalize;
+	}
+
+	.nw-main-blog .card__content .card__information {
+		padding: 20px 0px;
+	}
+
+	.nw-main-blog .card__inner {
+		height: 450px;
+		background-color: transparent;
+	}
+
+	.nw-main-blog .card__inner .card__media {
+		border-radius: 12px;
+	}
+
+	.nw-main-blog .title-wrapper--no-top-margin {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.nw-main-blog .title-wrapper--no-top-margin h2,
+	.nw-main-blog .title-wrapper--no-top-margin #blog-subtitle {
+		width: 100%;
+		text-align: left;
+	}
+
+	.nw-main-blog .card__content .card__information {
+		padding: 20px 0px;
+	}
+
+	.nw-main-blog .nw-tag {
+		font-family: Montserrat;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 20.47px;
+		border-radius: 100px;
+		background-color: #6F6F6F;
+		color: #fff;
+		padding: 5px 12px;
+		text-transform: capitalize;
+	}
+
+	.nw-main-blog .card__heading a {
+		margin-top: 12px;
+		font-family: Montserrat;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 32px;
+		text-align: left;
+		color: #231F20;
+	}
+
+	.nw-main-blog .card__heading a:hover {
+		text-decoration: none;
+	}
+
+	@media screen and (min-width: 750px) {
+		.section-{{ section.id }}-padding {
+		padding-top: {{ section.settings.padding_top }}px;
+		padding-bottom: {{ section.settings.padding_bottom }}px;
+		}
+	}
 {%- endstyle -%}
 
-{%- paginate blog.articles by 6 -%}
-  <div class="main-blog page-width section-{{ section.id }}-padding">
-    <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-      {{ blog.title | escape }}
-    </h1>
+<style>
+	.list-group {
+		text-align: center;
+	}
+	ul#BlogTagFilter {
+		list-style: none;
+		padding-top: 10px;
+		display: flex;
+		justify-content: center;
+		flex-direction: unset;
+		gap: 15px;
+		margin-bottom: 60px;
+	}
+	ul#BlogTagFilter li {
+		display: inline;
+		margin: 5px;
+	}
+	ul#BlogTagFilter li .button {
+		background: #fff !important;
+		color: #000;
+		text-transform: capitalize;
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19.5px;
+		color: #6F6F6F;
+		border-radius: 0px;
+		padding: 10px 15px;
+		margin: 0px;
+		width: auto;
+		display: flex;
+		min-width: min-content;
+		min-height: min-content;
+	}
+	ul#BlogTagFilter li .button.active {
+		border-bottom: 4px solid #C02127;
+		color: #C02127;
+	}
+	ul#BlogTagFilter li .button:before,
+	ul#BlogTagFilter li .button:after {
+		border-radius: 0px;
+		box-shadow: none;
+	}
 
-    <div class="blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+	{% comment %} .nw-main-blog .article-card__image {
+		aspect-ratio: 16/9;
+	} {% endcomment %}
+	.nw-main-blog .blog-articles {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 50px;
+	}
+
+	@media (max-width: 480px) {
+		.nw-main-blog .blog-articles {
+			grid-template-columns: repeat(1, minmax(0, 1fr)); /* 1 column for mobile */
+		}
+		ul#BlogTagFilter {
+			gap: 0px;
+			margin-left: 0px;
+			padding-left: 0px;
+		}
+		ul#BlogTagFilter li .button {
+			width: auto;
+			min-width: unset;
+			font-size: 16px;
+			padding: 5px 10px;
+		}
+	}
+</style>
+
+{%- paginate blog.articles by 6 -%}
+  <div class="nw-main-blog main-blog page-width section-{{ section.id }}-padding">
+    {% comment %}
+      <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ blog.title | escape }}
+      </h1>
+    {% endcomment %}
+
+    {% if blog.tags.size > 0 %}
+		<div class="blog-filter">
+			<div class="list-group">
+				<ul id="BlogTagFilter" class="tag-list">
+					<li>
+					  <a href="{{ blog.url }}" class="button {% if request.path == blog.url %}active{% endif %}">
+						{{ 'All' }}
+					  </a>
+					</li>
+					{% assign last_segment = request.path | split: '/' | last | handleize %}
+					{% for tag in blog.all_tags %}
+					  {% assign tag_handle = tag | handleize %}
+					  <li>
+						<a href="{{ blog.url }}/tagged/{{ tag_handle }}" class="button {% if tag_handle == last_segment %}active{% endif %}">
+						  {{ tag }}
+						</a>
+					  </li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+    {% endif %}
+
+    <div class="page-width blog-articles {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
       {%- for article in blog.articles -%}
         <div
           class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -31,15 +198,18 @@
             style="--animation-order: {{ forloop.index }};"
           {% endif %}
         >
-          {%- render 'article-card',
-            article: article,
-            media_height: section.settings.image_height,
-            media_aspect_ratio: article.image.aspect_ratio,
-            show_image: section.settings.show_image,
-            show_date: section.settings.show_date,
-            show_author: section.settings.show_author,
-            show_excerpt: true
-          -%}
+			{% assign thumb = article.metafields.custom.thumbnail %}
+			{%- render 'article-card',
+				article: article,
+				media_height: section.settings.image_height,
+				media_aspect_ratio: article.image.aspect_ratio,
+				show_image: section.settings.show_image,
+				show_date: section.settings.show_date,
+				show_author: section.settings.show_author,
+				show_tag: section.settings.nw_show_tag,
+				show_excerpt: true
+				thumb: thumb
+			-%}
         </div>
       {%- endfor -%}
     </div>
@@ -60,6 +230,12 @@
       "type": "header",
       "content": "t:sections.main-blog.settings.header.content"
     },
+	{
+		"type": "checkbox",
+		"id": "nw_show_tag",
+		"label": "Show Tag",
+		"default": false
+	},
     {
       "type": "select",
       "id": "layout",
