@@ -281,7 +281,6 @@
       "announcement": "Announcement",
       "announcement_bar": "Announcement bar"
     },
-
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
@@ -435,15 +434,15 @@
     "log_out": "Log out",
     "login_page": {
       "cancel": "Cancel",
-      "create_account": "Create account",
+      "create_account": "Sign Up",
       "email": "Email",
       "forgot_password": "Forgot your password?",
       "guest_continue": "Continue",
       "guest_title": "Continue as a guest",
       "password": "Password",
-      "title": "Login",
+      "title": "LOGIN",
       "sign_in": "Sign in",
-      "submit": "Submit",
+      "submit": "Login",
       "alternate_provider_separator": "or"
     },
     "order": {
@@ -488,12 +487,12 @@
       "success": "We've sent you an email with a link to update your password."
     },
     "register": {
-      "title": "Create account",
-      "first_name": "First name",
-      "last_name": "Last name",
+      "title": "SIGN UP",
+      "first_name": "First Name",
+      "last_name": "Last Name",
       "email": "Email",
       "password": "Password",
-      "submit": "Create"
+      "submit": "Create Account"
     },
     "reset_password": {
       "title": "Reset account password",
