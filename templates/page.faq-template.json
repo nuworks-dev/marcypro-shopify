@@ -11,35 +11,10 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
+      "custom_css": [],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
-      }
-    },
-    "rich_text_wED9BQ": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_M7c643": {
-          "type": "heading",
-          "settings": {
-            "heading": "<strong>Frequently Asked Questions</strong>",
-            "heading_size": "h0",
-            "font_style": "assistant_n4",
-            "font_size": 40
-          }
-        }
-      },
-      "block_order": [
-        "heading_M7c643"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "nw_collapsible_content_EmcbdC": {
@@ -272,7 +247,7 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "<strong>Home Gym and Smith Machine Troubleshooting</strong>",
+        "heading": "<strong>HOME GYM AND SMITH MACHINE TROUBLESHOOTING</strong>",
         "heading_size": "h2",
         "heading_alignment": "left",
         "layout": "none",
@@ -353,7 +328,7 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "<strong>Exercise Bike Troubleshooting</strong>",
+        "heading": "<strong>EXERCISE BIKE TROUBLESHOOTING</strong>",
         "heading_size": "h2",
         "heading_alignment": "left",
         "layout": "none",
@@ -369,7 +344,6 @@
   },
   "order": [
     "main",
-    "rich_text_wED9BQ",
     "nw_collapsible_content_EmcbdC",
     "nw_collapsible_content_ccXrqW",
     "nw_collapsible_content_p96QXt",
