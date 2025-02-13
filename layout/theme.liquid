@@ -389,6 +389,14 @@
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
+
+	  const debugTemplate = document.querySelector('#nw-debug-templatename').innerText;
+	  const debugPageClass = document.querySelector('#nw-debug-pageclass').innerText;
+
+	  	console.log({
+			debugTemplate,
+			debugPageClass
+		});
     </script>
 
     {%- if settings.predictive_search_enabled -%}
