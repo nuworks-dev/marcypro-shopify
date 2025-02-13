@@ -17,6 +17,49 @@
         "padding_bottom": 28
       }
     },
+    "rich_text_wED9BQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_M7c643": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Frequently Asked Questions</strong>",
+            "heading_size": "h0",
+            "font_style": "assistant_n4",
+            "font_size": 28
+          }
+        }
+      },
+      "block_order": [
+        "heading_M7c643"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_Ej4pW8": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify://shop_images/Frame_6767.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
     "nw_collapsible_content_EmcbdC": {
       "type": "nw-collapsible-content",
       "blocks": {
@@ -106,7 +149,7 @@
           "settings": {
             "heading": "Updating an Order, Cancelling Orders, Missing Part, Order Issues, & Order Status",
             "icon": "none",
-            "row_content": "<strong>For any issues with your order</strong> -  please reach out to us via live chat on Marcypro.com, via ticket at <a style=\"color:red;\"  href=\"/support\",> marcypro.com/support </a> or via message if you have a Marcypro.com account. Issues include:\n<br>\n<br>Updating a Shipping Address\n<br>Updating a Phone Number\n<br>General Order Questions\n<br>\n<br>\n<strong>Order Status</strong> – If you created a Marcypro.com account, please log in to see your order status. Otherwise, please reach out to us via Live Chat during business hours to receive an update.\n<br>\n<br>\n<strong>Canceling an order</strong> – If the order is in transit or the order is cancelled due to buyer’s remorse (which includes “does not fit,”) we charge a 15% restocking fee and the cost of shipping both ways.\n<br>\n<br>\nTo start your cancellation, please reach out to us via live chat on Marcypro.com, via ticket at marcypro.com/support, or via message if you have a Marcypro.com account.\n<br>\n<br>\n<strong>Missing Part With 2 year-Warranty</strong> – If your order is missing a part, the fastest way to get a replacement part free of charge under warranty would be to fill out the following form: <a style=\"color:red;\"  href=\"https://www.marcypro.com/replacement-parts-request\"> https://www.marcypro.com/replacement-parts-request </a>\n<br>\n<br>\nPlease allow 1 - 2 business days for a representative to respond.\n<br>\n<br>\n<strong>Missing Part Not under Warranty</strong> - If you are not under warranty, please request your part at <a style=\"color:red;\"  href=\"https://marcypro.freshdesk.com/support/tickets/new\">  https://marcypro.freshdesk.com/support/tickets/new </a> and a customer rep will reach out to you with availability / pricing",
+            "row_content": "<strong>For any issues with your order</strong> -  please reach out to us via live chat on Marcypro.com, via ticket at <a style=\"color:red;\"  href=\"/support\",> marcypro.com/support </a> or via message if you have a Marcypro.com account. Issues include:\n<br>\n<br>Updating a Shipping Address\n<br>Updating a Phone Number\n<br>General Order Questions\n<br>\n<br>\n<strong>Order Status</strong> – If you created a Marcypro.com account, please log in to see your order status. Otherwise, please reach out to us via Live Chat during business hours to receive an update.\n<br>\n<br>\n<strong>Canceling an order</strong> – If the order is in transit or the order is cancelled due to buyer’s remorse (which includes “does not fit,”) we charge a 15% restocking fee and the cost of shipping both ways.\n<br>\n<br>\nTo start your cancellation, please reach out to us via live chat on Marcypro.com, via ticket at marcypro.com/support, or via message if you have a Marcypro.com account.\n<br>\n<br>\n<strong>Missing Part With 2 year-Warranty</strong> – If your order is missing a part, the fastest way to get a replacement part free of charge under warranty would be to fill out the following form: <a style=\"color:red;\"  href=\"/replacement-parts-request\"> https://www.marcypro.com/replacement-parts-request </a>\n<br>\n<br>\nPlease allow 1 - 2 business days for a representative to respond.\n<br>\n<br>\n<strong>Missing Part Not under Warranty</strong> - If you are not under warranty, please request your part at <a style=\"color:red;\"  href=\"https://marcypro.freshdesk.com/support/tickets/new\">  https://marcypro.freshdesk.com/support/tickets/new </a> and a customer rep will reach out to you with availability / pricing",
             "page": ""
           }
         },
@@ -344,6 +387,8 @@
   },
   "order": [
     "main",
+    "rich_text_wED9BQ",
+    "image_with_text_Ej4pW8",
     "nw_collapsible_content_EmcbdC",
     "nw_collapsible_content_ccXrqW",
     "nw_collapsible_content_p96QXt",
