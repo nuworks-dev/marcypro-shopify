@@ -12,20 +12,52 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .nw-customer-login h1 {
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 32px;
+	letter-spacing: 0%;
+	text-align: center;
+  }
+  .nw-customer-login button {
+	background: #C02127;
+	border-radius: 100px;
+	font-family: Montserrat;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: 0px;
+	color: #fff;
+	outline: none;
+	border: 1px solid #C02127;
+  }
+  .nw-customer-login button::before,
+  .nw-customer-login button::after {
+	border: 0px;
+	box-shadow: none;
+  }
+  .nw-customer-login button:hover:before,
+  .nw-customer-login button:hover:after {
+	border: 0px;
+	box-shadow: none;
+  }
 {%- endstyle -%}
 
-<div class="customer register section-{{ section.id }}-padding">
+<div class="nw-customer-login customer register section-{{ section.id }}-padding">
   <h1>
-    {{ 'customer.register.title' | t }}
+    SIGN UP
   </h1>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
+
     {%- if form.errors -%}
-      <h2 class="form__message" tabindex="-1" autofocus>
+      <h4 class="form__message" tabindex="-1" autofocus>
         <span class="svg-wrapper">
           {{- 'icon-error.svg' | inline_asset_content -}}
         </span>
         {{ 'templates.contact.form.error_heading' | t }}
-      </h2>
+      </h4>
       <ul>
         {%- for field in form.errors -%}
           <li>
@@ -41,19 +73,22 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+
     <div class="field">
       <input
         type="text"
         name="customer[first_name]"
         id="RegisterForm-FirstName"
+		aria-required="true"
+		autofocus 
         {% if form.first_name %}
           value="{{ form.first_name }}"
         {% endif %}
         autocomplete="given-name"
-        placeholder="{{ 'customer.register.first_name' | t }}"
+        placeholder="First Name"
       >
       <label for="RegisterForm-FirstName">
-        {{ 'customer.register.first_name' | t }}
+        First Name *
       </label>
     </div>
     <div class="field">
@@ -61,14 +96,15 @@
         type="text"
         name="customer[last_name]"
         id="RegisterForm-LastName"
+		aria-required="true"
         {% if form.last_name %}
           value="{{ form.last_name }}"
         {% endif %}
         autocomplete="family-name"
-        placeholder="{{ 'customer.register.last_name' | t }}"
+        placeholder="Last Name"
       >
       <label for="RegisterForm-LastName">
-        {{ 'customer.register.last_name' | t }}
+        Last Name *
       </label>
     </div>
     <div class="field">
@@ -87,10 +123,10 @@
           aria-invalid="true"
           aria-describedby="RegisterForm-email-error"
         {% endif %}
-        placeholder="{{ 'customer.register.email' | t }}"
+        placeholder="Email *"
       >
       <label for="RegisterForm-email">
-        {{ 'customer.register.email' | t }}
+        Email *
       </label>
     </div>
     {%- if form.errors contains 'email' -%}
@@ -112,10 +148,10 @@
           aria-invalid="true"
           aria-describedby="RegisterForm-password-error"
         {% endif %}
-        placeholder="{{ 'customer.register.password' | t }}"
+        placeholder="Password"
       >
       <label for="RegisterForm-password">
-        {{ 'customer.register.password' | t }}
+        Password *
       </label>
     </div>
     {%- if form.errors contains 'password' -%}
@@ -128,10 +164,31 @@
       </span>
     {%- endif -%}
     <button>
-      {{ 'customer.register.submit' | t }}
+      Create Account
     </button>
   {%- endform -%}
 </div>
+
+
+<script>
+	document.querySelector("#create_customer").addEventListener("submit", function (event) {
+		const firstName = document.getElementById("RegisterForm-FirstName").value.trim();
+		const lastName = document.getElementById("RegisterForm-LastName").value.trim();
+		let errors = [];
+	  
+		if (firstName === "") {
+		  errors.push("First Name is required.");
+		}
+		if (lastName === "") {
+		  errors.push("Last Name is required.");
+		}
+	  
+		if (errors.length > 0) {
+		  event.preventDefault(); // Stop form submission
+		  alert(errors.join("\n")); // Show all errors in one alert
+		}
+	});	  
+</script>
 
 {% schema %}
 {
