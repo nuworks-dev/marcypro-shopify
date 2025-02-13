@@ -26,7 +26,7 @@
             "heading": "<strong>Frequently Asked Questions</strong>",
             "heading_size": "h0",
             "font_style": "assistant_n4",
-            "font_size": 28
+            "font_size": 40
           }
         }
       },
@@ -46,7 +46,7 @@
       "type": "image-with-text",
       "settings": {
         "image": "shopify://shop_images/Frame_6767.png",
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
         "desktop_content_position": "top",
