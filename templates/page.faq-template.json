@@ -34,7 +34,7 @@
           "settings": {
             "heading": "Where can I find a Digital Version of my Owner's and Assembly Manuals?",
             "icon": "none",
-            "row_content": "Owner and Assembly manuals can be downloaded by visiting our <a style=\"color:red\" href=\"https://www.marcypro.com/product-manuals\">Product Manual Page.</a>\n<br>\n<br>\nIf you are unable to locate your model from our selection, please contact our customer service department <a style=\"color:red\" href=\"https://marcypro.com/support\">via ticket system</a> and they will be happy to assist",
+            "row_content": "Owner and Assembly manuals can be downloaded by visiting our <a style=\"color:red\" href=\"product-manuals\">Product Manual Page.</a>\n<br>\n<br>\nIf you are unable to locate your model from our selection, please contact our customer service department <a style=\"color:red\" href=\"https://marcypro.com/support\">via ticket system</a> and they will be happy to assist",
             "page": ""
           }
         },
