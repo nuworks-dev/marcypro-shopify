@@ -25,7 +25,7 @@
           "settings": {
             "heading": "How do I Request a Missing / Damaged Part?",
             "icon": "none",
-            "row_content": "To order replacement parts (warranty & non-warranty,) please click <a style=\"color:red;\"  href=\"https://www.marcypro.com/parts\"> PARTS </a> at the top of our homepage. There will be instructions on how to submit your request for parts.\n<br>\n<br>\nOur trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.",
+            "row_content": "To order replacement parts (warranty & non-warranty,) please click <a style=\"color:red;\"  href=\"/parts\"> PARTS </a> at the top of our homepage. There will be instructions on how to submit your request for parts.\n<br>\n<br>\nOur trained experts are ready to help. You will receive a response within 1 - 2 business days of submitting your parts ticket.",
             "page": ""
           }
         },
@@ -34,7 +34,7 @@
           "settings": {
             "heading": "Where can I find a Digital Version of my Owner's and Assembly Manuals?",
             "icon": "none",
-            "row_content": "Owner and Assembly manuals can be downloaded by visiting our <a style=\"color:red\" href=\"product-manuals\">Product Manual Page.</a>\n<br>\n<br>\nIf you are unable to locate your model from our selection, please contact our customer service department <a style=\"color:red\" href=\"https://marcypro.com/support\">via ticket system</a> and they will be happy to assist",
+            "row_content": "Owner and Assembly manuals can be downloaded by visiting our <a style=\"color:red\" href=\"/product-manuals\">Product Manual Page.</a>\n<br>\n<br>\nIf you are unable to locate your model from our selection, please contact our customer service department <a style=\"color:red\" href=\"/support\">via ticket system</a> and they will be happy to assist",
             "page": ""
           }
         },
@@ -61,7 +61,7 @@
           "settings": {
             "heading": "Do your products require assembly?",
             "icon": "none",
-            "row_content": "Yes, virtually all products on <a style=\"color:red;\"  href=\"https://marcypro.com/\">MarcyPro.com</a> require assembly with very few exceptions.\n<br>\n<br>\nYou can follow the simple step-by-step instruction manual that was provided with your product.\n<br>\n<br>\nSome basic tools may be required to assemble your product. MarcyPro.com does not provide a technician to assemble products.\n<br>\n<br>\nTo download your specific Owners Manual or Assembly Manual, see the <a style=\"color:red\" href=\"https://www.marcypro.com/product-manuals\">Product Manual Page.</a>",
+            "row_content": "Yes, virtually all products on <a style=\"color:red;\"  href=\"https://marcypro.com/\">MarcyPro.com</a> require assembly with very few exceptions.\n<br>\n<br>\nYou can follow the simple step-by-step instruction manual that was provided with your product.\n<br>\n<br>\nSome basic tools may be required to assemble your product. MarcyPro.com does not provide a technician to assemble products.\n<br>\n<br>\nTo download your specific Owners Manual or Assembly Manual, see the <a style=\"color:red\" href=\"/product-manuals\">Product Manual Page.</a>",
             "page": ""
           }
         },
@@ -106,7 +106,7 @@
           "settings": {
             "heading": "Updating an Order, Cancelling Orders, Missing Part, Order Issues, & Order Status",
             "icon": "none",
-            "row_content": "<strong>For any issues with your order</strong> -  please reach out to us via live chat on Marcypro.com, via ticket at <a style=\"color:red;\"  href=\"marcypro.com/support\",> marcypro.com/support </a> or via message if you have a Marcypro.com account. Issues include:\n<br>\n<br>Updating a Shipping Address\n<br>Updating a Phone Number\n<br>General Order Questions\n<br>\n<br>\n<strong>Order Status</strong> – If you created a Marcypro.com account, please log in to see your order status. Otherwise, please reach out to us via Live Chat during business hours to receive an update.\n<br>\n<br>\n<strong>Canceling an order</strong> – If the order is in transit or the order is cancelled due to buyer’s remorse (which includes “does not fit,”) we charge a 15% restocking fee and the cost of shipping both ways.\n<br>\n<br>\nTo start your cancellation, please reach out to us via live chat on Marcypro.com, via ticket at marcypro.com/support, or via message if you have a Marcypro.com account.\n<br>\n<br>\n<strong>Missing Part With 2 year-Warranty</strong> – If your order is missing a part, the fastest way to get a replacement part free of charge under warranty would be to fill out the following form: <a style=\"color:red;\"  href=\"https://www.marcypro.com/replacement-parts-request\"> https://www.marcypro.com/replacement-parts-request </a>\n<br>\n<br>\nPlease allow 1 - 2 business days for a representative to respond.\n<br>\n<br>\n<strong>Missing Part Not under Warranty</strong> - If you are not under warranty, please request your part at <a style=\"color:red;\"  href=\"https://marcypro.freshdesk.com/support/tickets/new\">  https://marcypro.freshdesk.com/support/tickets/new </a> and a customer rep will reach out to you with availability / pricing",
+            "row_content": "<strong>For any issues with your order</strong> -  please reach out to us via live chat on Marcypro.com, via ticket at <a style=\"color:red;\"  href=\"/support\",> marcypro.com/support </a> or via message if you have a Marcypro.com account. Issues include:\n<br>\n<br>Updating a Shipping Address\n<br>Updating a Phone Number\n<br>General Order Questions\n<br>\n<br>\n<strong>Order Status</strong> – If you created a Marcypro.com account, please log in to see your order status. Otherwise, please reach out to us via Live Chat during business hours to receive an update.\n<br>\n<br>\n<strong>Canceling an order</strong> – If the order is in transit or the order is cancelled due to buyer’s remorse (which includes “does not fit,”) we charge a 15% restocking fee and the cost of shipping both ways.\n<br>\n<br>\nTo start your cancellation, please reach out to us via live chat on Marcypro.com, via ticket at marcypro.com/support, or via message if you have a Marcypro.com account.\n<br>\n<br>\n<strong>Missing Part With 2 year-Warranty</strong> – If your order is missing a part, the fastest way to get a replacement part free of charge under warranty would be to fill out the following form: <a style=\"color:red;\"  href=\"https://www.marcypro.com/replacement-parts-request\"> https://www.marcypro.com/replacement-parts-request </a>\n<br>\n<br>\nPlease allow 1 - 2 business days for a representative to respond.\n<br>\n<br>\n<strong>Missing Part Not under Warranty</strong> - If you are not under warranty, please request your part at <a style=\"color:red;\"  href=\"https://marcypro.freshdesk.com/support/tickets/new\">  https://marcypro.freshdesk.com/support/tickets/new </a> and a customer rep will reach out to you with availability / pricing",
             "page": ""
           }
         },
@@ -142,7 +142,7 @@
           "settings": {
             "heading": "Orders Shipped via LTL Freight Carrier",
             "icon": "none",
-            "row_content": "<strong>Does my order ship freight?</strong> – Our large items ship via LTL freight carrier. Once the order is picked up, our system will e-mail the tracking number and a link to the LTL freight carrier's tracking website.\n<br>\n<br>\nAnything other than UPS, FedEx, or USPS ships via LTL Freight Carrier and will be delivered curbside on a pallet.\n<br>\n<br>\nThe following models ship via LTL freight on a pallet due to the size of their boxes: MD-9010G, SM-4033, SM-4008, SM-4903, MKM-81010 \n<br>\n<br>\n<strong>Missing Box</strong> – If a box is missing from your LTL freight order, please reach out to us via live chat on Marcypro.com, via ticket at <a style=\"color:red;\"  href=\"marcypro.com/support\">marcypro.com/support</a> or via message if you have a Marcypro.com account.\n<br\n<br>\nOften, the box is just left behind at your local terminal and we can contact the freight company to retrieve it quickly.\n<br>\n<br>\n<strong>My freight order has an estimated delivery date</strong> – Freight orders will not deliver until the freight company calls you to schedule a delivery date. The estimated delivery date on freight tracking websites is the estimated date the unit will reach your local freight terminal.\n<br>\n<br>\n<strong>How do I track my order?</strong> – Once your order is shipped, the tracking number will be sent to your e-mail automatically through our system along with a link to your carrier’s website tracking page.",
+            "row_content": "<strong>Does my order ship freight?</strong> – Our large items ship via LTL freight carrier. Once the order is picked up, our system will e-mail the tracking number and a link to the LTL freight carrier's tracking website.\n<br>\n<br>\nAnything other than UPS, FedEx, or USPS ships via LTL Freight Carrier and will be delivered curbside on a pallet.\n<br>\n<br>\nThe following models ship via LTL freight on a pallet due to the size of their boxes: MD-9010G, SM-4033, SM-4008, SM-4903, MKM-81010 \n<br>\n<br>\n<strong>Missing Box</strong> – If a box is missing from your LTL freight order, please reach out to us via live chat on Marcypro.com, via ticket at <a style=\"color:red;\"  href=\"/support\">marcypro.com/support</a> or via message if you have a Marcypro.com account.\n<br\n<br>\nOften, the box is just left behind at your local terminal and we can contact the freight company to retrieve it quickly.\n<br>\n<br>\n<strong>My freight order has an estimated delivery date</strong> – Freight orders will not deliver until the freight company calls you to schedule a delivery date. The estimated delivery date on freight tracking websites is the estimated date the unit will reach your local freight terminal.\n<br>\n<br>\n<strong>How do I track my order?</strong> – Once your order is shipped, the tracking number will be sent to your e-mail automatically through our system along with a link to your carrier’s website tracking page.",
             "page": ""
           }
         },
@@ -151,7 +151,7 @@
           "settings": {
             "heading": "Do you Offer Assembly? How do I Register / Activate my Warranty?",
             "icon": "none",
-            "row_content": "<strong>Does MarcyPro offer assembly?</strong> – We sincerely apologize, we do not offer set up / assembly of our products.\n<br>\n<br>\nIf you decide to use a third party to assemble your item, please refrain from scheduling an assembler until after you receive your product in order to avoid any scheduling mishaps\n<br>\n<br>\n<strong>Register / Activate Warranty</strong> – To register your product and activate your 2-year limited warranty, please follow this link and fill out the registration form: <a style=\"color:red;\"  href=\"https://www.marcypro.com/product-registration\">https://www.marcypro.com/product-registration</a>\n<br>\n<br>\nCan't see the form? Try turning off your ad blocker or using an alternative web browser.",
+            "row_content": "<strong>Does MarcyPro offer assembly?</strong> – We sincerely apologize, we do not offer set up / assembly of our products.\n<br>\n<br>\nIf you decide to use a third party to assemble your item, please refrain from scheduling an assembler until after you receive your product in order to avoid any scheduling mishaps\n<br>\n<br>\n<strong>Register / Activate Warranty</strong> – To register your product and activate your 2-year limited warranty, please follow this link and fill out the registration form: <a style=\"color:red;\"  href=\"/product-registration\">https://www.marcypro.com/product-registration</a>\n<br>\n<br>\nCan't see the form? Try turning off your ad blocker or using an alternative web browser.",
             "page": ""
           }
         },
@@ -187,7 +187,7 @@
           "settings": {
             "heading": "Do you ship to my Country?",
             "icon": "none",
-            "row_content": "<strong>For item orders</strong>, we only ship within the Contiguous United States (we do not ship to Hawaii, Alaska, military bases, and U.S. territories / Possessions) and we do not ship internationally.\n<br>\n<br>\n<strong>For Parts orders</strong>, we ship to Mexico and Canada when the order is placed through our ticket system at <a style=\"color:red;\"  href=\"https://marcypro.com/support\">https://marcypro.com/support </a>",
+            "row_content": "<strong>For item orders</strong>, we only ship within the Contiguous United States (we do not ship to Hawaii, Alaska, military bases, and U.S. territories / Possessions) and we do not ship internationally.\n<br>\n<br>\n<strong>For Parts orders</strong>, we ship to Mexico and Canada when the order is placed through our ticket system at <a style=\"color:red;\"  href=\"/support\">https://marcypro.com/support </a>",
             "page": ""
           }
         }
@@ -227,7 +227,7 @@
           "settings": {
             "heading": "How do I adjust the cable tension or slack on my Home Gym?",
             "icon": "none",
-            "row_content": "Most Home Gyms have an adjustable Double Floating Pulley Bracket within the cable routing of the workout machine.\n<br>\n<br>\nYou will need to identify this part on your <a style=\"color:red;\"  href=\"assembly manual\">assembly manual </a> as it may vary from one machine to the next. Re-position the lower pulley on the Double Floating Pulley Bracket by moving the pulley up or down.\n<br>\n<br>\nTo increase cable tension, move the lower pulley up to the next vacant hole position. To add more slack to the cable, move the lower pulley down to the next vacant hole position.\n<br>\n<br>\nFor additional assistance, please reach out to our customer service team via ticket system: <a style=\"color:red;\"  href=\"marcypro.com/support\"> marcypro.com/support </a>\n</br>",
+            "row_content": "Most Home Gyms have an adjustable Double Floating Pulley Bracket within the cable routing of the workout machine.\n<br>\n<br>\nYou will need to identify this part on your <a style=\"color:red;\"  href=\"/assembly manual\">assembly manual </a> as it may vary from one machine to the next. Re-position the lower pulley on the Double Floating Pulley Bracket by moving the pulley up or down.\n<br>\n<br>\nTo increase cable tension, move the lower pulley up to the next vacant hole position. To add more slack to the cable, move the lower pulley down to the next vacant hole position.\n<br>\n<br>\nFor additional assistance, please reach out to our customer service team via ticket system: <a style=\"color:red;\"  href=\"/support\"> marcypro.com/support </a>\n</br>",
             "page": ""
           }
         },
@@ -277,7 +277,7 @@
           "settings": {
             "heading": "Is there a guide for removing the crank from your Stationary Bikes?",
             "icon": "none",
-            "row_content": "For instructions on how to use the crank remover tool please download the guide: <a style=\"color:red;\"  href=\"https://www.marcypro.com/content/Product_Manuals/Exercise_Bikes/Crank%20Removal.pdf\"> Crank Removal Guide.</a>\n<br>\n<br>\nAdditionally we have produced a video illustrating the removal process to accompany our Crank Removal Guide. Please visit this link:  <a style=\"color:red;\"  href=\"https://www.youtube.com/watch?v=3cueGTBhrC8\"> Pedal Removal Instructional Video </a>",
+            "row_content": "For instructions on how to use the crank remover tool please download the guide: <a style=\"color:red;\"  href=\"/content/Product_Manuals/Exercise_Bikes/Crank%20Removal.pdf\"> Crank Removal Guide.</a>\n<br>\n<br>\nAdditionally we have produced a video illustrating the removal process to accompany our Crank Removal Guide. Please visit this link:  <a style=\"color:red;\"  href=\"https://www.youtube.com/watch?v=3cueGTBhrC8\"> Pedal Removal Instructional Video </a>",
             "page": ""
           }
         },
