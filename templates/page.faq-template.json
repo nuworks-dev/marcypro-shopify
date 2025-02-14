@@ -28,68 +28,71 @@
         "input_weight": 700
       }
     },
-    "multicolumn_yNF9tK": {
-      "type": "multicolumn",
+    "nw_multicolumn_xFDmUL": {
+      "type": "nw-multicolumn",
       "blocks": {
-        "column_cgYYTV": {
+        "column_wkn6zn": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/Frame_6767.png",
-            "title": "",
+            "image": "shopify://shop_images/faq1.png",
+            "title": "General",
             "text": "",
-            "link_label": "Click me",
-            "link": "#shopify-section-template--19270786384108__nw_collapsible_content_EmcbdC"
-          }
-        },
-        "column_xJWRgE": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "link_label": "",
             "link": ""
           }
         },
-        "column_6tKMEN": {
+        "column_cwhjQq": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/faq2.png",
+            "title": "Orders",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column_8iCKPt": {
+        "column_KrdPT7": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/faq3.png",
+            "title": "Home Gym/Racks",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WdtLCd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/faq4.png",
+            "title": "Exercise Bikes",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column_cgYYTV",
-        "column_xJWRgE",
-        "column_6tKMEN",
-        "column_8iCKPt"
+        "column_wkn6zn",
+        "column_cwhjQq",
+        "column_KrdPT7",
+        "column_WdtLCd"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "full",
+        "image_width": "third",
         "image_ratio": "adapt",
         "columns_desktop": 4,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 0
+        "padding_bottom": 36
       }
     },
     "nw_collapsible_content_EmcbdC": {
@@ -436,7 +439,7 @@
   "order": [
     "main",
     "nw_heading_PTpVbe",
-    "multicolumn_yNF9tK",
+    "nw_multicolumn_xFDmUL",
     "nw_collapsible_content_EmcbdC",
     "nw_collapsible_content_ccXrqW",
     "nw_collapsible_content_p96QXt",
