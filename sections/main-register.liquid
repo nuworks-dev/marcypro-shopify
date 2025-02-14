@@ -6,13 +6,6 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
   .nw-customer-login h1 {
 	font-family: Montserrat;
 	font-weight: 700;
@@ -43,21 +36,27 @@
 	border: 0px;
 	box-shadow: none;
   }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
 {%- endstyle -%}
 
 <div class="nw-customer-login customer register section-{{ section.id }}-padding">
   <h1>
-    SIGN UP
+    {{ 'customer.register.title' | t }}
   </h1>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
-
     {%- if form.errors -%}
-      <h4 class="form__message" tabindex="-1" autofocus>
+      <h2 class="form__message" tabindex="-1" autofocus>
         <span class="svg-wrapper">
           {{- 'icon-error.svg' | inline_asset_content -}}
         </span>
         {{ 'templates.contact.form.error_heading' | t }}
-      </h4>
+      </h2>
       <ul>
         {%- for field in form.errors -%}
           <li>
@@ -73,22 +72,19 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
-
     <div class="field">
       <input
         type="text"
         name="customer[first_name]"
         id="RegisterForm-FirstName"
-		aria-required="true"
-		autofocus 
         {% if form.first_name %}
           value="{{ form.first_name }}"
         {% endif %}
         autocomplete="given-name"
-        placeholder="First Name"
+        placeholder="{{ 'customer.register.first_name' | t }}"
       >
       <label for="RegisterForm-FirstName">
-        First Name *
+        {{ 'customer.register.first_name' | t }}
       </label>
     </div>
     <div class="field">
@@ -96,15 +92,14 @@
         type="text"
         name="customer[last_name]"
         id="RegisterForm-LastName"
-		aria-required="true"
         {% if form.last_name %}
           value="{{ form.last_name }}"
         {% endif %}
         autocomplete="family-name"
-        placeholder="Last Name"
+        placeholder="{{ 'customer.register.last_name' | t }}"
       >
       <label for="RegisterForm-LastName">
-        Last Name *
+        {{ 'customer.register.last_name' | t }}
       </label>
     </div>
     <div class="field">
@@ -123,10 +118,10 @@
           aria-invalid="true"
           aria-describedby="RegisterForm-email-error"
         {% endif %}
-        placeholder="Email *"
+        placeholder="{{ 'customer.register.email' | t }}"
       >
       <label for="RegisterForm-email">
-        Email *
+        {{ 'customer.register.email' | t }}
       </label>
     </div>
     {%- if form.errors contains 'email' -%}
@@ -148,10 +143,10 @@
           aria-invalid="true"
           aria-describedby="RegisterForm-password-error"
         {% endif %}
-        placeholder="Password"
+        placeholder="{{ 'customer.register.password' | t }}"
       >
       <label for="RegisterForm-password">
-        Password *
+        {{ 'customer.register.password' | t }}
       </label>
     </div>
     {%- if form.errors contains 'password' -%}
@@ -164,31 +159,10 @@
       </span>
     {%- endif -%}
     <button>
-      Create Account
+      {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
 </div>
-
-
-<script>
-	document.querySelector("#create_customer").addEventListener("submit", function (event) {
-		const firstName = document.getElementById("RegisterForm-FirstName").value.trim();
-		const lastName = document.getElementById("RegisterForm-LastName").value.trim();
-		let errors = [];
-	  
-		if (firstName === "") {
-		  errors.push("First Name is required.");
-		}
-		if (lastName === "") {
-		  errors.push("Last Name is required.");
-		}
-	  
-		if (errors.length > 0) {
-		  event.preventDefault(); // Stop form submission
-		  alert(errors.join("\n")); // Show all errors in one alert
-		}
-	});	  
-</script>
 
 {% schema %}
 {
