@@ -9,35 +9,50 @@
  */
 {
   "sections": {
-    "nw_image_banner_gp7FMb": {
-      "type": "nw-image-banner",
+    "multirow_WcHcdG": {
+      "type": "multirow",
       "blocks": {
-        "heading_CdQ7YJ": {
-          "type": "heading",
+        "row_4B9LA6": {
+          "type": "row",
           "settings": {
-            "heading": "ABOUT US",
-            "text_color": "#ffffff",
-            "text_size": 72
+            "image": "shopify://shop_images/parts-1.png",
+            "caption": "",
+            "heading": "<strong>Under Warranty</strong>",
+            "text": "<p>Missing a part? Received a damaged part? </p><p>Click the link below.</p>",
+            "button_label": "Request Now",
+            "button_link": "shopify://pages/replacement-parts-request-form"
+          }
+        },
+        "row_KnNRNd": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/parts-2.png",
+            "caption": "",
+            "heading": "<strong>Not Under Warranty</strong>",
+            "text": "<p>No longer under the 2-Year Warranty?</p><p>Request replacement parts below.</p><p> </p><p>*Provide: Model Number and Quantity</p>",
+            "button_label": "Purchase Parts",
+            "button_link": "shopify://collections/replacement-parts"
           }
         }
       },
       "block_order": [
-        "heading_CdQ7YJ"
+        "row_4B9LA6",
+        "row_KnNRNd"
       ],
       "settings": {
-        "image": "shopify://shop_images/d20fbc8f36e8b41ded3d82035bfd05bf.png",
-        "image_2": "shopify://shop_images/d20fbc8f36e8b41ded3d82035bfd05bf.png",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "mobile_desktop_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "primary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "align-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "main": {
@@ -49,7 +64,7 @@
     }
   },
   "order": [
-    "nw_image_banner_gp7FMb",
+    "multirow_WcHcdG",
     "main"
   ]
 }
