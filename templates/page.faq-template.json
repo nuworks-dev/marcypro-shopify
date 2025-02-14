@@ -34,41 +34,33 @@
         "column_wkn6zn": {
           "type": "column",
           "settings": {
+            "link_label": "General",
             "image": "shopify://shop_images/faq1.png",
-            "title": "General",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "link": "#faq-general"
           }
         },
         "column_cwhjQq": {
           "type": "column",
           "settings": {
+            "link_label": "Orders",
             "image": "shopify://shop_images/faq2.png",
-            "title": "Orders",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "link": "#faq-orders"
           }
         },
         "column_KrdPT7": {
           "type": "column",
           "settings": {
+            "link_label": "Home Gym/Racks",
             "image": "shopify://shop_images/faq3.png",
-            "title": "Home Gym/Racks",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "link": "#faq-homegym"
           }
         },
         "column_WdtLCd": {
           "type": "column",
           "settings": {
+            "link_label": "Exercise Bikes",
             "image": "shopify://shop_images/faq4.png",
-            "title": "Exercise Bikes",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "link": "#faq-exercise-bike"
           }
         }
       },
@@ -79,18 +71,6 @@
         "column_WdtLCd"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -166,6 +146,7 @@
         ".accordion__content {padding-top: 20px; padding-bottom: 20px;}"
       ],
       "settings": {
+        "custom_id": "faq-general",
         "caption": "",
         "heading": "<strong>GENERAL</strong>",
         "heading_size": "h2",
@@ -291,6 +272,7 @@
         ".accordion__content {padding-top: 20px; padding-bottom: 20px;}"
       ],
       "settings": {
+        "custom_id": "faq-orders",
         "caption": "",
         "heading": "<strong>ORDERS</strong>",
         "heading_size": "h2",
@@ -336,6 +318,7 @@
         ".accordion__content {padding-top: 20px; padding-bottom: 20px;}"
       ],
       "settings": {
+        "custom_id": "faq-homegym",
         "caption": "",
         "heading": "<strong>HOME GYM AND SMITH MACHINE TROUBLESHOOTING</strong>",
         "heading_size": "h2",
@@ -421,6 +404,7 @@
         ".accordion__content {padding-top: 20px; padding-bottom: 20px;}"
       ],
       "settings": {
+        "custom_id": "faq-exercise-bike",
         "caption": "",
         "heading": "<strong>EXERCISE BIKE TROUBLESHOOTING</strong>",
         "heading_size": "h2",
