@@ -16,6 +16,7 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/parts-1.png",
+            "button_color": "#c02127",
             "caption": "",
             "heading": "<strong>Under Warranty</strong>",
             "text": "<p>Missing a part? Received a damaged part? </p><p>Click the link below.</p>",
@@ -27,6 +28,7 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/parts-2.png",
+            "button_color": "#c02127",
             "caption": "",
             "heading": "<strong>Not Under Warranty</strong>",
             "text": "<p>No longer under the 2-Year Warranty?</p><p>Request replacement parts below.</p><p> </p><p>*Provide: Model Number and Quantity</p>",

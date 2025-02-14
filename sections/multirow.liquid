@@ -6,6 +6,18 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .nw-custom-btn:after,
+  .nw-custom-btn:before {
+	box-shadow: none;
+	outline: none;
+  }
+
+  .nw-custom-btn:hover:after {
+	box-shadow: none !important;
+	outline: none;
+  }
+
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -94,7 +106,8 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button button--{{ section.settings.button_style }}"
+                  class="nw-custom-btn button button--{{ section.settings.button_style }}"
+				  style="background-color: {{ block.settings.button_color }}"
                 >
                   {{ block.settings.button_label | escape }}
                 </a>
@@ -357,6 +370,11 @@
           "id": "image",
           "label": "t:sections.multirow.blocks.row.settings.image.label"
         },
+		{
+			"type": "color",
+			"id": "button_color",
+			"label": "Button Color",
+		},
         {
           "type": "text",
           "id": "caption",
