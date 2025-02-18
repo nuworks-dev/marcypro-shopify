@@ -64,7 +64,7 @@
         "featured_collection_aAQpN6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "home-gyms",
+            "collection": "category-name-home-gyms-category-path-shop-all",
             "collection_list_item": "home-gym"
           }
         },
