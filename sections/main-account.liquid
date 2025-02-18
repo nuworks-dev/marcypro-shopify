@@ -11,6 +11,8 @@
 		background: #F7F4ED;
 		border-radius: 10px;
 		padding: 21px;
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.personal-detail h3 {
@@ -39,6 +41,44 @@
 		letter-spacing: 0%;
 	}
 
+	.email-phone .label span {
+		color: #000;
+	}
+
+	.address-link-title {
+		display: flex;
+		align-items: center;
+		vertical-align: middle;
+		gap: 40px;
+	}
+
+	.address-link-title a {
+		font-family: Montserrat;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 21px;
+		letter-spacing: 0%;
+		color: #C02127;
+	}
+
+	.address-type {
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0%;
+		color: #707070;
+	}
+
+	.address-block {
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0%;
+		color: #000;
+	}
+
 	@media screen and (min-width: 750px) {
 		.section-{{ section.id }}-padding {
 			padding-top: {{ section.settings.padding_top }}px;
@@ -62,31 +102,45 @@
 
 		{% comment %} ACCOUNT DETAIL {% endcomment %}
 		<div class="personal-detail">
-			{% comment %} <h2>{{ 'customer.account.details' | t }}</h2> {% endcomment %}
-			<h3>{{ customer.first_name }} {{ customer.last_name }}</h3>
-			<div class="email-phone">
-				<div>
-					<p class="label"><span>Email</span><br />
-					{{ customer.email }}</p>
-				</div>
-				<div>
-					<p class="label"><span>Phone Number</span><br />
-					{{ customer.phone }}</p>
+			<div>
+				{% comment %} <h2>{{ 'customer.account.details' | t }}</h2> {% endcomment %}
+				<h3>{{ customer.first_name }} {{ customer.last_name }}</h3>
+				<div class="email-phone">
+					<div>
+						<p class="label"><span>Email</span><br />
+						{{ customer.email }}</p>
+					</div>
+					<div>
+						<p class="label"><span>Phone Number</span><br />
+						{{ customer.phone }}</p>
+					</div>
 				</div>
 			</div>
 		</div>
-
+	</div>
+	<br />
+	<div class="personal-detail">
 		{% comment %} DEFAULT ADDRESS {% endcomment %}
 		<div>
-			<h2>Default Address</h2>
 			{% comment %} Customer Address {% endcomment %}
-			{{ customer.default_address | format_address }}
-			<a href="{{ routes.account_addresses_url }}">
-				{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
-			</a>
+			<span class="address-link-title">
+				<h3>Addresses</h3>
+				<a href="{{ routes.account_addresses_url }}">
+					{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
+				</a>
+			</span>
+
+			<div>
+				<h3 class="address-type">Default Address</h3>
+				<div class="address-block">
+					{{ customer.default_address | format_address }}
+				</div>
+			</div>
 		</div>
+		{% comment %} {{  customer.addresses | json }} {% endcomment %}
 	</div>
 
+	<br />
 	<div>
 		{% comment %} ORDERS {% endcomment %}
 		<div>
