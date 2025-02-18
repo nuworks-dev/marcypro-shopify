@@ -71,6 +71,18 @@
 		text-decoration: underline;
 	}
 
+	.nw-password i {
+		display: flex;
+		align-items: center;
+		padding-right: 12px;
+  	}
+
+	.nw-password i:hover {
+		cursor: pointer;
+		color: #C02127;
+	}
+
+
 	@media screen and (min-width: 750px) {
 		.section-{{ section.id }}-padding {
 			padding-top: {{ section.settings.padding_top }}px;
@@ -188,7 +200,7 @@
       </div>
 
       {%- if form.password_needed -%}
-        <div class="field">
+        <div class="field nw-password">
           <input
             type="password"
             value=""
@@ -203,6 +215,7 @@
           <label for="CustomerPassword">
             {{ 'customer.login_page.password' | t }}
           </label>
+		  <i class="bi bi-eye-slash" id="togglePassword"></i>
         </div>
 
         <a href="#recover">
@@ -238,6 +251,7 @@
       {%- endform -%}
     </div>
   {%- endif -%}
+
 </div>
 
 {% schema %}
