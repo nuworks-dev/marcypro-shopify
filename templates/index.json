@@ -183,7 +183,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
+        "enable_desktop_slider": false,
         "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
         "image_ratio": "square",
         "image_shape": "default",
