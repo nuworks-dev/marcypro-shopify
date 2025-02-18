@@ -46,10 +46,45 @@
         "padding_top": 60,
         "padding_bottom": 80
       }
+    },
+    "nw_featured_quotes_NtDmxi": {
+      "type": "nw-featured-quotes",
+      "blocks": {
+        "featured_subtitle_RqydGt": {
+          "type": "featured_subtitle",
+          "settings": {
+            "featured_subtitle": "Subtitle text goes here"
+          }
+        },
+        "featured_title_MNNTMB": {
+          "type": "featured_title",
+          "settings": {
+            "featured_title": "TITLE GOES HERE"
+          }
+        },
+        "featured_description_DbL8qL": {
+          "type": "featured_description",
+          "settings": {
+            "featured_description": "Description goes here"
+          }
+        }
+      },
+      "block_order": [
+        "featured_subtitle_RqydGt",
+        "featured_title_MNNTMB",
+        "featured_description_DbL8qL"
+      ],
+      "disabled": true,
+      "settings": {
+        "featured_background": "#231f20",
+        "featured_text_color": "#ffffff",
+        "featured_desktop_image": "shopify://shop_images/Manifesto-Mobile.png"
+      }
     }
   },
   "order": [
     "nw_image_banner_gp7FMb",
-    "main"
+    "main",
+    "nw_featured_quotes_NtDmxi"
   ]
 }
