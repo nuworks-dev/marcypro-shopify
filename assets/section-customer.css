@@ -1,0 +1,26 @@
+.nw-main-account h1 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #000;
+}
+.nw-main-account h2 {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #000;
+}
+.nw-main-account .header-title-logout {
+  display: flex;
+  justify-content: space-between;
+}
+.nw-main-account .order-account-detail {
+  display: flex;
+  gap: 30px;
+}
+
+/*# sourceMappingURL=section-customer.css.map */

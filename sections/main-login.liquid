@@ -1,17 +1,82 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
+	.section-{{ section.id }}-padding {
+		padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+		padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+	}
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
+	#login, #recover {
+		font-family: Montserrat;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 32px;
+		letter-spacing: 0%;
+		text-align: center;
+		color: #231F20;
+	}
+
+	#sign-in-btn, #login-btn {
+		width: 100%;
+		background: #C02127;
+		box-shadow: none !important;
+		outline: none;
+	}
+
+	#sign-in-btn::before,
+	#sign-in-btn::after,
+	#login-btn::before,
+	#login-btn::after {
+		border: 0px;
+		box-shadow: none;
+	}
+
+	#sign-in-btn:hover:before,
+	#sign-in-btn:hover:after {
+		border: 0px;
+		box-shadow: none;
+	}
+
+	#label-create-account {
+		display: flex;
+		justify-content: center;
+	}
+
+	#label-create-account a {
+		margin: unset;
+	}
+
+	#label-create-account .inner {
+		display: flex;
+		gap: 20px;
+	}
+
+	#label-create-account .inner span {
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: 0%;
+		text-decoration: none;
+		color: #231F20;
+	}
+
+	#label-create-account .inner a {
+		color: #C02127;
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: 0%;
+		text-decoration: underline;
+	}
+
+	@media screen and (min-width: 750px) {
+		.section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top }}px;
+			padding-bottom: {{ section.settings.padding_bottom }}px;
+		}
+	}
 {%- endstyle -%}
 
 {%- if section.settings.enable_shop_login_button == false -%}
@@ -58,8 +123,8 @@
         </small>
       {%- endif -%}
 
-      <button>
-        {{ 'customer.login_page.submit' | t }}
+      <button id="login-btn">
+		Submit
       </button>
 
       <a href="#login">
@@ -145,13 +210,19 @@
         </a>
       {%- endif -%}
 
-      <button>
+      <button id="sign-in-btn">
         {{ 'customer.login_page.sign_in' | t }}
       </button>
 
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
+		<span id="label-create-account">
+			<span class="inner">
+				<span>Don&apos;t have an account?</span>	
+				<a href="{{ routes.account_register_url }}">
+					{{ 'customer.login_page.create_account' | t }}
+				</a>
+			</span>
+		</span>
+     
     {%- endform -%}
   </div>
 
