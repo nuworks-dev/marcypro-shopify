@@ -323,7 +323,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-	
+
+	<script src="{{ 'jquery-3.7.1.js' | asset_url }}" defer="defer"></script>
+	<link rel="stylesheet" href="{{ 'bootstrap-icons.css' | asset_url }}" />
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -399,7 +402,28 @@
 			debugTemplate,
 			debugPageClass
 		});
+		
     </script>
+
+	<script>
+		window.onload = function () {
+			$(document).ready(function () {
+
+				const togglePassword = $("#togglePassword");
+				const password = $('input[name="customer[password]"]');
+		
+				// Use a regular function to properly reference 'this'
+				togglePassword.on('click', function() {
+					const type = password.attr("type") === "password" ? "text" : "password";
+					password.attr("type", type);
+					// 'this' now correctly refers to the clicked element
+					this.classList.toggle("bi-eye");
+					this.classList.toggle("bi-eye-slash"); // Optionally toggle the other icon class
+				});
+				
+			});
+		};
+	</script>
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>

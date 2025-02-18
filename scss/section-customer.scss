@@ -1,0 +1,28 @@
+// sass --watch scss/section-customer.scss:assets/section-customer.css
+.nw-main-account {
+	h1 {
+		font-family: Montserrat;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 32px;
+		letter-spacing: 0px;
+		color: #000;
+	}
+	h2 {
+		font-family: Montserrat;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 32px;
+		letter-spacing: 0px;
+		color: #000;
+	}
+	.header-title-logout {
+		display: flex;
+		justify-content: space-between;
+	}
+	.order-account-detail {
+		display: flex;
+		// flex-direction: column-reverse;
+		gap: 30px;
+	}
+}
