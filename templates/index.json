@@ -102,13 +102,6 @@
             "collection": "retired-products",
             "collection_list_item": "retired-products"
           }
-        },
-        "featured_collection_QkgyKW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "weightlifting-accessories",
-            "collection_list_item": "weightlifting-accessories"
-          }
         }
       },
       "block_order": [
@@ -117,8 +110,7 @@
         "featured_collection_e8dEDz",
         "featured_collection_GyyVVe",
         "featured_collection_VB4ihT",
-        "featured_collection_ex7RiH",
-        "featured_collection_QkgyKW"
+        "featured_collection_ex7RiH"
       ],
       "settings": {
         "title": "SHOP BY CATEGORY",
