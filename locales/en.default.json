@@ -495,7 +495,7 @@
       "submit": "Create Account"
     },
     "reset_password": {
-      "title": "Reset account password",
+      "title": "RESET ACCOUNT PASSWORD",
       "subtext": "Enter a new password",
       "password": "Password",
       "password_confirm": "Confirm password",
