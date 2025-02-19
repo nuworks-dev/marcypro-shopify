@@ -12,7 +12,7 @@
 {%- endif -%}
 
 {% comment %} Make header main logo to be the alternate(black logo) {% endcomment %}
-{%- if page.metafields.custom.class == 'common-page' or template.name == 'product' or template.name == 'login' or template.name == 'register' or template.name == 'order' or template.name == 'account' or template.name == 'reset_password' or template.name == 'addresses' -%}
+{%- if page.metafields.custom.class == 'common-page' or template.name == 'product' or template.name == 'login' or template.name == 'register' or template.name == 'order' or template.name == 'account' or template.name == 'reset_password' or template.name == 'addresses' or template.name == 'template-404' -%}
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const header = document.querySelector(".header-wrapper");
