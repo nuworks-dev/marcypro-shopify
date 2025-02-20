@@ -122,7 +122,7 @@
                   assign visual_layout_class = 'facets-layout facets-layout-list facets-layout-list--' | append: presentation
                 endif
               %}
-
+         
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
                   <details
@@ -137,6 +137,7 @@
                       class="facets__summary caption-large focus-offset"
                       aria-label="{{ filter.label | escape }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
                     >
+                    
                       <div>
                         <span class="facets__summary-label">
                           {{- filter.label | escape }}
@@ -151,10 +152,13 @@
                             {{ 'products.facets.filter_and_operator_subtitle' | t }}
                           </span>
                         {%- endif -%}
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                          {% if filter.label != 'Sale' %}
+                            {{- 'icon-caret.svg' | inline_asset_content -}}
+                          {% endif %}                     
                       </div>
                     </summary>
-                    <div
+                    {% comment %} {% if filter.label != 'Sale' %} {% endcomment %}
+                      <div
                       id="Facet-{{ forloop.index }}-{{ section.id }}"
                       class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
                     >
@@ -294,6 +298,9 @@
                         </show-more-button>
                       {%- endif %}
                     </div>
+                    {% comment %} {% endif %} {% endcomment %}
+                
+                    
                   </details>
                 {% when 'price_range' %}
                   <details
@@ -332,61 +339,6 @@
                       </price-range>
                     </div>
                   </details>
-                  {% when 'product_type' %}
-                    <details
-                      id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
-                      class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
-                      data-index="{{ forloop.index }}"
-                      {% if filter_type == 'vertical' and forloop.index == 1 %}
-                        open
-                      {% endif %}
-                    >
-                      <summary class="facets__summary caption-large focus-offset">
-                        <div>
-                          <span>{{ filter.label | escape }}</span>
-                          {{- 'icon-caret.svg' | inline_asset_content -}}
-                        </div>
-                      </summary>
-                      <div
-                        id="Facet-{{ forloop.index }}-{{ section.id }}"
-                        class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
-                      >
-                        <div class="{% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical{% endif %}">
-                          <span class="facets__selected">
-                            {% if filter.active_values.size > 0 %}
-                              {% for value in filter.active_values %}
-                                {{ value | escape }}{% unless forloop.last %}, {% endunless %}
-                              {% endfor %}
-                            {% else %}
-                              {{ 'products.facets.all_product_types' | t }}
-                            {% endif %}
-                          </span>
-                          {%- if filter_type != 'vertical' -%}
-                            <facet-remove>
-                              <a href="{{ filter.url_to_remove }}" class="facets__reset link underlined-link">
-                                {{ 'products.facets.reset' | t }}
-                              </a>
-                            </facet-remove>
-                          {%- endif -%}
-                        </div>
-                        <ul class="facets__product-type">
-                          {% for value in filter.values %}
-                            <li class="facets__item">
-                              <label for="ProductType-{{ value.value | escape }}-{{ section.id }}">
-                                <input
-                                  type="checkbox"
-                                  id="ProductType-{{ value.value | escape }}-{{ section.id }}"
-                                  name="{{ filter.param_name }}"
-                                  value="{{ value.value | escape }}"
-                                  {% if value.active %}checked{% endif %}
-                                >
-                                {{ value.label | escape }}
-                              </label>
-                            </li>
-                          {% endfor %}
-                        </ul>
-                      </div>
-                    </details>
               {% endcase %}
             {%- endfor -%}
           </div>
