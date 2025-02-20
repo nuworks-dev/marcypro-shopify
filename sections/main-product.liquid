@@ -191,13 +191,63 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
+        
+                
               {%- when 'description' -%}
-                {%- if product.description != blank -%}
-                  <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
-                  </div>
-                {%- endif -%}
-              {%- when 'sku' -%}
+                <div class="product-min-description" style="display: flex; flex-direction:column; gap: 0.2em;">
+                  <p style="margin: 0;"><strong>UPC:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.barcode | default: 'N/A' }}</span></p>
+                  <p style="margin: 0;"><strong>Availability:</strong> <span style="font-weight: normal;">{% if product.selected_or_first_available_variant.available %}In Stock{% else %}Out of Stock{% endif %}</span></p>
+                  <p style="margin: 0;"><strong>Maximum Purchase:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.max_purchase_limit | default: '1 unit' }}</span></p>
+                  <p style="margin: 0;"><strong>Shipping:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.free_shipping | default: 'Free Shipping' }}</span></p>
+                </div>
+                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  <details>
+                    <summary>
+                      <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.description' | t }}</h2>
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </summary>
+                    {%- if product.description != blank -%}
+                      <div class="product__description rte">
+                        {{ product.description }}
+                      </div>
+                    {%- endif -%}
+                  </details>
+                </div>
+
+                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  <details>
+                    <summary>
+                      <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.specification' | t }}</h2>
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </summary>
+                    <div class="product__specification rte">
+                      <p>Specification details will be added here. For now, this is dummy data.</p>
+                      <ul>
+                        <li>Dimension: 10 x 5 x 2 inches</li>
+                        <li>Weight: 1.5 lbs</li>
+                        <li>Material: High-quality plastic</li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+
+                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                  <details>
+                    <summary>
+                      <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.manuals_and_workout_charts' | t }}</h2>
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </summary>
+                    <div class="product__manuals rte">
+                      <p>Manuals and workout charts will be added here. For now, this is dummy data.</p>
+                      <ul>
+                        <li><a href="#">User Manual PDF</a></li>
+                        <li><a href="#">Workout Chart PDF</a></li>
+                      </ul>
+                    </div>
+                  </details>
+                </div>
+           
+                {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
                   id="Sku-{{ section.id }}"
