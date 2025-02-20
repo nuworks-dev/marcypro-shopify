@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Logo_10f3ddb3-75b9-48d9-b832-810ed956c9ed.png",
+    "logo": "shopify://shop_images/Black-logo_White-logo.png",
     "logo_alternate": "shopify://shop_images/Black-logo_black-logo.png",
     "logo_width": 190,
     "favicon": "shopify://shop_images/MarcyPro_Favicon_Logo.png",
@@ -17,11 +17,11 @@
     "heading_scale": 100,
     "type_body_font": "montserrat_n4",
     "body_scale": 100,
-    "page_width": 1600,
+    "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
-    "animations_reveal_on_scroll": true,
+    "animations_reveal_on_scroll": false,
     "animations_hover_elements": "default",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
@@ -157,6 +157,11 @@
       },
       "9901917232353999808": {
         "type": "shopify://apps/buddha-mega-menu-navigation/blocks/megamenu/dbb4ce56-bf86-4830-9b3d-16efbef51c6f",
+        "disabled": false,
+        "settings": {}
+      },
+      "21474836472147483647": {
+        "type": "shopify://apps/ecomposer-landing-page-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
         "disabled": false,
         "settings": {}
       }
