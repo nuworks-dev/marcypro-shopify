@@ -44,6 +44,14 @@
     padding: 2rem;
   }
 
+  .shop-all-text {
+  font-weight: bold; /* Or a numeric value like 700 */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  color: #333; /* Dark gray - adjust as needed */
+  -webkit-text-stroke: 2px white; /* For WebKit browsers */
+  text-stroke: 2px white; /* Standard property */
+}
+
   @media screen and (max-width: 749px) {
     .collection-hero {
       min-height: 350px; /* Adjust height for mobile */
@@ -61,7 +69,16 @@
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        
+        {% if collection.title == 'Products' %}
+			<div style="display: flex; flex-direction:column;">
+				<span class="shop-all-text" data-text="SHOP ALL">SHOP</span>
+				<span>ALL</span>
+			</div>
+          {% else %}
         {{- collection.title | escape -}}
+        {% endif %}
+		
       </h1>
 
       {%- if section.settings.show_collection_description -%}
