@@ -122,7 +122,7 @@
                   assign visual_layout_class = 'facets-layout facets-layout-list facets-layout-list--' | append: presentation
                 endif
               %}
-
+         
               {% case filter.type %}
                 {% when 'boolean', 'list' %}
                   <details
@@ -137,6 +137,7 @@
                       class="facets__summary caption-large focus-offset"
                       aria-label="{{ filter.label | escape }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})"
                     >
+                    
                       <div>
                         <span class="facets__summary-label">
                           {{- filter.label | escape }}
@@ -151,10 +152,13 @@
                             {{ 'products.facets.filter_and_operator_subtitle' | t }}
                           </span>
                         {%- endif -%}
-                        {{- 'icon-caret.svg' | inline_asset_content -}}
+                          {% if filter.label != 'Sale' %}
+                            {{- 'icon-caret.svg' | inline_asset_content -}}
+                          {% endif %}                     
                       </div>
                     </summary>
-                    <div
+                    {% comment %} {% if filter.label != 'Sale' %} {% endcomment %}
+                      <div
                       id="Facet-{{ forloop.index }}-{{ section.id }}"
                       class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
                     >
@@ -294,6 +298,9 @@
                         </show-more-button>
                       {%- endif %}
                     </div>
+                    {% comment %} {% endif %} {% endcomment %}
+                
+                    
                   </details>
                 {% when 'price_range' %}
                   <details
