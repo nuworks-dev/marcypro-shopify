@@ -253,6 +253,26 @@
         "name": "date_time",
         "category": "DATE_TIME"
       }
+    },
+    {
+      "key": "discounted_products",
+      "namespace": "custom",
+      "name": "Sale",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_type",
+      "namespace": "custom",
+      "name": "product type",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [],
