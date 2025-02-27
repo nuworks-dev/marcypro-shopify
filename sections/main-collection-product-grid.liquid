@@ -23,6 +23,28 @@
 {%- endif -%}
 
 {%- style -%}
+    .quick-add__submit {
+        background: #C02127;
+        color: white;
+        border: none !important;
+    }
+    button.quick-add__submit:after {
+        border: none !important;
+    }
+
+  #product-grid{
+    column-gap: 27px !important;
+    row-gap: 30px !important;
+  }
+
+  .shop_all_item{
+    border: 1px solid#E4E4E4;
+    border-radius: 12px;
+    padding: 12px;
+    width: calc(23% - var(--grid-desktop-horizontal-spacing)* 3 / 4) !important;
+    max-width: calc(23% - var(--grid-desktop-horizontal-spacing)* 3 / 4) !important;
+  }
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -159,7 +181,7 @@
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
                 <li
-                  class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                  class="shop_all_item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
                     style="--animation-order: {{ forloop.index }};"
