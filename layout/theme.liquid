@@ -426,6 +426,10 @@
 		};
 	</script>
 
+	{% if request.path == '/pages/product-manuals' or request.path == '/pages/assembly-videos' %}
+		<script src="{{ 'search-table.js' | asset_url }}" defer="defer"></script>
+	{% endif %}
+
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
