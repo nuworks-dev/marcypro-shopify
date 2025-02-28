@@ -34,6 +34,16 @@
             "swatch_shape": "circle"
           }
         },
+        "parcel_panel_edd_gg8C8B": {
+          "type": "shopify://apps/parcel-panel/blocks/edd/fc785c3f-90e0-4c98-a20c-7cde9ba5e4b5",
+          "settings": {
+            "corner_radius": 4,
+            "margin_top": 10,
+            "margin_bottom": 10,
+            "padding_x": 16,
+            "padding_y": 16
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -72,6 +82,7 @@
         "title",
         "price",
         "variant_picker",
+        "parcel_panel_edd_gg8C8B",
         "quantity_selector",
         "buy_buttons",
         "description",
