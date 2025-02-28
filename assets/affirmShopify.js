@@ -7,7 +7,7 @@
 	let _affirm_country;
 	let _region_public_key;
 
-	let parsedRegionPublicKeys = JSON.parse('undefined');
+	let parsedRegionPublicKeys = JSON.parse('{"US":"E08YVGB2DLTE05LE","CA":null}');
 
 	if (_shopify_country === 'US') {
 		_affirm_country = 'USA';
@@ -35,7 +35,7 @@
 <!-- End Affirm -->;
 function initializePromos() { 
 
-let promosJSON = '[{"promoStatus":false,"pageType":"product","selector":null,"onChange":null,"fontSize":"12","logoType":"logo","logoColor":"blue","position":"afterend","addCents":false,"saleSelector":null,"comparePrices":false,"dataElement":null,"alaElement":null,"shopifyPageType":"product"},{"promoStatus":false,"pageType":"cart","selector":null,"onChange":null,"fontSize":"12","logoType":"logo","logoColor":"blue","position":"afterend","addCents":false,"saleSelector":null,"comparePrices":false,"dataElement":null,"alaElement":null,"shopifyPageType":"global"}]';
+let promosJSON = '[{"promoStatus":true,"pageType":"product","selector":null,"onChange":null,"fontSize":"12","logoType":"logo","logoColor":"blue","position":"afterend","addCents":false,"saleSelector":null,"comparePrices":false,"dataElement":null,"alaElement":null,"shopifyPageType":"product"},{"promoStatus":true,"pageType":"cart","selector":null,"onChange":null,"fontSize":"12","logoType":"logo","logoColor":"blue","position":"afterend","addCents":false,"saleSelector":null,"comparePrices":false,"dataElement":null,"alaElement":null,"shopifyPageType":"global"}]';
 
 let promos = JSON.parse(promosJSON);
 
