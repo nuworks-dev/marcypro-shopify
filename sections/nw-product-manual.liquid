@@ -88,25 +88,25 @@
 		while (hasNextPage) {
 			const query = `
 			query {
-			  metaobjects(type: "product_manual", first: 250 ${cursor ? `, after: "${cursor}"` : ""}) {
-				pageInfo {
-				  hasNextPage
-				  endCursor
-				}
-				edges {
-				  node {
-					id
-					fields {
-					  key
-					  value
+				metaobjects(type: "product_manual", first: 250 ${cursor ? `, after: "${cursor}"` : ""}) {
+					pageInfo {
+						hasNextPage
+						endCursor
 					}
-					handle
-					type
-				  }
+					edges {
+						node {
+							id
+							fields {
+								key
+								value
+							}
+							handle
+							type
+						}
+					}
 				}
-			  }
 			}`;
-
+	
 			const storefrontToken = "{{ settings.storefront_access_token }}";
 			const graphqlApiUrl = "{{ settings.graphql_api_url }}";
 	
@@ -123,7 +123,7 @@
 	
 			if (result.errors) {
 				console.error("GraphQL Error:", result.errors);
-				return;
+				return [];
 			}
 	
 			const metaobjects = result.data.metaobjects.edges;
@@ -143,46 +143,108 @@
 		return allFiles;
 	}
 	
+	// Batch fetches all file URLs from Shopify when given multiple GenericFile GIDs
+	async function fetchFileUrls(gids) {
+		if (gids.length === 0) return {};
+	
+		const queries = gids.map((gid, index) => `
+			file${index}: node(id: "${gid}") {
+				... on GenericFile {
+					url
+				}
+			}
+		`).join("\n");
+	
+		const query = `query { ${queries} }`;
+	
+		const response = await fetch("{{ settings.graphql_api_url }}", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				"X-Shopify-Storefront-Access-Token": "{{ settings.storefront_access_token }}"
+			},
+			body: JSON.stringify({ query })
+		});
+	
+		const json = await response.json();
+	
+		// Debugging
+		console.log("Fetching file URLs for GIDs:", gids);
+		console.log("GraphQL Query:", query);
+		console.log("Response from API:", json);
+	
+		const urlMap = {};
+		gids.forEach((gid, index) => {
+			const fileKey = `file${index}`;
+			if (json.data[fileKey] && json.data[fileKey].url) {
+				urlMap[gid] = json.data[fileKey].url;
+			} else {
+				console.warn(`No URL found for ${gid}`);
+			}
+		});
+	
+		return urlMap;
+	}
+	
 	async function displayProductManuals() {
 		const allFiles = await fetchProductManuals();
+	
+		// Extract all GIDs from files
+		const gids = allFiles
+			.map(file => file.file_attachment)
+			.filter(url => url.startsWith("gid://shopify/GenericFile/"));
+	
+		// Fetch actual URLs in batch
+		const fileUrlMap = await fetchFileUrls(gids);
+
+		console.log("Resolved File URL Map:", fileUrlMap);
 	
 		document.querySelectorAll(".manual-section").forEach(section => {
 			const categoryName = section.getAttribute("data-category");
 			const formattedId = `files-${categoryName.replace(/\s+/g, "-").toLowerCase()}`;
-			console.log("Looking for:", formattedId); // Debugging log
-		
+	
 			const tableBody = document.getElementById(formattedId);
-		
+	
 			if (!tableBody) {
 				console.warn(`No matching <tbody> found for category: ${categoryName} (ID: ${formattedId})`);
-				return; // Prevents further errors
+				return;
 			}
-		
+	
 			tableBody.innerHTML = ""; // Clear previous content
-		
+	
 			const relatedFiles = allFiles.filter(file => file.category_label === categoryName);
-		
+	
 			if (relatedFiles.length === 0) {
 				tableBody.innerHTML = `<tr><td colspan="4" style="text-align: center;">No files available</td></tr>`;
 				return;
 			}
-		
+	
 			let counter = 0;
 			let row = document.createElement("tr");
-		
+	
 			relatedFiles.forEach(file => {
 				let cell = document.createElement("td");
-				cell.innerHTML = `<a href="${file.file_attachment}" target="_blank">${file.download_label}</a>`;
+	
+				let fileUrl = file.file_attachment.startsWith("gid://shopify/GenericFile/")
+					? fileUrlMap[file.file_attachment] || null
+					: file.file_attachment;
+	
+				if (fileUrl) {
+					cell.innerHTML = `<a href="${fileUrl}" target="_blank">${file.download_label}</a>`;
+				} else {
+					cell.innerHTML = `<span>File not available</span>`;
+				}
+	
 				row.appendChild(cell);
 				counter++;
-		
+	
 				if (counter === 4) {
 					tableBody.appendChild(row);
 					row = document.createElement("tr");
 					counter = 0;
 				}
 			});
-		
+	
 			if (counter > 0) {
 				while (counter < 4) {
 					let emptyCell = document.createElement("td");
@@ -192,10 +254,10 @@
 				tableBody.appendChild(row);
 			}
 		});
-		
 	}
 	
-	document.addEventListener("DOMContentLoaded", displayProductManuals);	
+	document.addEventListener("DOMContentLoaded", displayProductManuals);
+	
 	
 </script>
 
