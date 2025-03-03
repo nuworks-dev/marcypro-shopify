@@ -273,6 +273,26 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "product_specification",
+      "namespace": "custom",
+      "name": "Product Specification",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_attachment",
+      "namespace": "custom",
+      "name": "Product Attachment",
+      "description": "This is for product attachment link",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [],
