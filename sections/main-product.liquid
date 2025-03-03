@@ -223,6 +223,8 @@
                     <div class="product__specification rte">
 						{% if product.metafields.custom.product_specification != blank %}
 							{{ product.metafields.custom.product_specification | metafield_tag }}
+						{% else %}
+							<p>Specifications are not available yet.</p>
 						{% endif %}
                     </div>
                   </details>
@@ -250,7 +252,7 @@
 									{% endfor %}
 								</ul>
 							{% else %}
-								<p>No attachments found.</p>
+								<p>No attachments available.</p>
 							{% endif %}
 						</div>
 					</details>
