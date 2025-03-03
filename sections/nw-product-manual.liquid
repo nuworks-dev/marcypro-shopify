@@ -3,17 +3,108 @@
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
+	.responsive-chart-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	.responsive-chart-table td, 
+	.responsive-chart-table th {
+		padding: 8px;
+		text-align: center;
+		border: 1px solid #ccc;
+	}
+	
     @media (max-width: 768px) {
         #nw-product-manual-table {
             grid-template-columns: repeat(var(--mobile-columns, 2), 1fr) !important;
         }
+		.table-container {
+			width: 100%;
+			overflow-x: auto;
+		}
+	
+		.responsive-chart-table {
+			min-width: 600px; /* Ensures table scrolls horizontally if needed */
+			white-space: nowrap;
+		}
     }
 </style>
 <div class="page-width" id="nw-product-manual-table">
+	
 	<div>
 		<input type="text" class="button" id="search_text">
 		<input value="Search" type="submit" class="button" id="search_submit">
 	</div>
+
+	{% assign manuals = shop.metaobjects.product_manual_category.values %}
+	{% assign files = shop.metaobjects.product_manual.values %}
+
+	{% assign active_manuals = manuals | where: "active", true %}
+	{% assign manual_array = "" %}
+
+	{% for manual in active_manuals %}
+		{% assign padded_order = manual.order | plus: 1000 | append: "---" | append: manual.name %}
+		{% assign manual_array = manual_array | append: padded_order | append: "||" %}
+	{% endfor %}
+
+	{% assign sorted_manuals = manual_array | split: "||" | sort %}
+
+	{% for item in sorted_manuals %}
+		{% assign parts = item | split: "---" %}
+		{% assign order = parts[0] | minus: 1000 %}
+		{% assign name = parts[1] %}
+		
+		<p style="text-align: left;">
+			<span style="font-size: xx-large; font-family: Arial, Helvetica, sans-serif; color: #808080;">
+				<strong><span style="font-size: x-large;">{{ name }}</span></strong>
+			</span>
+		</p> 
+		
+		<div class="table-container">
+			{% assign related_files = files | where: "category_label", name %}
+			
+			{% if related_files.size > 0 %}
+				<table class="responsive-chart-table" align="center" border="1" class="responsive-chart-table" cellspacing="0" cellpadding="8" width="100%">
+					<tbody>
+						{% assign counter = 0 %}
+						{% for file in related_files %}
+							{% if counter == 0 %}
+								<tr>
+							{% endif %}
+							
+							<td align="center">
+								<span style="font-size: medium;">
+									<a href="{{ file.file_attachment | file_url }}" target="_blank">{{ file.download_label }}</a>
+								</span>
+							</td>
+							
+							{% assign counter = counter | plus: 1 %}
+							
+							{% if counter == 4 %}
+								</tr>  
+								{% assign counter = 0 %}
+							{% endif %}
+						{% endfor %}
+						
+						{% if counter > 0 %}
+							{% assign remaining = 4 | minus: counter %}
+							{% for i in (1..remaining) %}
+								<td></td>
+							{% endfor %}
+							</tr>
+						{% endif %}
+					</tbody>
+				</table>
+			{% else %}
+				<p style="text-align: left;">No files available</p>
+			{% endif %}
+		</div>
+		
+		<br>
+	{% endfor %}
+
+
 </div>
 {% schema %}
 	{
