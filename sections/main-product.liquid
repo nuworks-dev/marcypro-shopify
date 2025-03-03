@@ -221,30 +221,39 @@
                       {{- 'icon-caret.svg' | inline_asset_content -}}
                     </summary>
                     <div class="product__specification rte">
-                      <p>Specification details will be added here. For now, this is dummy data.</p>
-                      <ul>
-                        <li>Dimension: 10 x 5 x 2 inches</li>
-                        <li>Weight: 1.5 lbs</li>
-                        <li>Material: High-quality plastic</li>
-                      </ul>
+						{% if product.metafields.custom.product_specification != blank %}
+							{{ product.metafields.custom.product_specification | metafield_tag }}
+						{% endif %}
                     </div>
                   </details>
                 </div>
 
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                  <details>
-                    <summary>
-                      <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.manuals_and_workout_charts' | t }}</h2>
-                      {{- 'icon-caret.svg' | inline_asset_content -}}
-                    </summary>
-                    <div class="product__manuals rte">
-                      <p>Manuals and workout charts will be added here. For now, this is dummy data.</p>
-                      <ul>
-                        <li><a href="#">User Manual PDF</a></li>
-                        <li><a href="#">Workout Chart PDF</a></li>
-                      </ul>
-                    </div>
-                  </details>
+					<details>
+						<summary>
+							<h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.manuals_and_workout_charts' | t }}</h2>
+							{{- 'icon-caret.svg' | inline_asset_content -}}
+						</summary>
+						<div class="product__manuals rte">
+							{% if product.metafields.custom.product_attachment != blank %}
+								<ul>
+									{% for file in product.metafields.custom.product_attachment.value %}
+										{% if file.url != blank %}
+											{% assign file_name = file.url | split: '/' | last | split: '?' | first %} 
+											{% assign clean_name = file_name | split: '.' | first %} 
+											<li>
+												<a href="{{ file.url }}" target="_blank">{{ clean_name }}</a>
+											</li>
+										{% else %}
+											<li>No valid file available.</li>
+										{% endif %}
+									{% endfor %}
+								</ul>
+							{% else %}
+								<p>No attachments found.</p>
+							{% endif %}
+						</div>
+					</details>
                 </div>
            
                 {%- when 'sku' -%}
