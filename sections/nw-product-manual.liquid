@@ -106,12 +106,15 @@
 				}
 			  }
 			}`;
+
+			const storefrontToken = "{{ settings.storefront_access_token }}";
+			const graphqlApiUrl = "{{ settings.graphql_api_url }}";
 	
-			const response = await fetch("https://mqtas1-3r.myshopify.com/api/2025-01/graphql.json", {
+			const response = await fetch(graphqlApiUrl, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
-					"X-Shopify-Storefront-Access-Token": "641f19fbd076afe2452c76b4565fb015"
+					"X-Shopify-Storefront-Access-Token": storefrontToken
 				},
 				body: JSON.stringify({ query })
 			});
