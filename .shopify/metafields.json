@@ -44,6 +44,16 @@
         "name": "list.collection_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "collection_thumbnail",
+      "namespace": "custom",
+      "name": "Collection Thumbnail",
+      "description": "This is for mobile collection image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "company": [],

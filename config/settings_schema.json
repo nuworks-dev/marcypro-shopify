@@ -7,6 +7,7 @@
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
   },
+  
   {
     "name": "t:settings_schema.logo.name",
     "settings": [
@@ -1470,5 +1471,20 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+	"name": "Developer Settings",
+	"settings": [
+		{
+			"type": "text",
+			"id": "storefront_access_token",
+			"label": "Storefront Access Token"
+		},
+		{
+			"type": "text",
+			"id": "graphql_api_url",
+			"label": "GraphQL API URL"
+		}
+	]
   }
 ]
