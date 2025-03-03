@@ -1,0 +1,30 @@
+<style>
+	#nw-product-manual-table {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+    @media (max-width: 768px) {
+        #nw-product-manual-table {
+            grid-template-columns: repeat(var(--mobile-columns, 2), 1fr) !important;
+        }
+    }
+</style>
+<div class="page-width" id="nw-product-manual-table">
+	<div>
+		<input type="text" class="button" id="search_text">
+		<input value="Search" type="submit" class="button" id="search_submit">
+	</div>
+</div>
+{% schema %}
+	{
+		"name": "NW Product Manual Table",
+		"tag": "section",
+		"class": "nw-product-manual-table",
+		"blocks": [],
+		"presets": [
+			{
+				"name": "NW Product Manual Table"
+			}
+		]
+	}
+{% endschema %}
