@@ -57,8 +57,26 @@
       min-height: 350px; /* Adjust height for mobile */
     }
   }
+  @media screen and (max-width: 480px) {
+    .nw-collection-banner.collection-hero {
+      	{% if collection.metafields.custom.collection_thumbnail.value and collection.metafields.custom.collection_thumbnail.value != 'blank' %}
+        	background-image: url('{{ collection.metafields.custom.collection_thumbnail.value | image_url: width: 480 }}') !important;
+      	{% endif %}
+		min-height: 362px;
+		position: relative;
+		background-size: cover;
+        background-position: center center;
+    }
+	.nw-collection-banner.collection-hero .collection-hero__inner {
+		position: absolute;
+		bottom: 0px;
+	}
+	.collection-hero__title {
+		font-size: clamp(24px, 5vw, 74px);
+        line-height: unset;
+	}
+  }
 {%- endstyle -%}
-
 <div 
   class="nw-collection-banner collection-hero color-{{ section.settings.color_scheme }} gradient"
   {% if section.settings.show_collection_image and collection.image %}
