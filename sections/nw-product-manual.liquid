@@ -38,81 +38,52 @@
 	</div>
 
 	{% assign manuals = shop.metaobjects.product_manual_category.values %}
-	{% assign files = shop.metaobjects.product_manual.values %}
 
 	{% assign active_manuals = manuals | where: "active", true %}
 	{% assign manual_array = "" %}
 
 	{% for manual in active_manuals %}
-		{% assign padded_order = manual.order | plus: 1000 | append: "---" | append: manual.name %}
-		{% assign manual_array = manual_array | append: padded_order | append: "||" %}
+	{% assign padded_order = manual.order | plus: 1000 | append: "---" | append: manual.name %}
+	{% assign manual_array = manual_array | append: padded_order | append: "||" %}
 	{% endfor %}
 
 	{% assign sorted_manuals = manual_array | split: "||" | sort %}
 
+	<div id="manual-container">
 	{% for item in sorted_manuals %}
 		{% assign parts = item | split: "---" %}
 		{% assign order = parts[0] | minus: 1000 %}
 		{% assign name = parts[1] %}
-		
+
+		<div class="manual-section" data-category="{{ name }}">
 		<p style="text-align: left;">
 			<span style="font-size: xx-large; font-family: Arial, Helvetica, sans-serif; color: #808080;">
-				<strong><span style="font-size: x-large;">{{ name }}</span></strong>
+			<strong><span style="font-size: x-large;">{{ name }}</span></strong>
 			</span>
 		</p> 
-		
+
 		<div class="table-container">
-			{% assign related_files = files | where: "category_label", name %}
-			
-			{% if related_files.size > 0 %}
-				<table class="responsive-chart-table" align="center" border="1" class="responsive-chart-table" cellspacing="0" cellpadding="8" width="100%">
-					<tbody>
-						{% assign counter = 0 %}
-						{% for file in related_files %}
-							{% if counter == 0 %}
-								<tr>
-							{% endif %}
-							
-							<td align="center">
-								<span style="font-size: medium;">
-									<a href="{{ file.file_attachment | file_url }}" target="_blank">{{ file.download_label }}</a>
-								</span>
-							</td>
-							
-							{% assign counter = counter | plus: 1 %}
-							
-							{% if counter == 4 %}
-								</tr>  
-								{% assign counter = 0 %}
-							{% endif %}
-						{% endfor %}
-						
-						{% if counter > 0 %}
-							{% assign remaining = 4 | minus: counter %}
-							{% for i in (1..remaining) %}
-								<td></td>
-							{% endfor %}
-							</tr>
-						{% endif %}
-					</tbody>
-				</table>
-			{% else %}
-				<p style="text-align: left;">No files available</p>
-			{% endif %}
+			<table class="responsive-chart-table" align="center" border="1" cellspacing="0" cellpadding="8" width="100%">
+			<tbody id="files-{{ name | replace: ' ', '-' | downcase }}">
+				<tr>
+				<td colspan="4" style="text-align: center;">Loading files...</td>
+				</tr>
+			</tbody>
+			</table>
 		</div>
-		
 		<br>
+		</div>
 	{% endfor %}
+	</div>
 
 
 </div>
 
 <script>
-	async function fetchFilteredMetaobjects() {
-		
-		let filteredMetaobjects = [];
+	async function fetchProductManuals() {
 		let cursor = null;
 		let hasNextPage = true;
+		let allFiles = [];
 	
 		while (hasNextPage) {
 			const query = `
@@ -154,22 +125,74 @@
 	
 			const metaobjects = result.data.metaobjects.edges;
 	
-			// Filter metaobjects where category_label = "Exercise Bikes"
-			const filtered = metaobjects.filter(({ node }) => 
-				node.fields.some(field => field.key === "category_label" && field.value === "Exercise Bikes")
-			);
+			allFiles = allFiles.concat(metaobjects.map(({ node }) => {
+				let fileData = {};
+				node.fields.forEach(field => {
+					fileData[field.key] = field.value;
+				});
+				return fileData;
+			}));
 	
-			filteredMetaobjects = filteredMetaobjects.concat(filtered);
 			hasNextPage = result.data.metaobjects.pageInfo.hasNextPage;
 			cursor = result.data.metaobjects.pageInfo.endCursor || null;
 		}
 	
-		console.log("Filtered Metaobjects:", filteredMetaobjects);
-		return filteredMetaobjects;
+		return allFiles;
 	}
 	
-	fetchFilteredMetaobjects();
+	async function displayProductManuals() {
+		const allFiles = await fetchProductManuals();
 	
+		document.querySelectorAll(".manual-section").forEach(section => {
+			const categoryName = section.getAttribute("data-category");
+			const formattedId = `files-${categoryName.replace(/\s+/g, "-").toLowerCase()}`;
+			console.log("Looking for:", formattedId); // Debugging log
+		
+			const tableBody = document.getElementById(formattedId);
+		
+			if (!tableBody) {
+				console.warn(`No matching <tbody> found for category: ${categoryName} (ID: ${formattedId})`);
+				return; // Prevents further errors
+			}
+		
+			tableBody.innerHTML = ""; // Clear previous content
+		
+			const relatedFiles = allFiles.filter(file => file.category_label === categoryName);
+		
+			if (relatedFiles.length === 0) {
+				tableBody.innerHTML = `<tr><td colspan="4" style="text-align: center;">No files available</td></tr>`;
+				return;
+			}
+		
+			let counter = 0;
+			let row = document.createElement("tr");
+		
+			relatedFiles.forEach(file => {
+				let cell = document.createElement("td");
+				cell.innerHTML = `<a href="${file.file_attachment}" target="_blank">${file.download_label}</a>`;
+				row.appendChild(cell);
+				counter++;
+		
+				if (counter === 4) {
+					tableBody.appendChild(row);
+					row = document.createElement("tr");
+					counter = 0;
+				}
+			});
+		
+			if (counter > 0) {
+				while (counter < 4) {
+					let emptyCell = document.createElement("td");
+					row.appendChild(emptyCell);
+					counter++;
+				}
+				tableBody.appendChild(row);
+			}
+		});
+		
+	}
+	
+	document.addEventListener("DOMContentLoaded", displayProductManuals);	
 	
 </script>
 
