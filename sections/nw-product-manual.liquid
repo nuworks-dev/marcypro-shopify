@@ -157,7 +157,7 @@
 	
 	// Batch fetches all file URLs from Shopify when given multiple GenericFile GIDs
 	async function fetchFileUrls(gids) {
-		if (gids.length === 0) return {};
+		if (!gids.length) return {}; // If no valid GIDs, return an empty object
 	
 		const queries = gids.map((gid, index) => `
 			file${index}: node(id: "${gid}") {
@@ -201,14 +201,19 @@
 	async function displayProductManuals() {
 		const allFiles = await fetchProductManuals();
 	
-		// Extract all GIDs from files
+		if (!allFiles.length) {
+			console.warn("No product manuals found.");
+			return;
+		}
+	
+		// Extract all GIDs from files, only if `file_attachment` exists
 		const gids = allFiles
 			.map(file => file.file_attachment)
-			.filter(url => url.startsWith("gid://shopify/GenericFile/"));
+			.filter(url => url && url.startsWith("gid://shopify/GenericFile/"));
 	
 		// Fetch actual URLs in batch
 		const fileUrlMap = await fetchFileUrls(gids);
-
+	
 		console.log("Resolved File URL Map:", fileUrlMap);
 	
 		document.querySelectorAll(".manual-section").forEach(section => {
@@ -237,14 +242,14 @@
 			relatedFiles.forEach(file => {
 				let cell = document.createElement("td");
 	
-				let fileUrl = file.file_attachment.startsWith("gid://shopify/GenericFile/")
+				let fileUrl = file.file_attachment && file.file_attachment.startsWith("gid://shopify/GenericFile/")
 					? fileUrlMap[file.file_attachment] || null
 					: file.file_attachment;
 	
 				if (fileUrl) {
 					cell.innerHTML = `<a href="${fileUrl}" target="_blank">${file.download_label}</a>`;
 				} else {
-					cell.innerHTML = `<span>File not available</span>`;
+					cell.innerHTML = `<span>${file.download_label}</span>`;
 				}
 	
 				row.appendChild(cell);
@@ -257,19 +262,22 @@
 				}
 			});
 	
-			if (counter > 0) {
-				while (counter < 4) {
+			{% comment %} if (counter > 0 && counter < 4) {
+				for (let i = counter; i < 4; i++) {
 					let emptyCell = document.createElement("td");
 					row.appendChild(emptyCell);
-					counter++;
 				}
+				tableBody.appendChild(row);
+			} else if (counter === 4) {
+				tableBody.appendChild(row);
+			} {% endcomment %}
+			if (counter > 0) {
 				tableBody.appendChild(row);
 			}
 		});
 	}
 	
 	document.addEventListener("DOMContentLoaded", displayProductManuals);
-	
 	
 </script>
 
