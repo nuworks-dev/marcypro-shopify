@@ -11,12 +11,13 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-{%- if request.page_type != 'index' -%}
+{% comment %} Make header main logo to be the alternate(black logo) {% endcomment %}
+{%- if page.metafields.custom.class == 'common-page' or template.name == 'product' or template.name == 'login' or template.name == 'register' or template.name == 'order' or template.name == 'account' or template.name == 'reset_password' or template.name == 'addresses' or template.name == 'template-404' or template.name == '' -%}
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const header = document.querySelector(".header-wrapper");
 			const logo = document.querySelector(".header__heading-logo");
-			const alternateLogo = logo.dataset.altLogo;
+			const alternateLogo = logo.dataset.altLogo; // this is the black logo
 			logo.src = alternateLogo;
 		});
 	</script>
@@ -108,13 +109,12 @@
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
-{%- if request.page_type != 'index' -%}
+{% comment %} Style for black links and icons on header {% endcomment %}
+{% if request.page_type != 'index' and template.name != 'blog' or page.metafields.custom.class == 'common-page' or page.metafields.custom.class == 'transparent-header' %}
 	<style>
-		.list-menu.list-menu--inline span {
-			color: #231F20 !important;
-		}
+		.list-menu.list-menu--inline span,
 		.header__icon .icon {
-			color: #231F20 !important;
+			color: {% if page.metafields.custom.class == 'transparent-header' %} #fff {% else %} #231F20 {% endif %};
 		}
 	</style>
 {% endif %}
@@ -141,15 +141,8 @@
     endif
   -%}
 
-	{% if template != 'index' %}
-		<style>
-			{% comment %} #MainContent {
-				padding-top: 150px;
-			} {% endcomment %}
-		</style>
-	{% endif %}
-
-	{% if template == 'index' or template == 'collection' or template == 'blog'  %}
+	{% comment %} Style and effects for transparent header {% endcomment %}
+	{% if template == 'index' or template == 'collection' or template == 'blog' or page.metafields.custom.class == 'transparent-header' %}
 
 		<style>
 			#MainContent {
@@ -160,7 +153,9 @@
 		<script src="{{ 'nw-custom.js' | asset_url }}" defer></script>
 
 		<style>
-
+			.list-menu.list-menu--inline span {
+				color: #fff !important;
+			}
 			.shopify-section-group-header-group.announcement-bar-section {
 				height: 46px;
 			}
@@ -182,16 +177,19 @@
 			}
 		</style>
 		<script>
+			/** Transition Effect on header links and logo */
 			document.addEventListener("DOMContentLoaded", function () {
+				
 				const header = document.querySelector(".header-wrapper");
 				const logo = document.querySelector(".header__heading-logo");
+				const template_name = "{{ template }}";
 			
 				if (!header || !logo) return; // Prevent errors if elements are missing
 			
 				const originalLogo = logo.src;
 				const alternateLogo = logo.dataset.altLogo;
 				let lastScrollY = 0;
-			
+
 				function handleScroll() {
 					const scrolled = window.scrollY > 20;
 					
@@ -207,9 +205,8 @@
 			
 				// Start listening for scroll events efficiently
 				requestAnimationFrame(handleScroll);
-
+			
 				let items = document.querySelector(".header__inline-menu").querySelectorAll("details");
-				console.log(items)
 				items.forEach(item => {
 					item.addEventListener("mouseover", () => {
 					item.setAttribute("open", true);
@@ -222,6 +219,11 @@
 				});
 				
 				});
+
+				
+				if(template_name == 'blog' || template_name == 'account') {
+					logo.src = alternateLogo;
+				}
 			});
 		</script>
 
@@ -231,7 +233,7 @@
 	{% content_for 'blocks' %}
 
 
-  <header class="nw-template-name-{{ template.name }} header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="nw-template-name-{{ template.name }} nw-page-class-{{ page.metafields.custom.class }} header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
 	{%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
@@ -249,11 +251,12 @@
 			<a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
 				{%- if settings.logo != blank -%}
 				<div class="header__heading-logo-wrapper">
+					
 					{%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
 					{%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
 					{% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
 					{% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-
+				
 					<img src="{{ settings.logo | image_url: width: 600 }}"
 						data-alt-logo="{{ settings.logo_alternate | image_url: width: 600 }}"
 						class="header__heading-logo motion-reduce nw-heading-logo"
@@ -262,6 +265,7 @@
 						alt="{{ logo_alt }}"
 						sizes="{{ sizes }}"
 						preload="true">
+			
 				</div>
 				{%- else -%}
 				<span class="h2">{{ shop.name }}</span>
@@ -392,6 +396,10 @@
       </a>
     </div>
   </header>
+
+  <span id="nw-debug-templatename" style="display: none;">{{ template.name }}</span>
+  <span id="nw-debug-pageclass" style="display: none;">{{ page.metafields.custom.class }}</span>
+  
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}

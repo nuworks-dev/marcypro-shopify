@@ -1,0 +1,188 @@
+<section class="trust-badges" style="background: {{ section.settings.background_color }};">
+  <div class="trust-badges-container">
+    {% for block in section.blocks %}
+      <div class="trust-badge">
+        <div class="trust-badge-icon">
+          {% if block.settings.icon_image %}
+            {{ block.settings.icon_image | image_url: height: 34 | image_tag: class: "trust-icon" }}
+          {% endif %}
+        </div>
+        <div class="trust-details">
+          <div class="trust-badge-header">{{ block.settings.title }}</div>
+          <div class="trust-badge-info">{{ block.settings.description }}</div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+  }
+
+  .trust-badges-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Changed to center items */
+    gap: 20px;
+    width: 100%;
+    background: #F7F4ED;
+    padding: 50px;
+    border-radius: 8px;
+    border: #231F20;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .trust-badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  .trust-icon {
+ 
+    min-width: 31px;
+    height: 34px;
+  }
+
+  .trust-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trust-badge-header {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #231F20;
+  }
+
+  .trust-badge-info {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .trust-badges-container {
+      display: flex;
+      flex-direction: column;
+     
+      max-width: 100%;
+      padding: 30px;
+    }
+
+    .trust-badge {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    .trust-details {
+      max-width: 100%;
+      text-align: left;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Trust Badges Section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f6f2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Trust Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Badge Title",
+          "default": "Free Ground Shipping"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Badge Description",
+          "default": "For All New Orders"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "number",
+          "id": "icon_width",
+          "label": "Icon Width (px)",
+          "default": 40
+        },
+        {
+          "type": "number",
+          "id": "icon_height",
+          "label": "Icon Height (px)",
+          "default": 40
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Trust Badges Section",
+      "blocks": [
+        {
+          "type": "badge",
+          "settings": {
+            "title": "Free Ground Shipping",
+            "description": "For All New Orders",
+            "icon_width": 53,
+            "icon_height": 34
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "title": "2-Year Limited Warranty",
+            "description": "From Your Delivery Date",
+            "icon_width": 31,
+            "icon_height": 34
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "title": "Safe Payments",
+            "description": "Trusted SSL Protection",
+            "icon_width": 39,
+            "icon_height": 34
+          }
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

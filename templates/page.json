@@ -9,15 +9,82 @@
  */
 {
   "sections": {
+    "nw_image_banner_gp7FMb": {
+      "type": "nw-image-banner",
+      "blocks": {
+        "heading_CdQ7YJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "ABOUT US",
+            "text_color": "#ffffff",
+            "text_size": 72
+          }
+        }
+      },
+      "block_order": [
+        "heading_CdQ7YJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/d20fbc8f36e8b41ded3d82035bfd05bf.png",
+        "image_2": "shopify://shop_images/d20fbc8f36e8b41ded3d82035bfd05bf.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "mobile_desktop_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "nw_featured_quotes_NtDmxi": {
+      "type": "nw-featured-quotes",
+      "blocks": {
+        "featured_subtitle_RqydGt": {
+          "type": "featured_subtitle",
+          "settings": {
+            "featured_subtitle": "Subtitle text goes here"
+          }
+        },
+        "featured_title_MNNTMB": {
+          "type": "featured_title",
+          "settings": {
+            "featured_title": "TITLE GOES HERE"
+          }
+        },
+        "featured_description_DbL8qL": {
+          "type": "featured_description",
+          "settings": {
+            "featured_description": "Description goes here"
+          }
+        }
+      },
+      "block_order": [
+        "featured_subtitle_RqydGt",
+        "featured_title_MNNTMB",
+        "featured_description_DbL8qL"
+      ],
+      "disabled": true,
+      "settings": {
+        "featured_background": "#231f20",
+        "featured_text_color": "#ffffff",
+        "featured_desktop_image": "shopify://shop_images/Manifesto-Mobile.png"
       }
     }
   },
   "order": [
-    "main"
+    "nw_image_banner_gp7FMb",
+    "main",
+    "nw_featured_quotes_NtDmxi"
   ]
 }

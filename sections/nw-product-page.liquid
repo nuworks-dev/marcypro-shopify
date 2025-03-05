@@ -1,0 +1,104 @@
+{% schema %}
+  {
+    "name": "NW Product Page",
+    "tag": "section",
+    "class": "nw-product-page",
+    "settings": [],
+    "blocks": [
+      { "type": "title", "name": "Product Title", "limit": 1 },
+      { "type": "price", "name": "Product Price", "limit": 1 },
+      { "type": "rating", "name": "Star Rating", "limit": 1 },
+      { "type": "quantity_selector", "name": "Quantity Selector", "limit": 1 },
+      { "type": "add_to_cart", "name": "Add to Cart Button", "limit": 1 },
+      { "type": "wishlist", "name": "Wishlist Icon", "limit": 1 },
+      { "type": "product_info", "name": "Product Information", "limit": 1 },
+      { "type": "accordion", "name": "Accordion Sections", "limit": 3 }
+    ]
+  }
+  {% endschema %}
+  
+  <section class="product">
+    <div class="product__media">
+      {% for image in product.images %}
+        <img src="{{ image | image_url: '1024x1024' }}" 
+             alt="{{ image.alt | escape }}" 
+             width="1024" height="1024" 
+             loading="lazy">
+      {% endfor %}
+    </div>
+    <div class="product__info">
+      <h1 class="product__title">{{ product.title }}</h1>
+      <p class="product__price">{{ product.price | money }}</p>
+  
+      {% if product.metafields.reviews.rating %}
+        <div class="product__rating">
+          {% for i in (1..5) %}
+            {% if i <= product.metafields.reviews.rating %}
+              ⭐
+            {% else %}
+              ☆
+            {% endif %}
+          {% endfor %}
+          ({{ product.metafields.reviews.rating | round: 1 }})
+        </div>
+      {% endif %}
+  
+      <div class="product__quantity">
+        <button class="qty-btn" onclick="updateQty(-1)">-</button>
+        <input type="number" value="1" min="1" id="quantity" readonly>
+        <button class="qty-btn" onclick="updateQty(1)">+</button>
+      </div>
+  
+      {% form 'product', product %}
+        <button type="submit" class="product__add-to-cart">Add to Cart</button>
+        <span class="product__wishlist">♡</span>
+      {% endform %}
+  
+      <div class="product__details">
+        <p><strong>UPC:</strong> {{ product.metafields.custom.upc }}</p>
+        <p><strong>Availability:</strong> Limited Stock Available</p>
+        <p><strong>Maximum Purchase:</strong> 1 unit</p>
+        <p><strong>Shipping:</strong> Free Shipping</p>
+      </div>
+  
+      <div class="product__accordion">
+        <details>
+          <summary>PRODUCT DESCRIPTION</summary>
+          <p>{{ product.description }}</p>
+        </details>
+        <details>
+          <summary>SPECIFICATIONS</summary>
+          <p>{{ product.metafields.custom.specifications }}</p>
+        </details>
+        <details>
+          <summary>MANUALS & WORKOUT CHARTS</summary>
+          <p>{{ product.metafields.custom.manuals }}</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+     .product { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+    .product__media img { max-width: 100%; border-radius: 8px; }
+    .product__title { font-size: 22px; font-weight: bold; }
+    .product__price { font-size: 20px; color: black; font-weight: bold; }
+    .product__rating { font-size: 16px; color: #f39c12; margin-bottom: 10px; }
+    .product__quantity { display: flex; justify-content: center; gap: 10px; margin: 10px 0; }
+    .qty-btn { padding: 5px 10px; border: 1px solid black; cursor: pointer; }
+    #quantity { text-align: center; width: 40px; border: 1px solid black; }
+    .product__add-to-cart { background: #c00; color: white; padding: 10px 20px; border-radius: 50px; border: none; cursor: pointer; }
+    .product__wishlist { font-size: 24px; cursor: pointer; margin-left: 10px; }
+    .product__details p { margin: 5px 0; font-size: 14px; }
+    details { border-bottom: 1px solid #ccc; padding: 10px; cursor: pointer; }
+    summary { font-weight: bold; }
+  </style>
+  
+  <script>
+    function updateQty(change) {
+      let qtyInput = document.getElementById('quantity');
+      let newQty = parseInt(qtyInput.value) + change;
+      if (newQty > 0) qtyInput.value = newQty;
+    }
+  </script>
+  

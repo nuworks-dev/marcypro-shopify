@@ -64,43 +64,43 @@
         "featured_collection_aAQpN6": {
           "type": "featured_collection",
           "settings": {
-            "collection": "home-gyms"
+            "collection": "category-name-home-gyms-category-path-shop-all",
+            "collection_list_item": "home-gym"
           }
         },
         "featured_collection_RFN8VX": {
           "type": "featured_collection",
           "settings": {
-            "collection": "fitness-accessories"
+            "collection": "fitness-accessories",
+            "collection_list_item": "fitness-accessories"
           }
         },
         "featured_collection_e8dEDz": {
           "type": "featured_collection",
           "settings": {
-            "collection": "strength"
+            "collection": "strength",
+            "collection_list_item": "strength"
           }
         },
         "featured_collection_GyyVVe": {
           "type": "featured_collection",
           "settings": {
-            "collection": "cardio"
+            "collection": "cardio",
+            "collection_list_item": "cardio"
           }
         },
         "featured_collection_VB4ihT": {
           "type": "featured_collection",
           "settings": {
-            "collection": "outdoor"
+            "collection": "outdoor",
+            "collection_list_item": "outdoor"
           }
         },
         "featured_collection_ex7RiH": {
           "type": "featured_collection",
           "settings": {
-            "collection": "retired-products"
-          }
-        },
-        "featured_collection_QkgyKW": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "weightlifting-accessories"
+            "collection": "retired-products",
+            "collection_list_item": "retired-products"
           }
         }
       },
@@ -110,8 +110,7 @@
         "featured_collection_e8dEDz",
         "featured_collection_GyyVVe",
         "featured_collection_VB4ihT",
-        "featured_collection_ex7RiH",
-        "featured_collection_QkgyKW"
+        "featured_collection_ex7RiH"
       ],
       "settings": {
         "title": "SHOP BY CATEGORY",
@@ -165,7 +164,7 @@
       "settings": {
         "featured_background": "#231f20",
         "featured_text_color": "#ffffff",
-        "featured_desktop_image": "shopify://shop_images/testimonial-desktop.png",
+        "featured_desktop_image": "shopify://shop_images/manifesto.png",
         "featured_tablet_image": "shopify://shop_images/Manifesto-Desktop.png",
         "featured_mobile_image": "shopify://shop_images/testimonial-mobile.png"
       }
@@ -178,17 +177,17 @@
         "description": "<p>Kick off your fitness journey with these Marcy Fitness community favorites</p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-sellers",
+        "collection": "best-selling-products",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
         "image_ratio": "square",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": true,
         "quick_add": "standard",

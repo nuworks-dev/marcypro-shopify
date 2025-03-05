@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/Logo_10f3ddb3-75b9-48d9-b832-810ed956c9ed.png",
+    "logo": "shopify://shop_images/Black-logo_White-logo.png",
     "logo_alternate": "shopify://shop_images/Black-logo_black-logo.png",
     "logo_width": 190,
     "favicon": "shopify://shop_images/MarcyPro_Favicon_Logo.png",
@@ -21,7 +21,7 @@
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
-    "animations_reveal_on_scroll": true,
+    "animations_reveal_on_scroll": false,
     "animations_hover_elements": "default",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
@@ -129,6 +129,8 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
+    "storefront_access_token": "641f19fbd076afe2452c76b4565fb015",
+    "graphql_api_url": "https://mqtas1-3r.myshopify.com/api/2025-01/graphql.json",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -237,6 +239,17 @@
           "button_label": "#231f20",
           "secondary_button_label": "#f7f4ed",
           "shadow": "#121212"
+        }
+      },
+      "scheme-6fa0e69d-a5eb-4591-a6a8-edddb9289b7c": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text": "#121212",
+          "button": "#ffffff",
+          "button_label": "#f7f4ed",
+          "secondary_button_label": "#c02127",
+          "shadow": "#ffffff"
         }
       }
     }

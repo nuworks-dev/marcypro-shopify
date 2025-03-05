@@ -1,14 +1,118 @@
 {
-  "article": [],
-  "blog": [],
+  "article": [
+    {
+      "key": "thumbnail",
+      "namespace": "custom",
+      "name": "Thumbnail",
+      "description": "Thumbnail image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "class",
+      "namespace": "custom",
+      "name": "Class",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
+  "blog": [
+    {
+      "key": "class",
+      "namespace": "custom",
+      "name": "Class",
+      "description": "",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    }
+  ],
   "brand": [],
-  "collection": [],
+  "collection": [
+    {
+      "key": "collections",
+      "namespace": "ecomposer",
+      "name": "Define sub collections for current collection",
+      "description": "Set the sub collection for curernt collection.",
+      "type": {
+        "name": "list.collection_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "collection_thumbnail",
+      "namespace": "custom",
+      "name": "Collection Thumbnail",
+      "description": "This is for mobile collection image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
   "company": [],
   "company_location": [],
   "location": [],
   "market": [],
   "order": [],
-  "page": [],
+  "page": [
+    {
+      "key": "banner_image",
+      "namespace": "custom",
+      "name": "Banner Image",
+      "description": "",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "banner_title",
+      "namespace": "custom",
+      "name": "Banner Title",
+      "description": "",
+      "type": {
+        "name": "multi_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "is_title_hide",
+      "namespace": "custom",
+      "name": "Is Title Hide",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "class",
+      "namespace": "custom",
+      "name": "Class",
+      "description": "Class definition used for styling",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "is_banner_hide",
+      "namespace": "custom",
+      "name": "Is Banner Hide",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    }
+  ],
   "product": [
     {
       "key": "color-pattern",
@@ -127,6 +231,76 @@
       "description": null,
       "type": {
         "name": "list.product_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_video",
+      "namespace": "custom",
+      "name": "Product Video",
+      "description": "This is product video",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "countdown",
+      "namespace": "ecomposer",
+      "name": "EComposer product countdown end at",
+      "description": "Set date and time countdown end at",
+      "type": {
+        "name": "date_time",
+        "category": "DATE_TIME"
+      }
+    },
+    {
+      "key": "countdown_from",
+      "namespace": "ecomposer",
+      "name": "EComposer product countdown start at",
+      "description": "Set date and time countdown start at",
+      "type": {
+        "name": "date_time",
+        "category": "DATE_TIME"
+      }
+    },
+    {
+      "key": "discounted_products",
+      "namespace": "custom",
+      "name": "Sale",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_type",
+      "namespace": "custom",
+      "name": "product type",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_specification",
+      "namespace": "custom",
+      "name": "Product Specification",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_attachment",
+      "namespace": "custom",
+      "name": "Product Attachment",
+      "description": "This is for product attachment link",
+      "type": {
+        "name": "list.file_reference",
         "category": "REFERENCE"
       }
     }
