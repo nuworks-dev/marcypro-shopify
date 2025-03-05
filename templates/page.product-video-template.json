@@ -17,6 +17,33 @@
         "padding_bottom": 80
       }
     },
+    "nw_spacer_KmER3V": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 50,
+        "spacer_height_mobile": 20,
+        "background_color": "#ffffff"
+      }
+    },
+    "nw_heading_fqgtbL": {
+      "type": "nw-heading",
+      "settings": {
+        "input_text": "Assembly Videos",
+        "input_font": "montserrat_n4",
+        "input_alignment": "center",
+        "input_color": "#121212",
+        "input_size": 36,
+        "input_weight": 600
+      }
+    },
+    "nw_spacer_cWBcLG": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 50,
+        "spacer_height_mobile": 10,
+        "background_color": "#ffffff"
+      }
+    },
     "nw_product_video_nyxzNq": {
       "type": "nw-product-video",
       "settings": {}
@@ -24,6 +51,9 @@
   },
   "order": [
     "main",
+    "nw_spacer_KmER3V",
+    "nw_heading_fqgtbL",
+    "nw_spacer_cWBcLG",
     "nw_product_video_nyxzNq"
   ]
 }
