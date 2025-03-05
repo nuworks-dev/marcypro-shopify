@@ -17,6 +17,33 @@
         "padding_bottom": 80
       }
     },
+    "nw_spacer_wCXrKQ": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 50,
+        "spacer_height_mobile": 30,
+        "background_color": "#ffffff"
+      }
+    },
+    "nw_heading_HiMQKU": {
+      "type": "nw-heading",
+      "settings": {
+        "input_text": "Product Manuals",
+        "input_font": "montserrat_n4",
+        "input_alignment": "center",
+        "input_color": "",
+        "input_size": 36,
+        "input_weight": 900
+      }
+    },
+    "nw_spacer_W7Wzx4": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 40,
+        "spacer_height_mobile": 20,
+        "background_color": "#ffffff"
+      }
+    },
     "nw_product_manual_Chcrny": {
       "type": "nw-product-manual",
       "settings": {}
@@ -24,6 +51,9 @@
   },
   "order": [
     "main",
+    "nw_spacer_wCXrKQ",
+    "nw_heading_HiMQKU",
+    "nw_spacer_W7Wzx4",
     "nw_product_manual_Chcrny"
   ]
 }
