@@ -1,0 +1,294 @@
+<style>
+	#nw-product-video-table {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.responsive-chart-table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	.responsive-chart-table td, 
+	.responsive-chart-table th {
+		padding: 8px;
+		text-align: center;
+		border: 1px solid #ccc;
+	}
+
+	.highlight {
+		background-color: yellow !important;
+	}
+
+	.responsive-chart-table a {
+		text-decoration: underline; /* Removes underline */
+		color: #202738;
+		
+	}
+	.responsive-chart-table a:visited {
+		color: #202738;
+	}
+	
+	.responsive-chart-table a:hover {
+		text-decoration: underline; /* Optional: Adds underline on hover */
+		color: #c02127;
+	}
+	
+    @media (max-width: 768px) {
+        #nw-product-video-table {
+            grid-template-columns: repeat(var(--mobile-columns, 2), 1fr) !important;
+        }
+		.table-container {
+			width: 100%;
+			overflow-x: auto;
+		}
+	
+		.responsive-chart-table {
+			min-width: 600px; /* Ensures table scrolls horizontally if needed */
+			white-space: nowrap;
+		}
+    }
+</style>
+<div class="page-width" id="nw-product-video-table">
+	
+	<div>
+		<input type="text" class="button" id="search_text">
+		<input value="Search" type="submit" class="button" id="search_submit">
+	</div>
+
+	{% assign videos = shop.metaobjects.product_video_category.values %}
+
+	{% assign active_video = videos | where: "active", true %}
+	{% assign manual_array = "" %}
+
+	{% for manual in active_video %}
+	{% assign padded_order = manual.order | plus: 1000 | append: "---" | append: manual.name %}
+	{% assign manual_array = manual_array | append: padded_order | append: "||" %}
+	{% endfor %}
+
+	{% assign sorted_videos = manual_array | split: "||" | sort %}
+
+	<div id="manual-container">
+	{% for item in sorted_videos %}
+		{% assign parts = item | split: "---" %}
+		{% assign order = parts[0] | minus: 1000 %}
+		{% assign name = parts[1] %}
+
+		<div class="manual-section" data-category="{{ name }}">
+		<p style="text-align: left;">
+			<span style="font-size: xx-large; font-family: Arial, Helvetica, sans-serif; color: #808080;">
+			<strong><span style="font-size: x-large;">{{ name }}</span></strong>
+			</span>
+		</p> 
+
+		<div class="table-container">
+			<table class="responsive-chart-table" align="center" border="1" cellspacing="0" cellpadding="8" width="100%">
+			<tbody id="files-{{ name | replace: ' ', '-' | downcase }}">
+				<tr>
+				<td colspan="4" style="text-align: center;">Loading files...</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<br>
+		</div>
+	{% endfor %}
+	</div>
+
+
+</div>
+
+<script>
+	async function fetchProductVideos() {
+		let cursor = null;
+		let hasNextPage = true;
+		let allFiles = [];
+	
+		while (hasNextPage) {
+			const query = `
+			query {
+				metaobjects(type: "product_video", first: 250 ${cursor ? `, after: "${cursor}"` : ""}) {
+					pageInfo {
+						hasNextPage
+						endCursor
+					}
+					edges {
+						node {
+							id
+							fields {
+								key
+								value
+							}
+							handle
+							type
+						}
+					}
+				}
+			}`;
+	
+			const storefrontToken = "{{ settings.storefront_access_token }}";
+			const graphqlApiUrl = "{{ settings.graphql_api_url }}";
+	
+			const response = await fetch(graphqlApiUrl, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"X-Shopify-Storefront-Access-Token": storefrontToken
+				},
+				body: JSON.stringify({ query })
+			});
+	
+			const result = await response.json();
+	
+			if (result.errors) {
+				console.error("GraphQL Error:", result.errors);
+				return [];
+			}
+	
+			const metaobjects = result.data.metaobjects.edges;
+	
+			allFiles = allFiles.concat(metaobjects.map(({ node }) => {
+				let fileData = {};
+				node.fields.forEach(field => {
+					fileData[field.key] = field.value;
+				});
+				return fileData;
+			}));
+	
+			hasNextPage = result.data.metaobjects.pageInfo.hasNextPage;
+			cursor = result.data.metaobjects.pageInfo.endCursor || null;
+		}
+	
+		return allFiles;
+	}
+	
+	// Batch fetches all file URLs from Shopify when given multiple GenericFile GIDs
+	async function fetchFileUrls(gids) {
+		if (!gids.length) return {}; // If no valid GIDs, return an empty object
+	
+		const queries = gids.map((gid, index) => `
+			file${index}: node(id: "${gid}") {
+				... on GenericFile {
+					url
+				}
+			}
+		`).join("\n");
+	
+		const query = `query { ${queries} }`;
+	
+		const response = await fetch("{{ settings.graphql_api_url }}", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				"X-Shopify-Storefront-Access-Token": "{{ settings.storefront_access_token }}"
+			},
+			body: JSON.stringify({ query })
+		});
+	
+		const json = await response.json();
+	
+		// Debugging
+		console.log("Fetching file URLs for GIDs:", gids);
+		console.log("GraphQL Query:", query);
+		console.log("Response from API:", json);
+	
+		const urlMap = {};
+		gids.forEach((gid, index) => {
+			const fileKey = `file${index}`;
+			if (json.data[fileKey] && json.data[fileKey].url) {
+				urlMap[gid] = json.data[fileKey].url;
+			} else {
+				console.warn(`No URL found for ${gid}`);
+			}
+		});
+	
+		return urlMap;
+	}
+	
+	async function displayProductVideos() {
+		const allFiles = await fetchProductVideos();
+	
+		if (!allFiles.length) {
+			console.warn("No product videos found.");
+			return;
+		}
+	
+		// Extract all GIDs from files, only if `file_attachment` exists
+		const gids = allFiles
+			.map(file => file.file_attachment)
+			.filter(url => url && url.startsWith("gid://shopify/GenericFile/"));
+	
+		// Fetch actual URLs in batch
+		const fileUrlMap = await fetchFileUrls(gids);
+	
+		console.log("Resolved File URL Map:", fileUrlMap);
+	
+		document.querySelectorAll(".manual-section").forEach(section => {
+			const categoryName = section.getAttribute("data-category");
+			const formattedId = `files-${categoryName.replace(/\s+/g, "-").toLowerCase()}`;
+	
+			const tableBody = document.getElementById(formattedId);
+	
+			if (!tableBody) {
+				console.warn(`No matching <tbody> found for category: ${categoryName} (ID: ${formattedId})`);
+				return;
+			}
+	
+			tableBody.innerHTML = ""; // Clear previous content
+	
+			const relatedFiles = allFiles.filter(file => file.category_label === categoryName);
+	
+			if (relatedFiles.length === 0) {
+				tableBody.innerHTML = `<tr><td colspan="4" style="text-align: center;">No files available</td></tr>`;
+				return;
+			}
+	
+			let counter = 0;
+			let row = document.createElement("tr");
+	
+			relatedFiles.forEach(file => {
+				let cell = document.createElement("td");
+
+				console.log('file', file.video_link);
+
+				let videoLinkObj = typeof file.video_link === "string" ? JSON.parse(file.video_link) : file.video_link;
+				let fileUrl = videoLinkObj?.url || null;
+
+				if (fileUrl) {
+					cell.innerHTML = `<a href="${fileUrl}" target="_blank">${file.video_label || 'Video'}</a>`;
+				} else {
+					cell.innerHTML = `<span>${file.video_label || 'No Video Available'}</span>`;
+				}
+					
+				row.appendChild(cell);
+				counter++;
+	
+				if (counter === 4) {
+					tableBody.appendChild(row);
+					row = document.createElement("tr");
+					counter = 0;
+				}
+			});
+	
+			if (counter > 0) {
+				tableBody.appendChild(row);
+			}
+		});
+	}
+	
+	document.addEventListener("DOMContentLoaded", displayProductVideos);
+	
+</script>
+
+{% schema %}
+	{
+		"name": "NW Product Video Table",
+		"tag": "section",
+		"class": "nw-product-video-table",
+		"blocks": [],
+		"presets": [
+			{
+				"name": "NW Product Video Table"
+			}
+		]
+	}
+{% endschema %}
