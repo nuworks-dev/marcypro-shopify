@@ -44,6 +44,16 @@
         "name": "list.collection_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "collection_thumbnail",
+      "namespace": "custom",
+      "name": "Mobile Thumbnail",
+      "description": "This is for mobile collection image",
+      "type": {
+        "name": "file_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "company": [],
@@ -271,6 +281,26 @@
       "description": "",
       "type": {
         "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_specification",
+      "namespace": "custom",
+      "name": "Product Specification",
+      "description": "",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_attachment",
+      "namespace": "custom",
+      "name": "Product Attachment",
+      "description": "This is for product attachment link",
+      "type": {
+        "name": "list.file_reference",
         "category": "REFERENCE"
       }
     }
