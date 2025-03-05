@@ -9,6 +9,7 @@
 .card {
   text-decoration: none;
   text-align: var(--text-alignment);
+  
 }
 
 .card:not(.ratio) {
