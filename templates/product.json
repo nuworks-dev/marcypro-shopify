@@ -106,6 +106,22 @@
         "padding_bottom": 12
       }
     },
+    "video_4Djyb6": {
+      "type": "video",
+      "settings": {
+        "heading": "{{ product.title }}",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video": "{{ product.metafields.custom.product_video.value }}",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "{{ product.featured_image }}",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "nw_featured_collection_Vk9AXh": {
       "type": "nw-featured-collection",
       "settings": {
@@ -215,6 +231,7 @@
   },
   "order": [
     "main",
+    "video_4Djyb6",
     "nw_featured_collection_Vk9AXh",
     "nw_trust_badge_wMyFzm",
     "related-products",
