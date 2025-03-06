@@ -16,6 +16,14 @@
 {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
 {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .sale-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use default color */
+    padding-bottom: 14px;
+  }
+</style>
+
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
   assign total_active_values = 0
@@ -154,10 +162,12 @@
                         {%- endif -%}
                           {% if filter.label != 'Sale' %}
                             {{- 'icon-caret.svg' | inline_asset_content -}}
-                          {% endif %}                     
+                          {% endif %}  
+                                         
                       </div>
+                      
                     </summary>
-                    {% comment %} {% if filter.label != 'Sale' %} {% endcomment %}
+                    
                       <div
                       id="Facet-{{ forloop.index }}-{{ section.id }}"
                       class="parent-display {% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}"
@@ -341,6 +351,8 @@
                   </details>
               {% endcase %}
             {%- endfor -%}
+
+            <a href="/collections/on-sale" class="sale-link">Sale</a>
           </div>
           {% comment %} Pills after filtes on filter type horizontal {% endcomment %}
           {%- if filter_type == 'horizontal' -%}
@@ -382,6 +394,8 @@
                   <span>{{ 'products.facets.clear_all' | t }}</span>
                 </a>
               </facet-remove>
+
+              
             </div>
           {%- endif -%}
         {% endif %}
