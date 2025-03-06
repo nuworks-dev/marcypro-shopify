@@ -109,7 +109,7 @@
     "video_4Djyb6": {
       "type": "video",
       "settings": {
-        "heading": "{{ product.title }}",
+        "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
         "video": "{{ product.metafields.custom.product_video.value }}",
