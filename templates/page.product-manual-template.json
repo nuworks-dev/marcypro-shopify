@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 80
+      }
+    },
+    "nw_spacer_wCXrKQ": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 50,
+        "spacer_height_mobile": 20,
+        "background_color": "#ffffff"
+      }
+    },
+    "nw_heading_HiMQKU": {
+      "type": "nw-heading",
+      "settings": {
+        "input_text": "Product Manuals",
+        "input_font": "montserrat_n4",
+        "input_alignment": "center",
+        "input_color": "",
+        "input_size": 36,
+        "input_weight": 900
+      }
+    },
+    "nw_spacer_W7Wzx4": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 40,
+        "spacer_height_mobile": 20,
+        "background_color": "#ffffff"
+      }
+    },
+    "nw_product_manual_Chcrny": {
+      "type": "nw-product-manual",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "nw_spacer_wCXrKQ",
+    "nw_heading_HiMQKU",
+    "nw_spacer_W7Wzx4",
+    "nw_product_manual_Chcrny"
+  ]
+}

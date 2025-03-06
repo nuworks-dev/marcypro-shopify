@@ -48,7 +48,7 @@
     {
       "key": "collection_thumbnail",
       "namespace": "custom",
-      "name": "Collection Thumbnail",
+      "name": "Mobile Thumbnail",
       "description": "This is for mobile collection image",
       "type": {
         "name": "file_reference",

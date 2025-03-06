@@ -1,5 +1,5 @@
 <style>
-	#nw-product-manual-table {
+	#nw-product-video-table {
 		padding-top: 30px;
 		padding-bottom: 30px;
 	}
@@ -34,7 +34,7 @@
 	}
 	
     @media (max-width: 768px) {
-        #nw-product-manual-table {
+        #nw-product-video-table {
             grid-template-columns: repeat(var(--mobile-columns, 2), 1fr) !important;
         }
 		.table-container {
@@ -48,27 +48,27 @@
 		}
     }
 </style>
-<div class="page-width" id="nw-product-manual-table">
+<div class="page-width" id="nw-product-video-table">
 	
 	<div>
 		<input type="text" class="button" id="search_text">
 		<input value="Search" type="submit" class="button" id="search_submit">
 	</div>
 
-	{% assign manuals = shop.metaobjects.product_manual_category.values %}
+	{% assign videos = shop.metaobjects.product_video_category.values %}
 
-	{% assign active_manuals = manuals | where: "active", true %}
+	{% assign active_video = videos | where: "active", true %}
 	{% assign manual_array = "" %}
 
-	{% for manual in active_manuals %}
+	{% for manual in active_video %}
 	{% assign padded_order = manual.order | plus: 1000 | append: "---" | append: manual.name %}
 	{% assign manual_array = manual_array | append: padded_order | append: "||" %}
 	{% endfor %}
 
-	{% assign sorted_manuals = manual_array | split: "||" | sort %}
+	{% assign sorted_videos = manual_array | split: "||" | sort %}
 
 	<div id="manual-container">
-	{% for item in sorted_manuals %}
+	{% for item in sorted_videos %}
 		{% assign parts = item | split: "---" %}
 		{% assign order = parts[0] | minus: 1000 %}
 		{% assign name = parts[1] %}
@@ -98,7 +98,7 @@
 </div>
 
 <script>
-	async function fetchProductManuals() {
+	async function fetchProductVideos() {
 		let cursor = null;
 		let hasNextPage = true;
 		let allFiles = [];
@@ -106,7 +106,7 @@
 		while (hasNextPage) {
 			const query = `
 			query {
-				metaobjects(type: "product_manual", first: 250 ${cursor ? `, after: "${cursor}"` : ""}) {
+				metaobjects(type: "product_video", first: 250 ${cursor ? `, after: "${cursor}"` : ""}) {
 					pageInfo {
 						hasNextPage
 						endCursor
@@ -204,11 +204,11 @@
 		return urlMap;
 	}
 	
-	async function displayProductManuals() {
-		const allFiles = await fetchProductManuals();
+	async function displayProductVideos() {
+		const allFiles = await fetchProductVideos();
 	
 		if (!allFiles.length) {
-			console.warn("No product manuals found.");
+			console.warn("No product videos found.");
 			return;
 		}
 	
@@ -247,17 +247,18 @@
 	
 			relatedFiles.forEach(file => {
 				let cell = document.createElement("td");
-	
-				let fileUrl = file.file_attachment && file.file_attachment.startsWith("gid://shopify/GenericFile/")
-					? fileUrlMap[file.file_attachment] || null
-					: file.file_attachment;
-	
+
+				console.log('file', file.video_link);
+
+				let videoLinkObj = typeof file.video_link === "string" ? JSON.parse(file.video_link) : file.video_link;
+				let fileUrl = videoLinkObj?.url || null;
+
 				if (fileUrl) {
-					cell.innerHTML = `<a href="${fileUrl}" target="_blank">${file.download_label}</a>`;
+					cell.innerHTML = `<a href="${fileUrl}" target="_blank">${file.video_label || 'Video'}</a>`;
 				} else {
-					cell.innerHTML = `<span>${file.download_label}</span>`;
+					cell.innerHTML = `<span>${file.video_label || 'No Video Available'}</span>`;
 				}
-	
+					
 				row.appendChild(cell);
 				counter++;
 	
@@ -268,34 +269,25 @@
 				}
 			});
 	
-			{% comment %} if (counter > 0 && counter < 4) {
-				for (let i = counter; i < 4; i++) {
-					let emptyCell = document.createElement("td");
-					row.appendChild(emptyCell);
-				}
-				tableBody.appendChild(row);
-			} else if (counter === 4) {
-				tableBody.appendChild(row);
-			} {% endcomment %}
 			if (counter > 0) {
 				tableBody.appendChild(row);
 			}
 		});
 	}
 	
-	document.addEventListener("DOMContentLoaded", displayProductManuals);
+	document.addEventListener("DOMContentLoaded", displayProductVideos);
 	
 </script>
 
 {% schema %}
 	{
-		"name": "NW Product Manual Table",
+		"name": "NW Product Video Table",
 		"tag": "section",
-		"class": "nw-product-manual-table",
+		"class": "nw-product-video-table",
 		"blocks": [],
 		"presets": [
 			{
-				"name": "NW Product Manual Table"
+				"name": "NW Product Video Table"
 			}
 		]
 	}
