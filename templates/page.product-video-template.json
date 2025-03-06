@@ -21,7 +21,7 @@
       "type": "nw-spacer",
       "settings": {
         "spacer_height": 60,
-        "spacer_height_mobile": 20,
+        "spacer_height_mobile": 40,
         "background_color": "#ffffff"
       }
     },
