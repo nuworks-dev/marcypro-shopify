@@ -17,7 +17,7 @@
         "padding_bottom": 80
       }
     },
-    "nw_spacer_W7Wzx4": {
+    "nw_spacer_KmER3V": {
       "type": "nw-spacer",
       "settings": {
         "spacer_height": 60,
@@ -25,26 +25,26 @@
         "background_color": "#ffffff"
       }
     },
-    "nw_heading_HiMQKU": {
+    "nw_heading_fqgtbL": {
       "type": "nw-heading",
       "settings": {
-        "input_text": "PRODUCT MANUALS",
+        "input_text": "ASSEMBLY VIDEOS",
         "input_font": "montserrat_n4",
         "input_alignment": "left",
-        "input_color": "",
+        "input_color": "#121212",
         "input_size": 36,
-        "input_weight": 900
+        "input_weight": 600
       }
     },
-    "nw_product_manual_Chcrny": {
-      "type": "nw-product-manual",
+    "nw_product_video_nyxzNq": {
+      "type": "nw-product-video",
       "settings": {}
     }
   },
   "order": [
     "main",
-    "nw_spacer_W7Wzx4",
-    "nw_heading_HiMQKU",
-    "nw_product_manual_Chcrny"
+    "nw_spacer_KmER3V",
+    "nw_heading_fqgtbL",
+    "nw_product_video_nyxzNq"
   ]
 }
