@@ -12,16 +12,20 @@
 	.responsive-chart-table th {
 		padding: 8px;
 		text-align: center;
-		border: 1px solid #ccc;
 	}
 
 	.highlight {
 		background-color: yellow !important;
 	}
 
+	.responsive-chart-table td {
+		text-align: left;
+	}
+
 	.responsive-chart-table a {
 		text-decoration: underline; /* Removes underline */
 		color: #202738;
+		text-align: left !important;
 		
 	}
 	.responsive-chart-table a:visited {
@@ -32,6 +36,32 @@
 		text-decoration: underline; /* Optional: Adds underline on hover */
 		color: #c02127;
 	}
+
+	.form-input-field {
+		display: flex;
+		gap: 25px;
+		padding-bottom: 60px;
+	}
+
+	#search_text {
+		background-color: #fff;
+		border: 1px solid #DCDCDC;
+		width: 390px;
+		color: #000;
+	}
+
+	#search_submit {
+		background: #C02127;
+		color: #fff;
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0px;
+		width: 120px;
+	}
+
+
 	
     @media (max-width: 768px) {
         #nw-product-video-table {
@@ -47,12 +77,24 @@
 			white-space: nowrap;
 		}
     }
+
+	@media (max-width: 480px) {
+		#search_text {
+			width: 100%;
+		}
+		.form-input-field {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+		}
+	}
 </style>
 <div class="page-width" id="nw-product-video-table">
 	
-	<div>
-		<input type="text" class="button" id="search_text">
-		<input value="Search" type="submit" class="button" id="search_submit">
+	<div class="form-input-field">
+		<input type="text" class="button" id="search_text" placeholder="Search" />
+		<input value="Search" type="submit" class="button" id="search_submit" />
 	</div>
 
 	{% assign videos = shop.metaobjects.product_video_category.values %}

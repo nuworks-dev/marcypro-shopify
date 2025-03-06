@@ -265,26 +265,6 @@
       }
     },
     {
-      "key": "discounted_products",
-      "namespace": "custom",
-      "name": "Sale",
-      "description": "",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "product_type",
-      "namespace": "custom",
-      "name": "product type",
-      "description": "",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
       "key": "product_specification",
       "namespace": "custom",
       "name": "Product Specification",
@@ -301,6 +281,16 @@
       "description": "This is for product attachment link",
       "type": {
         "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_type",
+      "namespace": "custom",
+      "name": "Product type",
+      "description": "",
+      "type": {
+        "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
     }
