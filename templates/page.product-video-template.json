@@ -20,7 +20,7 @@
     "nw_spacer_KmER3V": {
       "type": "nw-spacer",
       "settings": {
-        "spacer_height": 50,
+        "spacer_height": 60,
         "spacer_height_mobile": 20,
         "background_color": "#ffffff"
       }
@@ -28,20 +28,12 @@
     "nw_heading_fqgtbL": {
       "type": "nw-heading",
       "settings": {
-        "input_text": "Assembly Videos",
+        "input_text": "ASSEMBLY VIDEOS",
         "input_font": "montserrat_n4",
-        "input_alignment": "center",
+        "input_alignment": "left",
         "input_color": "#121212",
         "input_size": 36,
         "input_weight": 600
-      }
-    },
-    "nw_spacer_cWBcLG": {
-      "type": "nw-spacer",
-      "settings": {
-        "spacer_height": 40,
-        "spacer_height_mobile": 20,
-        "background_color": "#ffffff"
       }
     },
     "nw_product_video_nyxzNq": {
@@ -53,7 +45,6 @@
     "main",
     "nw_spacer_KmER3V",
     "nw_heading_fqgtbL",
-    "nw_spacer_cWBcLG",
     "nw_product_video_nyxzNq"
   ]
 }
