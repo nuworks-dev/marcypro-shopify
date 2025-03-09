@@ -20,13 +20,14 @@
 .nw-banner-image.banner__content {
 	max-width: unset;
 	padding-bottom: 0px;
-	height: 95vh;
+	height: 130vh;
 	min-height: 800px;
 }
 
 .nw-banner-image .banner__box {
 	max-width: 1280px;
 	width: 100%;
+	margin-bottom: 0px;
 }
 
 .decorative-text-wrapper {
@@ -36,9 +37,9 @@
 		text-align: left;
 		font-weight: 700;
 		font-family: var(--font-body-family);
-		font-size: 60px; 
+		font-size: 110px; 
 		color: #fff;
-		line-height: 90px;
+		line-height: 135px;
 		br {
 			content: "";
 			display: block !important;
@@ -51,6 +52,12 @@
 .banner__text {
 	p {
 		text-align: left;
+		width: 450px;
+	}
+	@media screen and (max-width: 480px) {
+		p {
+			width: 100%;
+		}
 	}
 }
 .banner__buttons {
