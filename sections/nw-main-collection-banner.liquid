@@ -62,10 +62,10 @@
       	{% if collection.metafields.custom.collection_thumbnail.value and collection.metafields.custom.collection_thumbnail.value != 'blank' %}
         	background-image: url('{{ collection.metafields.custom.collection_thumbnail.value | image_url: width: 480 }}') !important;
       	{% endif %}
-		min-height: 362px;
+		min-height: 342px;
 		position: relative;
-		background-size: cover;
-        background-position: center center;
+		background-size: contain;
+        background-position: top;
     }
 	.nw-collection-banner.collection-hero .collection-hero__inner {
 		position: absolute;
