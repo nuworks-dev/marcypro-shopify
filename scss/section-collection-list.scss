@@ -87,7 +87,7 @@
 				}
 			}
 			@media screen and (max-width: 480px){
-				gap: 15px;
+				gap: 25px;
 				li.collection-list__item {
 					.card__inner {
 						width: 360px;
@@ -95,9 +95,6 @@
 				}
 			}
 		}
-		// .slider-buttons {
-		// 	display: none;
-		// }
 		@media screen and (max-width: 480px) {
 			.slider-buttons {
 				display: none;
@@ -105,3 +102,10 @@
 		}
 	}
 }
+
+@media screen and (max-width: 480px) {
+	.nw-custom-collection .collection-list-wrapper { 
+		padding-top: 0px !important;
+	}
+}
+
