@@ -339,7 +339,9 @@ This file can be re-written at any time.
 		</style>
 	{% endif %}
 
-  </head>
+  
+  {% render 'shogun-head' %}
+</head>
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     {% include 'shogun-content-handler' %}
 
