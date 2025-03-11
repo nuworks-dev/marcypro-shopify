@@ -107,6 +107,7 @@
 		font-weight: 400;
 		line-height: 22px;
 		margin-bottom: 40px;
+		width: 490px;
 	}
 
 	#featured-card a {
@@ -205,6 +206,19 @@
 			top: 2%;
 			left: 5%;
 		}
+
+		#featured-card h3 {
+			width: 100%;
+			font-size: 40px;
+		}
+
+		#featured-card h3 br {
+			display: none;
+		}
+
+		#featured-card p { 
+			width: 100%;
+		}
 	}
 
 {%- endstyle -%}
@@ -234,7 +248,7 @@
 					{% if block.type == 'featured_subtitle' and block.settings.featured_subtitle %}
 						<h5>{{ block.settings.featured_subtitle }}</h5>
 					{% elsif block.type == 'featured_title' and block.settings.featured_title %}
-						<h3>{{ block.settings.featured_title }}</h3>
+						<h3>{{ block.settings.featured_title | newline_to_br }}</h3>
 					{% elsif block.type == 'featured_description' and block.settings.featured_description %}
 						<p>{{ block.settings.featured_description | newline_to_br }}</p>
 					{% elsif block.type == 'featured_url' and block.settings.featured_url %}
@@ -309,7 +323,7 @@
 				"name": "Featured Title",
 				"settings": [
 					{
-						"type": "text",
+						"type": "textarea",
 						"id": "featured_title",
 						"label": "Featured Title",
 						"default": "TITLE GOES HERE"
