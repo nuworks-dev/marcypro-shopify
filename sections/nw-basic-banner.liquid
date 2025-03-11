@@ -34,6 +34,7 @@
 		margin-bottom: {{ section.settings.bottom_gap | append: "px" }};
 		padding: 0px;
 		line-height: 78px;
+		text-align: {{ section.settings.text_align }};
 	}
 	@media screen and (width >= 1441px) {
 		#nw-basic-banner {
@@ -47,14 +48,19 @@
 			height: {{ section.settings.background_height_mobile | append: "px" }};
 			padding: 35px;
 			margin-bottom: {{ section.settings.mobile_margin_top | append: "px" }};
+
+			background-size: contain;
+			min-height: 360px;
+			margin-top: 45px;
 		}
 		#nw-basic-banner h1 { 
 			font-size: {{  section.settings.text_size_mobile | append: "px" }};
+			line-height: 58px;
 		}
 	}
 {% endstyle %}
 <div id="nw-basic-banner">
-	<h1>{{ section.settings.banner_heading }}</h1>
+	<h1>{{ section.settings.banner_heading | newline_to_br }}</h1>
 </div>
 {% schema %}
 	{
@@ -175,7 +181,7 @@
 				"content": "Title Settings"
 			},
 			{
-				"type": "text",
+				"type": "textarea",
 				"id": "banner_heading",
 				"label": "Banner Heading",
 				"default": "Banner Title"
@@ -196,9 +202,14 @@
 				"default": 400
 			},
 			{
+				"type": "text_alignment",
+				"id": "text_align",
+				"label": "Text Alignment"
+			},
+			{
 				"type": "select",
 				"id": "text_alignment",
-				"label": "Text Alignment Horizontal",
+				"label": "Text Position Horizontal",
 				"options": [
 					{
 						"label": "Left",
@@ -218,7 +229,7 @@
 			{
 				"type": "select",
 				"id": "text_alignment_vertical",
-				"label": "Text Alignment Vertical",
+				"label": "Text Position Vertical",
 				"options": [
 					{
 						"label": "Top",

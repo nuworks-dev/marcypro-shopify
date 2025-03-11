@@ -3048,6 +3048,13 @@
 	right: 0;
 	border-radius: 0;
   }
+
+  @media screen and (max-width: 480px) {
+	.page-width {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+  }
   
   @media screen and (max-width: 749px) {
 	.content-container--full-width-mobile {
@@ -3058,6 +3065,7 @@
 	.content-container--full-width-mobile:after {
 	  display: none;
 	}
+
   }
   
   .global-media-settings {
