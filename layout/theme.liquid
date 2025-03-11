@@ -328,6 +328,13 @@
 	<script src="{{ 'jquery-3.7.1.js' | asset_url }}" defer="defer"></script>
 	<link rel="stylesheet" href="{{ 'bootstrap-icons.css' | asset_url }}" />
 
+	{% comment %} SHOW JUDGEME WIDGET ONLY IN PRODUCT {% endcomment %}
+	{% if template.name != "product" %} 
+		<style>
+			.jdgm-widget { display: none !important; }
+		</style>
+	{% endif %}
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

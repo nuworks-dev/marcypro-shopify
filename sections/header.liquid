@@ -111,6 +111,8 @@
 
 {% comment %} Style for black links and icons on header {% endcomment %}
 {% if request.page_type != 'index' and template.name != 'blog' or page.metafields.custom.class == 'common-page' or page.metafields.custom.class == 'transparent-header' %}
+	{% comment %} {{ "This is a debug message: " | append: collection.title }} {% endcomment %}
+  
   <style>
 		.list-menu.list-menu--inline span,
 		.header__icon .icon {

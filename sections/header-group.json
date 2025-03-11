@@ -17,7 +17,7 @@
         "nw_utilitybar_naezRR": {
           "type": "nw-utilitybar",
           "settings": {
-            "utility_page_link": "https://mqtas1-3r.myshopify.com/apps/parcelpanel",
+            "utility_page_link": "https://mqtas1-3r.myshopify.com/apps/trackingstatus",
             "utility_font_picker": "helvetica_n4",
             "utility_font_color": "#f3f3f3",
             "utility_background_color": "#121212",
