@@ -111,10 +111,10 @@
 
 {% comment %} Style for black links and icons on header {% endcomment %}
 {% if request.page_type != 'index' and template.name != 'blog' or page.metafields.custom.class == 'common-page' or page.metafields.custom.class == 'transparent-header' %}
-	<style>
+  <style>
 		.list-menu.list-menu--inline span,
 		.header__icon .icon {
-			color: {% if page.metafields.custom.class == 'transparent-header' %} #fff {% else %} #231F20 {% endif %};
+			color: {% if page.metafields.custom.class == 'transparent-header' %} #fff {% elsif collection.title == "Shop All" %} #fff {% else %} #231F20 {% endif %};
 		}
 	</style>
 {% endif %}
