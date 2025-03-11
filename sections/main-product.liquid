@@ -213,71 +213,65 @@ details[open] .accordion__plus-icon {
                 
               {%- when 'description' -%}
                 <div class="product-min-description" style="display: flex; flex-direction:column; gap: 0.2em;">
-					<p style="margin: 0;"><strong>UPC:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.barcode | default: 'N/A' }}</span></p>
-					<p style="margin: 0;"><strong>Availability:</strong> <span style="font-weight: normal;">{% if product.selected_or_first_available_variant.available %}In Stock{% else %}Out of Stock{% endif %}</span></p>
-					{% unless product.tags contains "no-max-purchase" %}
-						<p style="margin: 0;"><strong>Maximum Purchase:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.max_purchase_limit | default: '1 unit' }}</span></p>
-					{% endunless %}
-					<p style="margin: 0;"><strong>Shipping:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.free_shipping | default: 'Free Shipping' }}</span></p>
+                    <p style="margin: 0;"><strong>UPC:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.barcode | default: 'N/A' }}</span></p>
+                    <p style="margin: 0;"><strong>Availability:</strong> <span style="font-weight: normal;">{% if product.selected_or_first_available_variant.available %}In Stock{% else %}Out of Stock{% endif %}</span></p>
+                    {% unless product.tags contains "no-max-purchase" %}
+                        <p style="margin: 0;"><strong>Maximum Purchase:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.max_purchase_limit | default: '1 unit' }}</span></p>
+                    {% endunless %}
+                    <p style="margin: 0;"><strong>Shipping:</strong> <span style="font-weight: normal;">{{ product.selected_or_first_available_variant.free_shipping | default: 'Free Shipping' }}</span></p>
                 </div>
+                {%- if product.description != blank -%}
+                  <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+                      <details>
+                          <summary style="display: flex; justify-content: space-between;">
+                              <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.description' | t }}</h2>
+                              <span class="accordion__plus-icon">+</span>
+                          </summary>
+                          <div class="product__description rte">
+                              {{ product.description }}
+                          </div>
+                      </details>
+                  </div>
+                  {% endif %}
+                {% if product.metafields.custom.product_specification != blank %}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                  <details>
-                    <summary style="display: flex; justify-content: space-between;">
-                      <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.description' | t }}</h2>
-                      <span class="accordion__plus-icon">+</span>
-                    </summary>
-                    {%- if product.description != blank -%}
-                      <div class="product__description rte">
-                        {{ product.description }}
-                      </div>
-                    {%- endif -%}
-                  </details>
+                    <details>
+                        <summary style="display: flex; justify-content: space-between;">
+                            <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.specification' | t }}</h2>
+                            <span class="accordion__plus-icon">+</span>
+                        </summary>
+                        <div class="product__specification rte">
+                            {{ product.metafields.custom.product_specification | metafield_tag }}
+                        </div>
+                    </details>
                 </div>
-
+                {% endif %}
+                {% if product.metafields.custom.product_attachment != blank %}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                  <details>
-                    <summary style="display: flex; justify-content: space-between;">
-                      <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.specification' | t }}</h2>
-                      <span class="accordion__plus-icon">+</span>
-                    </summary>
-                    <div class="product__specification rte">
-						{% if product.metafields.custom.product_specification != blank %}
-							{{ product.metafields.custom.product_specification | metafield_tag }}
-						{% else %}
-							<p>Specifications are not available yet.</p>
-						{% endif %}
-                    </div>
-                  </details>
+                    <details>
+                        <summary style="display: flex; justify-content: space-between;">
+                            <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.manuals_and_workout_charts' | t }}</h2>
+                            <span class="accordion__plus-icon">+</span>
+                        </summary>
+                        <div class="product__manuals rte">
+                            <ul>
+                                {% for file in product.metafields.custom.product_attachment.value %}
+                                    {% if file.url != blank %}
+                                        {% assign file_name = file.url | split: '/' | last | split: '?' | first %} 
+                                        {% assign clean_name = file_name | split: '.' | first %} 
+                                        <li>
+                                            <a href="{{ file.url }}" target="_blank">{{ clean_name }}</a>
+                                        </li>
+                                    {% else %}
+                                        <li>No valid file available.</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </details>
                 </div>
-
-                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-					<details>
-            <summary style="display: flex; justify-content: space-between;">
-							<h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.manuals_and_workout_charts' | t }}</h2>
-              <span class="accordion__plus-icon">+</span>
-						</summary>
-						<div class="product__manuals rte">
-							{% if product.metafields.custom.product_attachment != blank %}
-								<ul>
-									{% for file in product.metafields.custom.product_attachment.value %}
-										{% if file.url != blank %}
-											{% assign file_name = file.url | split: '/' | last | split: '?' | first %} 
-											{% assign clean_name = file_name | split: '.' | first %} 
-											<li>
-												<a href="{{ file.url }}" target="_blank">{{ clean_name }}</a>
-											</li>
-										{% else %}
-											<li>No valid file available.</li>
-										{% endif %}
-									{% endfor %}
-								</ul>
-							{% else %}
-								<p>No attachments available.</p>
-							{% endif %}
-						</div>
-					</details>
-                </div>
-           
+                {% endif %}
+              
                 {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
