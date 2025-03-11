@@ -49,9 +49,10 @@
 			padding: 35px;
 			margin-bottom: {{ section.settings.mobile_margin_top | append: "px" }};
 
-			background-size: contain;
-			min-height: 360px;
+			background-size: cover;
 			margin-top: 45px;
+			background-position: top center;
+			min-height: 360px;
 		}
 		#nw-basic-banner h1 { 
 			font-size: {{  section.settings.text_size_mobile | append: "px" }};
@@ -97,12 +98,14 @@
 			{
 				"type": "image_picker",
 				"id": "desktop_background",
-				"label": "Desktop Background"
+				"label": "Desktop Background",
+				"info": "Recommended for subpage: (1399x549)"
 			},
 			{
 				"type": "image_picker",
 				"id": "mobile_background",
-				"label": "Mobile Background"
+				"label": "Mobile Background",
+				"info": "Recommended: (440x362)"
 			},
 			{
 				"type": "select",
