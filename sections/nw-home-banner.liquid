@@ -1,0 +1,464 @@
+{{ 'section-nw-home-banner.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+	{{ section.settings.utility_font_picker | font_face: font_display: 'swap' }}
+	#nw-home-banner {
+		background-image: url({{ section.settings.desktop_background | image_url }});
+		background-size: {{ section.settings.background_size }};
+		background-repeat: no-repeat;
+		background-position: {{ section.settings.background_position_x }} {{ section.settings.background_position_y }};
+		width: 100%;
+		height: {{ section.settings.background_height_desktop | append: "px"}};
+		display: flex;
+		justify-content: {{ section.settings.text_alignment }};
+		align-items: {{ section.settings.text_alignment_vertical }};
+		padding: 65px;
+		position: relative; /* Ensure relative positioning for absolute child */
+		margin-top: {{ section.settings.desktop_margin_top | append: "px"}};
+	}
+	/* overlay gradient */
+	#nw-home-banner::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 80%;
+		background: linear-gradient(to top, rgba(0, 0, 0, 20%), transparent);
+		pointer-events: none;
+	}
+	#nw-home-banner h1 {
+		font-size: {{ section.settings.text_size | append: "px" }};
+		color: {{ section.settings.text_color }};
+		font-family: {{ section.settings.heading_font.family }};
+		font-weight: {{ section.settings.text_weight }};
+		padding: 0px;
+		line-height: 78px;
+		text-align: {{ section.settings.text_align }};
+	}
+	#nw-home-banner h1 span {
+		display: inline-block; /* Prevents rendering issues */
+		color: transparent;
+		-webkit-text-stroke: 1px {{ section.settings.text_color | default: 'white' }};
+	}
+	#nw-home-banner .banner-description {
+		margin-top: 25px;
+		color: {{ section.settings.text_color }};
+		font-family: {{ section.settings.description_font.family }};
+		font-weight: 400;
+		font-size: {{ section.settings.description_text_size | append: "px"}};
+		line-height: 100%;
+		margin-bottom: {{ section.settings.bottom_gap | append: "px" }};
+	}
+	#nw-home-banner .banner-container {
+		z-index: 1;
+		width: {{ section.settings.description_width | append: "px" }};
+		margin-bottom: {{ section.settings.bottom_gap_container | append: "px" }};
+	}
+	#nw-home-banner .banner-container img {
+		position: absolute;
+		bottom: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	#nw-home-banner .banner-container .button_link {
+		border-radius: 100px;
+		color: #fff;
+		background-color: {{ section.settings.button_color }};
+		font-family: "Montserrat", sans-serif;
+		padding: 14px 32px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		border: 0px;
+		display: inline-block;
+		width: auto;
+		text-decoration: none;
+	}
+	@media screen and (width >= 1441px) {
+		#nw-home-banner {
+			background-size: cover; /* forced to cover **/
+			height: 100vh; /** forced to this height **/
+		}
+		.banner-wrapper {
+			width: 1300px;
+			margin: 0 auto;
+			z-index: 1;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		#nw-home-banner {
+			background-image: url({{ section.settings.mobile_background | image_url }});
+			height: {{ section.settings.background_height_mobile | append: "px" }};
+			padding: 35px;
+			margin-bottom: {{ section.settings.mobile_margin_top | append: "px" }};
+
+			background-size: cover;
+			margin-top: 45px;
+			background-position: top center;
+			min-height: 360px;
+		}
+		.banner-wrapper {
+			width: 100%;
+			z-index: 1;
+		}
+		#nw-home-banner::after {
+			background: linear-gradient(to top, rgba(0, 0, 0, 90%), transparent);
+		}
+		#nw-home-banner .banner-container img {
+			position: absolute;
+			bottom: 60px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		#nw-home-banner h1 { 
+			font-size: {{  section.settings.text_size_mobile | append: "px" }};
+			line-height: 58px;
+		}
+		#nw-home-banner .banner-description {
+			font-size: {{ section.settings.description_text_size_mobile | append: "px"}};
+		}
+		#nw-home-banner .banner-container {
+			margin-bottom: 100px;
+		}
+	}
+{% endstyle %}
+<div id="nw-home-banner">
+	<div class="banner-wrapper">
+		<div class="banner-container">
+			<h1>
+				<span class="outlined-text">{{ section.settings.banner_heading_outline }}</span>
+				{% if section.settings.banner_heading_solid != blank %}
+				<br />{{ section.settings.banner_heading_solid }}
+				{% endif %}
+			</h1>
+			<div class="banner-description">
+				{{ section.settings.banner_description | newline_to_br }}
+			</div>
+
+			{%- if section.settings.button_link != blank -%}
+				<a href="{{ section.settings.button_link }}" class="button_link">{{ section.settings.button_label }}</a>
+			{%- endif -%}
+
+			<img src="{{- 'banner-arrow.svg' | asset_url -}}" width="25" height="30" />
+
+		</div>
+	</div>
+</div>
+{% schema %}
+	{
+		"name": "NW Home Banner",
+		"settings": [
+			{
+				"type": "header",
+				"content": "Background Settings"
+			},
+			{
+				"type": "number",
+				"default": 0,
+				"label": "Desktop Margin Top",
+				"id": "desktop_margin_top"
+			},
+			{
+				"type": "number",
+				"default": 0,
+				"label": "Mobile Margin Top",
+				"id": "mobile_margin_top"
+			},
+			{
+				"type": "number",
+				"default": 400,
+				"label": "Desktop background height",
+				"id": "background_height_desktop",
+				"info": "Recommended: 900"
+			},
+			{
+				"type": "number",
+				"default": 360,
+				"label": "Mobile background height",
+				"id": "background_height_mobile",
+				"info": "Recommended: 800"
+			},
+			{
+				"type": "image_picker",
+				"id": "desktop_background",
+				"label": "Desktop Background",
+				"info": "Recommended: (1440x854)"
+			},
+			{
+				"type": "image_picker",
+				"id": "mobile_background",
+				"label": "Mobile Background",
+				"info": "Recommended: (440x816)"
+			},
+			{
+				"type": "select",
+				"id": "background_size",
+				"label": "Background Size",
+				"options": [
+					{
+						"label": "Cover",
+						"value": "cover"
+					},
+					{
+						"label": "Contain",
+						"value": "contain"
+					},
+				]
+			},
+			{
+				"type": "select",
+				"id": "background_position_x",
+				"label": "Background Position Horizontal",
+				"options": [
+					{
+						"label": "Top",
+						"value": "top"
+					},
+					{
+						"label": "Right",
+						"value": "right"
+					},
+					{
+						"label": "Bottom",
+						"value": "bottom"
+					},
+					{
+						"label": "Left",
+						"value": "left"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "select",
+				"id": "background_position_y",
+				"label": "Background Position Vertical",
+				"options": [
+					{
+						"label": "Top",
+						"value": "top"
+					},
+					{
+						"label": "Right",
+						"value": "right"
+					},
+					{
+						"label": "Bottom",
+						"value": "bottom"
+					},
+					{
+						"label": "Left",
+						"value": "left"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "range",
+				"label": "Description Width",
+				"id": "description_width",
+				"info": "Recommended: 400",
+				"step": 100,
+				"min": 400,
+				"max": 1000,
+				"default": 400,
+				"unit": "px"
+			},
+
+			{
+				"type": "header",
+				"content": "Title Settings"
+			},
+			{
+				"type": "text",
+				"id": "banner_heading_outline",
+				"label": "Banner Heading Outline",
+				"default": "Banner"
+			},
+			{
+				"type": "text",
+				"id": "banner_heading_solid",
+				"label": "Banner Heading Solid",
+				"default": "Title"
+			},
+			{
+				"type": "font_picker",
+				"id": "heading_font",
+				"label": "Heading font",
+				"default": "helvetica_n4"
+			},
+			{
+				"type": "range",
+				"id": "text_weight",
+				"label": "Text Weight",
+				"min": 100,
+				"max": 900,
+				"step": 100,
+				"default": 400
+			},
+			{
+				"type": "text_alignment",
+				"id": "text_align",
+				"label": "Text Alignment"
+			},
+			{
+				"type": "select",
+				"id": "text_alignment",
+				"label": "Text Position Horizontal",
+				"options": [
+					{
+						"label": "Left",
+						"value": "start"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					},
+					{
+						"label": "Right",
+						"value": "end"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "select",
+				"id": "text_alignment_vertical",
+				"label": "Text Position Vertical",
+				"options": [
+					{
+						"label": "Top",
+						"value": "start"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					},
+					{
+						"label": "Bottom",
+						"value": "end"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "color",
+				"id": "text_color",
+				"label": "Text Color",
+				"default": "#fff"
+			},
+			{
+				"type": "range",
+				"id": "text_size",
+				"label": "Text Size",
+				"min": 30,
+				"max": 75,
+				"step": 1,
+				"default": 75,
+				"unit": "px"
+			},
+
+			{
+				"type": "range",
+				"id": "text_size_mobile",
+				"label": "Text Size Mobile",
+				"min": 30,
+				"max": 60,
+				"step": 1,
+				"default": 60,
+				"unit": "px"
+			},
+			{
+				"type": "range",
+				"id": "bottom_gap_container",
+				"label": "Bottom Gap Container",
+				"min": 10,
+				"max": 500,
+				"step": 10,
+				"default": 10
+			},
+			{
+				"type": "range",
+				"id": "bottom_gap",
+				"label": "Bottom Gap Description",
+				"min": 0,
+				"max": 100,
+				"step": 1,
+				"default": 0
+			},
+
+			{
+				"type": "header",
+				"content": "Description Settings"
+			},
+			{
+				"type": "textarea",
+				"id": "banner_description",
+				"label": "Banner Description",
+				"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate dui non libero eleifend vestibulum. Mauris lorem lacus, tristique eu mauris id, lacinia accumsan odio. Etiam rutrum ultricies iaculis. "
+			},
+			{
+				"type": "font_picker",
+				"id": "description_font",
+				"label": "Description Font",
+				"default": "helvetica_n4"
+			},
+			{
+				"type": "range",
+				"id": "description_text_size",
+				"label": "Text Size",
+				"min": 14,
+				"max": 30,
+				"step": 1,
+				"default": 18,
+				"unit": "px"
+			},
+			{
+				"type": "range",
+				"id": "description_text_size_mobile",
+				"label": "Text Size Mobile",
+				"min": 14,
+				"max": 30,
+				"step": 1,
+				"default": 18,
+				"unit": "px"
+			},
+
+			{
+				"type": "header",
+				"content": "Other Settings"
+			},
+			{
+				"type": "url",
+				"id": "button_link",
+				"label": "Button Link"
+			},
+			{
+				"type": "text",
+				"id": "button_label",
+				"label": "Button Label",
+				"default": "Shop More"
+			},
+			{
+				"type": "color",
+				"id": "button_color",
+				"label": "Button Color",
+				"default": "#C02127"
+			},
+		],
+		"presets": [
+			{
+				"name": "NW Home Banner",
+			}
+		]
+	}
+{% endschema %}	

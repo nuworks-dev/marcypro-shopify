@@ -9,6 +9,40 @@
  */
 {
   "sections": {
+    "nw_home_banner_ntyCLq": {
+      "type": "nw-home-banner",
+      "settings": {
+        "desktop_margin_top": 45,
+        "mobile_margin_top": 45,
+        "background_height_desktop": 900,
+        "background_height_mobile": 815,
+        "desktop_background": "shopify://shop_images/Homepage-Desktop4.png",
+        "mobile_background": "shopify://shop_images/Homepage-Mobile_09e609bf-eb5f-4ad4-9a24-39246297adae.png",
+        "background_size": "cover",
+        "background_position_x": "center",
+        "background_position_y": "center",
+        "description_width": 400,
+        "banner_heading_outline": "MAKE IT",
+        "banner_heading_solid": "HAPPEN",
+        "heading_font": "montserrat_n4",
+        "text_weight": 700,
+        "text_align": "left",
+        "text_alignment": "start",
+        "text_alignment_vertical": "end",
+        "text_color": "#ffffff",
+        "text_size": 75,
+        "text_size_mobile": 60,
+        "bottom_gap_container": 140,
+        "bottom_gap": 50,
+        "banner_description": "Elevate your fitness journey from the comfort of your home ",
+        "description_font": "montserrat_n4",
+        "description_text_size": 18,
+        "description_text_size_mobile": 18,
+        "button_link": "shopify://collections/shop-all",
+        "button_label": "Shop Now",
+        "button_color": "#c02127"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -42,6 +76,7 @@
         "text_rM7i9V",
         "buttons_9qtjYU"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Homepage-Desktop2.png",
         "image_2": "shopify://shop_images/Homepage-Mobile.png",
@@ -283,6 +318,7 @@
     }
   },
   "order": [
+    "nw_home_banner_ntyCLq",
     "image_banner",
     "nw_collection_list_3wxgaP",
     "nw_featured_quotes_WCPtAN",

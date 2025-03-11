@@ -86,7 +86,7 @@
 }
 @media screen and (max-width: 480px) {
   .nw-custom-collection slider-component ul.collection-list {
-    gap: 15px;
+    gap: 25px;
   }
   .nw-custom-collection slider-component ul.collection-list li.collection-list__item .card__inner {
     width: 360px;
@@ -95,6 +95,12 @@
 @media screen and (max-width: 480px) {
   .nw-custom-collection slider-component .slider-buttons {
     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nw-custom-collection .collection-list-wrapper {
+    padding-top: 0px !important;
   }
 }
 

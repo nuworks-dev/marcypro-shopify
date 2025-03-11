@@ -293,6 +293,16 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "product_video_link",
+      "namespace": "custom",
+      "name": "Product video link",
+      "description": "Product video links",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [],
