@@ -12,7 +12,7 @@
 {%- endif -%}
 
 {% comment %} Make header main logo to be the alternate(black logo) {% endcomment %}
-{%- if page.metafields.custom.class == 'common-page' or template.name == 'product' or template.name == 'login' or template.name == 'register' or template.name == 'order' or template.name == 'account' or template.name == 'reset_password' or template.name == 'addresses' or template.name == 'template-404' or template.name == '' -%}
+{%- if page.metafields.custom.class == 'common-page' or template.name == 'product' or template.name == 'login' or template.name == 'register' or template.name == 'order' or template.name == 'account' or template.name == 'reset_password' or template.name == 'addresses' or template.name == 'template-404' or template.name == 'search' -%}
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const header = document.querySelector(".header-wrapper");
@@ -111,12 +111,16 @@
 
 {% comment %} Style for black links and icons on header {% endcomment %}
 {% if request.page_type != 'index' and template.name != 'blog' or page.metafields.custom.class == 'common-page' or page.metafields.custom.class == 'transparent-header' %}
-	{% comment %} {{ "This is a debug message: " | append: collection.title }} {% endcomment %}
-  
-  <style>
+  	<style>
 		.list-menu.list-menu--inline span,
 		.header__icon .icon {
-    color: {% if collection.title == "Shop All" or collection.title == "New Arrivals" or collection.title == "Home Gyms" or collection.title == "Smith Machine" or collection.title == "Stack Home Gym" or collection.title == "Fitness Accessories" or collection.title == "Strength" or collection.title == "Cardio" or collection.title == "Exercise Bikes" or collection.title == "Fan Bikes" or collection.title == "Foldable Bikes" or collection.title == "Indoor Cycling Bikes" or collection.title == "Mini Cycles" or collection.title == "Recumbent Bikes" or collection.title == "Upright Bikes" or collection.title == "Elliptical" or collection.title == "Rowing Machine" or collection.title == "Treadmills" or collection.title == "Weightlifting Accessories" or collection.title == "Barbells" or collection.title == "Olympic Barbell and Standard Spring Clips" or collection.title == "Outdoors" or collection.title == "Kids Playground" or collection.title == "Sale" or collection.title == "Parts" %} #fff {% elsif page.metafields.custom.class == 'transparent-header' %} #fff {% else %} #231F20 {% endif %};
+			color: {% if page.metafields.custom.class == 'transparent-header' %} #fff {% else %} #231F20 {% endif %};
+		}
+		@media screen and (max-width: 480px) {
+			.list-menu.list-menu--inline span,
+			.header__icon .icon {
+				color: #fff;
+			}
 		}
 	</style>
 {% endif %}
