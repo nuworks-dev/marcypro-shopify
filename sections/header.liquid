@@ -114,7 +114,7 @@
   <style>
 		.list-menu.list-menu--inline span,
 		.header__icon .icon {
-			color: {% if page.metafields.custom.class == 'transparent-header' %} #fff {% elsif collection.title == "Shop All" or collection.title == "New Arrivals" %} #fff {% else %} #231F20 {% endif %};
+			color: {% if page.metafields.custom.class == 'transparent-header' %} #fff {% elsif collection.title != "" %} #fff {% else %} #231F20 {% endif %};
 		}
 	</style>
 {% endif %}
