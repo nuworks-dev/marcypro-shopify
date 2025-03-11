@@ -35,6 +35,7 @@
 		padding: 0px;
 		line-height: 78px;
 		text-align: {{ section.settings.text_align }};
+		margin-bottom: 0px;
 	}
 	#nw-home-banner h1 span {
 		display: inline-block; /* Prevents rendering issues */
@@ -49,6 +50,7 @@
 		font-size: {{ section.settings.description_text_size | append: "px"}};
 		line-height: 100%;
 		margin-bottom: {{ section.settings.bottom_gap | append: "px" }};
+		width: 90%;
 	}
 	#nw-home-banner .banner-container {
 		z-index: 1;
@@ -143,6 +145,14 @@
 		}
 		#nw-home-banner .banner-container {
 			margin-bottom: 100px;
+			width: 100%;
+		}
+	}
+	@media screen and (max-width: 380px) {
+		#nw-home-banner h1 {
+			font-size: 50px;
+		}
+		#nw-home-banner .banner-description {
 			width: 100%;
 		}
 	}
@@ -292,9 +302,9 @@
 				"id": "description_width",
 				"info": "Recommended: 400",
 				"step": 100,
-				"min": 400,
+				"min": 100,
 				"max": 1000,
-				"default": 400,
+				"default": 100,
 				"unit": "px"
 			},
 
@@ -430,6 +440,7 @@
 				"label": "Banner Description",
 				"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate dui non libero eleifend vestibulum. Mauris lorem lacus, tristique eu mauris id, lacinia accumsan odio. Etiam rutrum ultricies iaculis. "
 			},
+			
 			{
 				"type": "font_picker",
 				"id": "description_font",

@@ -110,7 +110,7 @@
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
 {% comment %} Style for black links and icons on header {% endcomment %}
-{% if request.page_type != 'index' and template.name != 'blog' or page.metafields.custom.class == 'common-page' or page.metafields.custom.class == 'transparent-header' %}
+{% if request.page_type != 'index' and template.name != 'blog' or page.metafields.custom.class == 'common-page' or template.name == 'cart' or page.metafields.custom.class == 'transparent-header' %}
   	<style>
 		.list-menu.list-menu--inline span,
 		.header__icon .icon {
@@ -148,7 +148,7 @@
   -%}
 
 	{% comment %} Style and effects for transparent header {% endcomment %}
-	{% if template == 'index' or template == 'collection' or template == 'blog' or page.metafields.custom.class == 'transparent-header' %}
+	{% if template == 'index' or template == 'collection' or template == 'blog' or template == 'cart' or page.metafields.custom.class == 'transparent-header' %}
 
 		<style>
 			#MainContent {
