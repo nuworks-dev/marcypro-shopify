@@ -1,0 +1,277 @@
+{{ 'section-nw-basic-banner.css' | asset_url | stylesheet_tag }}
+{% style %}
+	{{ section.settings.utility_font_picker | font_face: font_display: 'swap' }}
+	#nw-basic-banner {
+		background-image: url({{ collection.image | image_url }});
+		background-size: {{ section.settings.background_size }};
+		background-repeat: no-repeat;
+		background-position: {{ section.settings.background_position_x }} {{ section.settings.background_position_y }};
+		width: 100%;
+		height: {{ section.settings.background_height_desktop | append: "px"}};
+		display: flex;
+		justify-content: {{ section.settings.text_alignment }};
+		align-items: {{ section.settings.text_alignment_vertical }};
+		padding: 65px;
+		position: relative; /* Ensure relative positioning for absolute child */
+		margin-top: {{ section.settings.desktop_margin_top | append: "px"}};
+	}
+	/* overlay gradient */
+	#nw-basic-banner::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 60%; /* Adjust height for the gradient effect */
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent); /* Dark to transparent */
+		pointer-events: none; /* Ensure it doesn't interfere with clicks */
+	}
+	#nw-basic-banner h1 {
+		text-transform: uppercase;
+		font-size: {{ section.settings.text_size | append: "px" }};
+		color: {{ section.settings.text_color }};
+		font-family: {{ section.settings.heading_font.family }};
+		font-weight: {{ section.settings.text_weight }};
+		margin-bottom: {{ section.settings.bottom_gap | append: "px" }};
+		padding: 0px;
+		line-height: 78px;
+		text-align: {{ section.settings.text_align }};
+		z-index: 1;
+	}
+	@media screen and (width >= 1441px) {
+		#nw-basic-banner {
+			background-size: cover; /* forced to cover **/
+			height: 525px; /** forced to this height **/
+		}
+	}
+	@media screen and (max-width: 480px) {
+		#nw-basic-banner {
+			background-image: url({{ collection.metafields.custom.collection_thumbnail.value | image_url }});
+			height: {{ section.settings.background_height_mobile | append: "px" }};
+			padding: 65px;
+			margin-bottom: {{ section.settings.mobile_margin_top | append: "px" }};
+
+			background-size: cover;
+			margin-top: 45px;
+			background-position: top center;
+			min-height: 360px;
+		}
+		#nw-basic-banner h1 { 
+			font-size: 54px;
+			line-height: 58px;
+			margin-bottom: 0px;
+		}
+		.nw-custom-collection .collection-list-wrapper {
+			padding-top: 0px !important;
+		}
+	}
+{% endstyle %}
+<div id="nw-basic-banner">
+	<h1>
+		{% if collection.title == 'Products' %}
+			<span>SHOP ALL</span>
+	  	{% else %}
+		{{- collection.title | escape -}}
+	{% endif %}</h1>
+</div>
+{% schema %}
+	{
+		"name": "NW Collection Banner V2",
+		"settings": [
+			{
+				"type": "header",
+				"content": "Background Settings"
+			},
+			{
+				"type": "number",
+				"default": 0,
+				"label": "Desktop Margin Top",
+				"id": "desktop_margin_top"
+			},
+			{
+				"type": "number",
+				"default": 0,
+				"label": "Mobile Margin Top",
+				"id": "mobile_margin_top"
+			},
+			{
+				"type": "number",
+				"default": 400,
+				"label": "Desktop background height",
+				"id": "background_height_desktop"
+			},
+			{
+				"type": "number",
+				"default": 360,
+				"label": "Mobile background height",
+				"id": "background_height_mobile"
+			},
+			{
+				"type": "select",
+				"id": "background_size",
+				"label": "Background Size",
+				"options": [
+					{
+						"label": "Cover",
+						"value": "cover"
+					},
+					{
+						"label": "Contain",
+						"value": "contain"
+					},
+				]
+			},
+			{
+				"type": "select",
+				"id": "background_position_x",
+				"label": "Background Position Horizontal",
+				"options": [
+					{
+						"label": "Top",
+						"value": "top"
+					},
+					{
+						"label": "Right",
+						"value": "right"
+					},
+					{
+						"label": "Bottom",
+						"value": "bottom"
+					},
+					{
+						"label": "Left",
+						"value": "left"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "select",
+				"id": "background_position_y",
+				"label": "Background Position Vertical",
+				"options": [
+					{
+						"label": "Top",
+						"value": "top"
+					},
+					{
+						"label": "Right",
+						"value": "right"
+					},
+					{
+						"label": "Bottom",
+						"value": "bottom"
+					},
+					{
+						"label": "Left",
+						"value": "left"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					}
+				],
+				"default": "center"
+			},
+
+			{
+				"type": "header",
+				"content": "Title Settings"
+			},
+			{
+				"type": "font_picker",
+				"id": "heading_font",
+				"label": "Heading font",
+				"default": "helvetica_n4"
+			},
+			{
+				"type": "range",
+				"id": "text_weight",
+				"label": "Text Weight",
+				"min": 100,
+				"max": 900,
+				"step": 100,
+				"default": 400
+			},
+			{
+				"type": "text_alignment",
+				"id": "text_align",
+				"label": "Text Alignment"
+			},
+			{
+				"type": "select",
+				"id": "text_alignment",
+				"label": "Text Position Horizontal",
+				"options": [
+					{
+						"label": "Left",
+						"value": "start"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					},
+					{
+						"label": "Right",
+						"value": "end"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "select",
+				"id": "text_alignment_vertical",
+				"label": "Text Position Vertical",
+				"options": [
+					{
+						"label": "Top",
+						"value": "start"
+					},
+					{
+						"label": "Center",
+						"value": "center"
+					},
+					{
+						"label": "Bottom",
+						"value": "end"
+					}
+				],
+				"default": "center"
+			},
+			{
+				"type": "color",
+				"id": "text_color",
+				"label": "Text Color",
+				"default": "#fff"
+			},
+			{
+				"type": "range",
+				"id": "text_size",
+				"label": "Text Size",
+				"min": 30,
+				"max": 75,
+				"step": 1,
+				"default": 75,
+				"unit": "px"
+			},
+			{
+				"type": "range",
+				"id": "bottom_gap",
+				"label": "Bottom Gap",
+				"min": 0,
+				"max": 100,
+				"step": 1,
+				"default": 0
+			},
+		],
+		"presets": [
+			{
+				"name": "NW Collection Banner V2",
+			}
+		]
+	}
+{% endschema %}	
