@@ -24,6 +24,7 @@
       "block_order": [
         "heading_r7P4HQ"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Blog-Desktop_077190de-5cf4-45cc-9d5f-7cff4e7c8908.png",
         "image_2": "shopify://shop_images/20e2d7d5caece3175e9ecd4ae245394a.png",
@@ -38,6 +39,29 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "nw_basic_banner_7acJaM": {
+      "type": "nw-basic-banner",
+      "settings": {
+        "desktop_margin_top": 45,
+        "mobile_margin_top": 45,
+        "background_height_desktop": 440,
+        "background_height_mobile": 360,
+        "desktop_background": "shopify://shop_images/Blog-Desktop.png",
+        "mobile_background": "shopify://shop_images/Blog-Mobile.png",
+        "background_size": "cover",
+        "background_position_x": "center",
+        "background_position_y": "center",
+        "banner_heading": "BLOG",
+        "heading_font": "montserrat_n4",
+        "text_weight": 700,
+        "text_alignment": "center",
+        "text_alignment_vertical": "end",
+        "text_color": "#ffffff",
+        "text_size": 74,
+        "text_size_mobile": 54,
+        "bottom_gap": 30
       }
     },
     "main": {
@@ -56,6 +80,7 @@
   },
   "order": [
     "nw_image_banner_BMjBJR",
+    "nw_basic_banner_7acJaM",
     "main"
   ]
 }
