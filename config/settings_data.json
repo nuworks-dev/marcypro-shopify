@@ -178,6 +178,11 @@
         "type": "shopify://apps/rimix-product-badges/blocks/rimix-helper/46f9dcab-fec8-4959-8563-b2334479cd94",
         "disabled": false,
         "settings": {}
+      },
+      "12424619676349770391": {
+        "type": "shopify://apps/lably/blocks/app-embeds/6c1584f0-c71d-4a5f-8025-affd32e7e34d",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
