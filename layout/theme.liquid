@@ -261,7 +261,7 @@
       }
     {% endstyle %}
 
-	{% if template.name == "index" %} 
+	{% if template.name == "index" or template.name == 'blog' or template.name == 'collection' or page.metafields.custom.class == 'transparent-header' %} 
 	  <style>
 		sticky-header.gradient {
 			border-bottom: 0px;
