@@ -36,7 +36,6 @@
 .video-section__media iframe,
 .video-section__media video {
   position: absolute;
-  height: 530px;
   width: 100%;
 }
 
