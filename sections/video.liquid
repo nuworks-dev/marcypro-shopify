@@ -2,16 +2,20 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+.section-{{ section.id }}-padding {
+    height: 530px;
+    max-width: 1312px; /* Added max-width */
+    margin: 0 auto; /* centers the container */
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+      max-width: none; /* removes max-width on desktop */
+      margin: initial; /* removes margin on desktop */
     }
+  
   }
 {%- endstyle -%}
 
@@ -55,30 +59,30 @@
       class="video-section__media deferred-media gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       data-media-id="{{ video_id }}"
       {% if poster != null %}
-        style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+        style="--ratio-percent: {{ 1 | divided_by: 2.475 | times: 100 }}%;"
       {% endif %}
     >
-      <button
-        id="Deferred-Poster-Modal-{{ video_id }}"
-        class="video-section__poster media deferred-media__poster media--landscape"
-        type="button"
-        aria-label="{{ alt }}"
-      >
-        {%- if poster != null -%}
-          {{
-            poster
-            | image_url: width: 3840
-            | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-          }}
-        {%- else -%}
-          {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-        {%- endif -%}
-        <span class="deferred-media__poster-button motion-reduce">
-          <span class="svg-wrapper">
-            {{- 'icon-play.svg' | inline_asset_content -}}
-          </span>
-        </span>
-      </button>
+    <button
+    id="Deferred-Poster-Modal-{{ video_id }}"
+    class="video-section__poster media deferred-media__poster media--landscape"
+    type="button"
+    aria-label="{{ alt }}"
+  >
+    {%- if poster != null -%}
+      {{
+        poster
+        | image_url: width: 1312, height: 530
+        | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
+      }}
+    {%- else -%}
+      {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+    {%- endif -%}
+    <span class="deferred-media__poster-button motion-reduce">
+      <span class="svg-wrapper">
+        {{- 'icon-play.svg' | inline_asset_content -}}
+      </span>
+    </span>
+  </button>
       <template>
         {%- if section.settings.video == null and section.settings.video_url != null -%}
           {%- liquid

@@ -1,5 +1,5 @@
 .video-section__media {
-  --ratio-percent: 56.25%;
+  --ratio-percent: 40.40%; /* Updated to the correct percentage */
   position: relative;
   padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
 }
@@ -35,8 +35,8 @@
 .video-section__media iframe,
 .video-section__media video {
   position: absolute;
+  height: 530px;
   width: 100%;
-  height: 100%;
 }
 
 .video-section__media video {
@@ -44,5 +44,5 @@
 }
 
 .video-section__media.media-fit-cover video {
-  object-fit: cover;
+  object-fit: fill;
 }
