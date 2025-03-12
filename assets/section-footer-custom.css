@@ -186,7 +186,7 @@ footer .copyright__content {
 }
 
 
-@media (max-width: 749px) {
+@media (max-width: 768px) {
 	.footer__content-bottom-wrapper,
 	.nw-social {
 		padding-left: calc(4rem / var(--font-body-scale));
