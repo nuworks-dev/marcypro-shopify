@@ -17,9 +17,10 @@
 }
 
 .deferred-media__poster img {
-  width: auto;
-  max-width: 50%;
-  height: 50%;
+  width: 100%;
+  max-width: 1312px;
+  height: 100%;
+  max-height: 530px;
   object-fit: cover;
 }
 
