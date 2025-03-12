@@ -18,9 +18,9 @@
 
 .deferred-media__poster img {
   width: auto;
-  max-width: 100%;
-  height: 100%;
-  object-fit: cover; /* added object-fit cover */
+  max-width: 50%;
+  height: 50%;
+  object-fit: cover;
 }
 
 .deferred-media {
