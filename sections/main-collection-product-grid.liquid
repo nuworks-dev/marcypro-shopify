@@ -31,7 +31,6 @@
         
     }
  
-
   #product-grid{
     column-gap: 37px !important;
     row-gap: 37px !important;
@@ -41,8 +40,7 @@
   .shop_all_item{
     border: 1px solid #E4E4E4;
     border-radius: 12px;
-
-    padding: 12px;
+    padding: 8px;
     width: calc(23% - 20px) !important; 
     max-width: calc(23% - 20px) !important; 
   }
@@ -72,15 +70,17 @@
         max-width: 166px;  
         height: 32px;
         border-radius: 100px;
-        /* padding: 8px 12px;  */
         line-height: 16px;
         font-weight: 500;
     }
 
 
     #product-grid {
+      margin-left: 8px;
       column-gap: 15px !important;
       row-gap: 20px !important;
+      display: flex;
+      justify-content: start;
     }
     
     .section-{{ section.id }}-padding {
