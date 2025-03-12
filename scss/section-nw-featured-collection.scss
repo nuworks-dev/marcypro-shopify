@@ -106,6 +106,24 @@
 					// width: 300px;
 					border: 1px solid #E4E4E4;
 					border-radius: 12px;
+					.card-product-border {
+						border: 0px !important;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		slider-component {
+			padding-left: 25px;
+			ul {
+				display: flex;
+				gap: 10px;
+				li {
+					&:first-child {
+						margin-left: 0px;
+					}
 				}
 			}
 		}

@@ -251,3 +251,10 @@ footer .copyright__content {
 	}
 
 }
+
+@media (max-width: 480px) {
+	.footer__content-bottom-wrapper, .nw-social {
+		padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
