@@ -133,3 +133,19 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+	.nw-blog-featured .title-wrapper--no-top-margin {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.nw-blog-featured slider-component ul {
+		margin-left: 25px !important;
+	}
+	.nw-blog-featured slider-component ul li:first-child{
+		margin-left: 0px !important;
+	}
+}

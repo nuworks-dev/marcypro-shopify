@@ -85,8 +85,24 @@
   }
   #nw-featured-collection slider-component ul li {
     padding: 16px;
-    /* border: 1px solid #E4E4E4;
-    border-radius: 12px; */
+    border: 1px solid #E4E4E4;
+    border-radius: 12px;
+  }
+  #nw-featured-collection slider-component ul li .card-product-border {
+    border: 0px !important;
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #nw-featured-collection slider-component {
+    padding-left: 25px;
+  }
+  #nw-featured-collection slider-component ul {
+    display: flex;
+    gap: 10px;
+  }
+  #nw-featured-collection slider-component ul li:first-child {
+    margin-left: 0px;
   }
 }
 

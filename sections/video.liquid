@@ -2,11 +2,14 @@
 {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-.section-{{ section.id }}-padding {
-    height: 530px;
-    width: 100%;
-    max-width: 1312px;
-  }
+	.video-section__media.deferred-media {
+		border: 0px;
+	}
+	.section-{{ section.id }}-padding {
+		height: 530px;
+		width: 100%;
+		max-width: 1312px;
+  	}
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
@@ -25,7 +28,19 @@
     max-width: 1440px;
     margin: 0 auto; 
     }
-  
+  }
+
+  @media screen and (max-width: 480px) {
+	.video-section {
+		height: unset;
+		padding-top: 45px;
+	}
+	.video-section__media.deferred-media {
+		height: 312px !important;
+	}
+	.video-section__media iframe {
+		height: 100% !important;
+	}
   }
 {%- endstyle -%}
 
