@@ -3,16 +3,18 @@
 
 {%- style -%}
 .section-{{ section.id }}-padding {
-    max-width: 1440px;
-    margin: 0 auto; /* centers the container */
+    height: 530px;
+    width: 100%;
+    max-width: 1312px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
-      max-width: none; /* removes max-width on desktop */
-      margin: initial; /* removes margin on desktop */
+      max-width: none; 
+      margin: initial; 
+      height: 265px;
     }
   
   }
