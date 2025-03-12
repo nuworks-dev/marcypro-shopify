@@ -157,13 +157,6 @@
         "disabled": false,
         "settings": {}
       },
-      "12120936241911852800": {
-        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-          "position": "bottom"
-        }
-      },
       "7278732907249339192": {
         "type": "shopify://apps/rimix-product-badges/blocks/rimix-helper/46f9dcab-fec8-4959-8563-b2334479cd94",
         "disabled": false,
@@ -198,6 +191,13 @@
         "type": "shopify://apps/parcel-panel/blocks/app.embed/fc785c3f-90e0-4c98-a20c-7cde9ba5e4b5",
         "disabled": false,
         "settings": {}
+      },
+      "12120936241911852800": {
+        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "bottom"
+        }
       }
     },
     "color_schemes": {
