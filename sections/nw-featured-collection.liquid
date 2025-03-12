@@ -39,8 +39,6 @@
   border-radius: 12px;
   padding: 16px;  
   }
-
-
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -48,6 +46,27 @@
     }
   }
 {%- endstyle -%}
+
+{% if template.name == 'product' %}
+	{% style %}
+		.collection  slider-component {
+			padding-left: 7rem;
+			padding-right: 7rem;
+		}
+		@media screen and (min-width: 768px) {
+			.collection  slider-component {
+				padding-left: 5rem;
+				padding-right: 5rem;
+			}
+		}
+		@media screen and (min-width: 480px) {
+			.collection  slider-component {
+				padding-left: 25px !important;
+				padding-right: 25px !important;
+			}
+		}
+	{% endstyle %}
+{% endif %}
 
 {{ 'section-nw-featured-collection.css' | asset_url | stylesheet_tag }}
 
@@ -226,6 +245,31 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+	{
+		"type": "header",
+		"content": "Container Padding",
+	},
+	{
+		"type": "range",
+		"id": "padding_left",
+		"min": 0,
+		"max": 100,
+		"step": 1,
+		"unit": "px",
+		"label": "Padding Left",
+		"default": 0
+	},
+	{
+		"type": "range",
+		"id": "padding_right",
+		"min": 0,
+		"max": 100,
+		"step": 1,
+		"unit": "px",
+		"label": "Padding Right",
+		"default": 0
+	},
+
     {
       "type": "inline_richtext",
       "id": "title",
