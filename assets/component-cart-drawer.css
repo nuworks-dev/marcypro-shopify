@@ -1,5 +1,5 @@
 .drawer {
-	z-index: 9999999999;
+	z-index: 9999999999 !important;
 	position: fixed;
 	z-index: 1000;
 	left: 0;
