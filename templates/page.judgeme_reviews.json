@@ -81,11 +81,27 @@
         "featured_text_color": "#ffffff",
         "featured_desktop_image": "shopify://shop_images/Manifesto-Mobile.png"
       }
+    },
+    "174181058208737712": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_page_Y3xzxm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_page_Y3xzxm"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "nw_image_banner_gp7FMb",
     "main",
-    "nw_featured_quotes_NtDmxi"
+    "nw_featured_quotes_NtDmxi",
+    "174181058208737712"
   ]
 }
