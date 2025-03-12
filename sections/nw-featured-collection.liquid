@@ -30,15 +30,14 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    width: 100%;
-    padding: 32px 32px;
-    gap: 24px;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
-
+  
   .card-product-border{
-    border: 1px solid #E4E4E4;
+  border: 1px solid #E4E4E4;
   border-radius: 12px;
-  padding: 24px;  
+  padding: 16px;  
   }
 
 
