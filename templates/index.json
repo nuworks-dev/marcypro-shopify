@@ -332,12 +332,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "1741802675f34b8ecf": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
@@ -349,8 +343,7 @@
     "featured_blog_T8aGke",
     "rich_text_UHwrJa",
     "173797665520ae1a24",
-    "nw_spacer_nzDaKf",
     "1741802059d51b99a5",
-    "1741802675f34b8ecf"
+    "nw_spacer_nzDaKf"
   ]
 }
