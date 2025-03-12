@@ -120,7 +120,7 @@
 			.list-menu.list-menu--inline span,
 			.header__icon .icon {
 				color: #fff;
-				{% if template.name == 'cart' or template.name == 'product' %}
+				{% if template.name == 'cart' or template.name == 'product' or page.metafields.custom.is_banner_hide == true  %}
 					color: #231F20 !important;
 				{% endif %}
 			}
