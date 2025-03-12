@@ -1,6 +1,7 @@
 .video-section__media {
   --ratio-percent: 40.40%;
   position: relative;
+  
   padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
 }
 
@@ -10,6 +11,7 @@
 
 .video-section__media.global-media-settings--full-width {
   padding-bottom: var(--ratio-percent);
+  
 }
 
 .video-section__media.deferred-media {
@@ -34,17 +36,18 @@
 .video-section__media iframe,
 .video-section__media video {
   position: absolute;
-  height: 530px;
   width: 100%;
 }
 
 .video-section__media video {
   background: #000000;
+  
   object-fit: cover; /* Changed to cover */
 }
 
 .video-section__media.media-fit-cover video {
   object-fit: cover;
+  
 }
 
 /* Mobile adjustments */
