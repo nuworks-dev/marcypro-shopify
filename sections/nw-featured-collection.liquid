@@ -30,18 +30,14 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    max-width: 1312px;
-    padding: 32px 32px;
-    gap: 24px;
-    display: flex; /* Added to enable flex properties */
-    flex-direction: column; /* Added to stack items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  
   .card-product-border{
-    border: 1px solid #E4E4E4;
+  border: 1px solid #E4E4E4;
   border-radius: 12px;
-  padding: 24px;  
+  padding: 16px;  
   }
 
 

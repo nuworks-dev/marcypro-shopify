@@ -85,8 +85,8 @@
   }
   #nw-featured-collection slider-component ul li {
     padding: 16px;
-    border: 1px solid #E4E4E4;
-    border-radius: 12px;
+    /* border: 1px solid #E4E4E4;
+    border-radius: 12px; */
   }
 }
 
