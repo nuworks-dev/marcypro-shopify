@@ -1,10 +1,9 @@
 .video-section__media {
-  --ratio-percent: 40.40%; /* Updated to the correct percentage */
+  --ratio-percent: 40.40%;
   position: relative;
   padding-bottom: calc(var(--ratio-percent) - var(--media-border-width));
 }
 
-/* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
 .scroll-trigger:where(.gradient.video-section__media) {
   background: transparent;
 }
@@ -41,8 +40,20 @@
 
 .video-section__media video {
   background: #000000;
+  object-fit: cover; /* Changed to cover */
 }
 
 .video-section__media.media-fit-cover video {
-  object-fit: fill;
+  object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 749px) {
+  .video-section__media,
+  .video-section__poster,
+  .video-section__media iframe,
+  .video-section__media video {
+    height: auto; 
+    max-height: 100vw;
+  }
 }
