@@ -185,6 +185,13 @@ footer .copyright__content {
 	}
 }
 
+@media (max-width: 1024px) {
+	.footer__content-top {
+		display: flex;
+		flex-direction: column !important;
+	}
+}
+
 
 @media (max-width: 749px) {
 	.footer__content-bottom-wrapper,

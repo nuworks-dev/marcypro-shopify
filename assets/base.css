@@ -2049,7 +2049,7 @@
   
   .modal__content {
 	position: absolute;
-	top: 0;
+	top: 35%;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -2075,7 +2075,7 @@
   
   .cart-count-bubble {
 	position: absolute;
-	background-color: rgb(var(--color-button));
+	background-color: #C02127;
 	color: rgb(var(--color-button-text));
 	height: 1.7rem;
 	width: 1.7rem;
