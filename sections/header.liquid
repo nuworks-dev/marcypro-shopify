@@ -12,7 +12,7 @@
 {%- endif -%}
 
 {% comment %} Make header main logo to be the alternate(black logo) {% endcomment %}
-{%- if page.metafields.custom.class == 'common-page' or template.name == 'product' or template.name == 'login' or template.name == 'register' or template.name == 'order' or template.name == 'account' or template.name == 'reset_password' or template.name == 'addresses' or template.name == 'template-404' or template.name == 'search' -%}
+{%- if page.metafields.custom.class == 'common-page' or template.name == 'product' or template.name == 'login' or template.name == 'register' or template.name == 'order' or template.name == 'account' or template.name == 'reset_password' or template.name == 'addresses' or template.name == 'template-404' or template.name == 'search' or template.name == 'cart' -%}
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const header = document.querySelector(".header-wrapper");
@@ -120,6 +120,9 @@
 			.list-menu.list-menu--inline span,
 			.header__icon .icon {
 				color: #fff;
+				{% if template.name == 'cart' %}
+					color: #231F20 !important;
+				{% endif %}
 			}
 		}
 	</style>
@@ -148,7 +151,7 @@
   -%}
 
 	{% comment %} Style and effects for transparent header {% endcomment %}
-	{% if template == 'index' or template == 'collection' or template == 'blog' or template == 'cart' or page.metafields.custom.class == 'transparent-header' %}
+	{% if template == 'index' or template == 'collection' or template == 'blog' or page.metafields.custom.class == 'transparent-header' %}
 
 		<style>
 			#MainContent {

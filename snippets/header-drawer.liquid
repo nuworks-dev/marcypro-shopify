@@ -5,6 +5,42 @@
   {% render 'header-drawer' %}
 {% endcomment %}
 
+{% style %}
+	.menu-drawer__navigation {
+		position: relative;
+		padding-top: 145px;
+	}
+	.close-icon-custom {
+		position: absolute;
+		top: 75px;
+		left: 38px;
+	}
+	.close-icon-custom svg {
+		width: 18px;
+		height: 18px;
+		line-height: normal;
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+{% endstyle %}
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+	
+		const closeIcon = document.querySelector(".close-icon-custom");
+		const menuButton = document.querySelector(".header__icon--menu");
+	
+		if (closeIcon && menuButton) {
+			closeIcon.addEventListener("click", function (event) {
+				event.preventDefault();
+				menuButton.click(); // Simulate a click on the menu button to close the drawer
+			});
+		}
+
+	});
+</script>
+
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
@@ -20,6 +56,10 @@
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
+			
+			<span class="close-icon-custom">
+				{{- 'icon-drawer-close.svg' | inline_asset_content -}}
+			</span>
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 <li>
