@@ -4,7 +4,7 @@
 {%- style -%}
 .section-{{ section.id }}-padding {
     height: 530px;
-    max-width: 1312px; /* Added max-width */
+    max-width: 1440px;
     margin: 0 auto; /* centers the container */
   }
 
@@ -14,6 +14,15 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
       max-width: none; /* removes max-width on desktop */
       margin: initial; /* removes margin on desktop */
+    }
+  
+  }
+
+  @media screen and (min-width: 2560px) {
+    .section-{{ section.id }}-padding {
+      height: 530px;
+    max-width: 1440px;
+    margin: 0 auto; 
     }
   
   }
