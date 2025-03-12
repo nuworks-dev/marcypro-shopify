@@ -57,6 +57,7 @@
   .video-section__poster,
   .video-section__media iframe,
   .video-section__media video {
-    height: 265px;
+    height: auto; 
+    max-height: 100vw;
   }
 }
