@@ -150,6 +150,14 @@
         "padding_bottom": 0
       }
     },
+    "nw_spacer_Fy464r": {
+      "type": "nw-spacer",
+      "settings": {
+        "spacer_height": 50,
+        "spacer_height_mobile": 30,
+        "background_color": "#ffffff"
+      }
+    },
     "nw_trust_badge_wMyFzm": {
       "type": "nw-trust-badge",
       "blocks": {
@@ -233,6 +241,7 @@
     "main",
     "video_4Djyb6",
     "nw_featured_collection_Vk9AXh",
+    "nw_spacer_Fy464r",
     "nw_trust_badge_wMyFzm",
     "related-products",
     "173762477832b50e7f"
