@@ -67,8 +67,9 @@
 	}
 	@media screen and (max-width: 360px) {
 		#nw-basic-banner h1 {
-			font-size: 36px;
-		}
+        	font-size: clamp(30px, 4vw, 36px);
+			line-height: normal;
+   	 	}
 	}
 {% endstyle %}
 <div id="nw-basic-banner">

@@ -102,6 +102,11 @@
   .nw-custom-collection .collection-list-wrapper {
     padding-top: 0px !important;
   }
+
+  .nw-custom-collection .collection-list-wrapper .page-width.title-wrapper-with-link {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 /*# sourceMappingURL=section-collection-list.css.map */

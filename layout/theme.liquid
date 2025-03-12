@@ -262,10 +262,13 @@
       }
     {% endstyle %}
 
-	{% if template.name == "index" or template.name == 'blog' or template.name == 'collection' or template.name == 'search' or page.metafields.custom.class == 'transparent-header' %} 
+	{% if template.name == "index" or template.name == 'blog' or template.name == 'collection' or template.name == 'search' or template.name == 'cart' or page.metafields.custom.class == 'transparent-header' %} 
 	  <style>
 		sticky-header.gradient {
 			border-bottom: 0px;
+			{% if template.name == 'cart' %}
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+			{% endif %}
 		}
 	  </style>
 		<script>
@@ -335,6 +338,14 @@
 			.jdgm-widget { display: none !important; }
 		</style>
 	{% endif %}
+
+	{% style %}
+		@media only screen and (min-width: 747px) {
+			svg.icon.icon-close {
+				right: auto !important;
+			}
+		}
+	{%  endstyle %}
 
   
   {% render 'shogun-head' %}
