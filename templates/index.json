@@ -207,6 +207,7 @@
     "nw_featured_collection_AdFAcf": {
       "type": "nw-featured-collection",
       "settings": {
+        "wrap_to_page": "no",
         "title": "<strong>BEST SELLER</strong>",
         "heading_size": "h1",
         "description": "<p>Kick off your fitness journey with these Marcy Fitness community favorites</p>",
@@ -338,6 +339,22 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1741909044222108d2": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_page_kaWHbF": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_page/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_page_kaWHbF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -351,6 +368,7 @@
     "173797665520ae1a24",
     "nw_spacer_nzDaKf",
     "17418040350f103327",
-    "1741804122da31a46c"
+    "1741804122da31a46c",
+    "1741909044222108d2"
   ]
 }
