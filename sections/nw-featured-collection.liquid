@@ -68,6 +68,21 @@
 	{% endstyle %}
 {% endif %}
 
+{% if template.name == 'index' %}
+	{% style %}
+		#nw-featured-collection h2,
+		#nw-featured-collection p {
+			margin: 0px 5rem;
+		}
+		@media screen and (max-width: 768px) {
+			#nw-featured-collection h2,
+			#nw-featured-collection p {
+			margin: 0px;
+		}
+		}
+	{% endstyle %}
+{% endif %}
+
 {{ 'section-nw-featured-collection.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
@@ -92,7 +107,7 @@
 
 <div
 	id="nw-featured-collection"
-  class="color-{{ section.settings.color_scheme }} isolate gradient"
+  	class="color-{{ section.settings.color_scheme }} isolate gradient {% if section.settings.wrap_to_page == "yes" %}page-width{% endif %}"
 >
 
   <div
@@ -250,26 +265,21 @@
 		"content": "Container Padding",
 	},
 	{
-		"type": "range",
-		"id": "padding_left",
-		"min": 0,
-		"max": 100,
-		"step": 1,
-		"unit": "px",
-		"label": "Padding Left",
-		"default": 0
+		"type": "radio",
+		"id": "wrap_to_page",
+		"label": "Wrap to page",
+		"options": [
+			{
+				"label": "Yes",
+				"value": "yes"
+			},
+			{
+				"label": "No",
+				"value": "no"
+			}
+		],
+		"default": "no"
 	},
-	{
-		"type": "range",
-		"id": "padding_right",
-		"min": 0,
-		"max": 100,
-		"step": 1,
-		"unit": "px",
-		"label": "Padding Right",
-		"default": 0
-	},
-
     {
       "type": "inline_richtext",
       "id": "title",

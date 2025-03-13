@@ -131,6 +131,7 @@
     "cart_color_scheme": "scheme-692d382f-23bf-47a4-8b0d-bc1a8644b1c1",
     "storefront_access_token": "641f19fbd076afe2452c76b4565fb015",
     "graphql_api_url": "https://mqtas1-3r.myshopify.com/api/2025-01/graphql.json",
+    "enable_pagewidth_guide": "no",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

@@ -255,6 +255,12 @@
 		display: none !important;
 	  }
 
+	  	{% if settings.enable_pagewidth_guide == 'yes' %}
+			.page-width {
+				border: 1px solid red; /* for layout guide only */
+  			}
+		{% endif %}
+
       @media screen and (min-width: 750px) {
         body {
           font-size: 1.6rem;

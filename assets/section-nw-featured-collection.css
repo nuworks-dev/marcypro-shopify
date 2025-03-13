@@ -9,6 +9,7 @@
   line-height: 32px;
   text-align: left;
   color: #231F20;
+  margin-bottom: 0px;
 }
 #nw-featured-collection p {
   font-family: var(--font-body-family);
