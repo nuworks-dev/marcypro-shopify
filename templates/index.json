@@ -297,6 +297,12 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1741909136a787ba0b": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -308,6 +314,7 @@
     "rich_text_UHwrJa",
     "173797665520ae1a24",
     "nw_spacer_nzDaKf",
-    "1741808024a01b74de"
+    "1741808024a01b74de",
+    "1741909136a787ba0b"
   ]
 }
