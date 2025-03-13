@@ -452,7 +452,21 @@
 			});
 		};
 	</script>
+{% if template == 'index' %}
+<style>
+.jdgm-revs-tab {
+display: block !important;
+}
+</style>
+{% endif %}
 
+{% unless template == 'index' %}
+<style>
+.jdgm-revs-tab {
+display: none !important;
+}
+</style>
+{% endunless %}
 	{% if request.path == '/pages/product-manuals' or request.path == '/pages/assembly-videos' %}
 		<script src="{{ 'search-table.js' | asset_url }}" defer="defer"></script>
 	{% endif %}
