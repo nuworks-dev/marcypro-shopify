@@ -59,29 +59,30 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
+        "affirm_pay_over_time_messaging_product_block_HJzPJ3": {
+          "type": "shopify://apps/affirm-pay-over-time-messaging/blocks/product-block/6dce54be-130d-4d13-9636-1e8f611b3071",
+          "settings": {
+            "logo_align": "left",
+            "font_size": 16,
+            "logo_color": "blue",
+            "logo_type": "logo",
+            "public_api_key": "",
+            "price_selector": ""
+          }
         },
         "share": {
           "type": "share",
-          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "judge_me_reviews_review_widget_Yjfi9C": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "disabled": true,
-          "settings": {}
-        },
-        "judge_me_reviews_preview_badge_HcYgEm": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {}
-        },
-        "judge_me_reviews_review_snippet_widget_9pd7WX": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
         "parcel_panel_edd_pXbLcN": {
@@ -94,21 +95,6 @@
             "padding_x": 16,
             "padding_y": 16
           }
-        },
-        "judge_me_reviews_review_snippet_widget_rxM4rT": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_snippet_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        },
-        "affirm_pay_over_time_messaging_product_block_HJzPJ3": {
-          "type": "shopify://apps/affirm-pay-over-time-messaging/blocks/product-block/6dce54be-130d-4d13-9636-1e8f611b3071",
-          "settings": {
-            "logo_align": "left",
-            "font_size": 16,
-            "logo_color": "blue",
-            "logo_type": "logo",
-            "public_api_key": "",
-            "price_selector": ""
-          }
         }
       },
       "block_order": [
@@ -120,14 +106,11 @@
         "parcel_panel_edd_gg8C8B",
         "quantity_selector",
         "buy_buttons",
-        "description",
+        "affirm_pay_over_time_messaging_product_block_HJzPJ3",
         "share",
+        "description",
         "judge_me_reviews_review_widget_Yjfi9C",
-        "judge_me_reviews_preview_badge_HcYgEm",
-        "judge_me_reviews_review_snippet_widget_9pd7WX",
-        "parcel_panel_edd_pXbLcN",
-        "judge_me_reviews_review_snippet_widget_rxM4rT",
-        "affirm_pay_over_time_messaging_product_block_HJzPJ3"
+        "parcel_panel_edd_pXbLcN"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -165,16 +148,6 @@
     },
     "173762477832b50e7f": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_h8Pgmp": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "disabled": true,
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_h8Pgmp"
-      ],
       "disabled": true,
       "settings": {
         "include_margins": true
