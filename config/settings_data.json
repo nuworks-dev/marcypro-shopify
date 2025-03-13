@@ -173,13 +173,6 @@
         "disabled": true,
         "settings": {}
       },
-      "12120936241911852800": {
-        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-          "position": "right"
-        }
-      },
       "17931662404830155662": {
         "type": "shopify://apps/mincart-order-limits/blocks/mincart-embed-block/e578f44f-3eec-4b0b-ac83-c7dbb9686592",
         "disabled": false,
@@ -207,6 +200,13 @@
           "cart_drawer_total_selector": "",
           "add_to_cart_selector": "",
           "adjacent_element_selector": ""
+        }
+      },
+      "12120936241911852800": {
+        "type": "shopify://apps/judge-me-reviews/blocks/reviews_tab/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+          "position": "right"
         }
       }
     },
