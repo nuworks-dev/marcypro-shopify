@@ -68,6 +68,21 @@
 	{% endstyle %}
 {% endif %}
 
+{% if template.name == 'index' %}
+	{% style %}
+		#nw-featured-collection h2,
+		#nw-featured-collection p {
+			margin: 0px 5rem;
+		}
+		@media screen and (max-width: 768px) {
+			#nw-featured-collection h2,
+			#nw-featured-collection p {
+			margin: 0px;
+		}
+		}
+	{% endstyle %}
+{% endif %}
+
 {{ 'section-nw-featured-collection.css' | asset_url | stylesheet_tag }}
 
 {%- liquid

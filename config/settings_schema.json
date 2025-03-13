@@ -1484,6 +1484,22 @@
 			"type": "text",
 			"id": "graphql_api_url",
 			"label": "GraphQL API URL"
+		},
+		{
+			"type": "radio",
+			"id": "enable_pagewidth_guide",
+			"label": "Show page width border",
+			"options": [
+				{
+					"label": "Yes",
+					"value": "yes"
+				},
+				{
+					"label": "No",
+					"value": "no"
+				},
+			],
+			"default": "no"
 		}
 	]
   }
