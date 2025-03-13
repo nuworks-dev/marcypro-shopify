@@ -453,6 +453,20 @@
 		}
 	</script>
 	<script src="https://chimpstatic.com/mcjs-connected/js/users/c1c63e8b7fa8ce993f6e244f9/e335a2945ef163b534f73f22e.js" defer="defer"></script>
+{% if template == 'index' %}
+<style>
+.jdgm-revs-tab {
+display: block !important;
+}
+</style>
+{% endif %}
 
+{% unless template == 'index' %}
+<style>
+.jdgm-revs-tab {
+display: none !important;
+}
+</style>
+{% endunless %}
   {%- render "ecom_footer"-%}</body>
 </html>
