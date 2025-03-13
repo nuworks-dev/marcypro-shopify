@@ -483,5 +483,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".jdgm-carousel {display:block !important;}"
+    ]
   }
 }
