@@ -3,7 +3,11 @@
 
 {%- style -%}
 	.video-section__media.deferred-media {
-		border: 0px;
+		border: {% if section.settings.border_video == "yes" %} 1px solid #E4E4E4 {% else %} 0px {% endif %};
+		border-radius: 5px;
+	}
+	.video-section__media.deferred-media button {
+		border-radius: 5px;
 	}
 	.section-{{ section.id }}-padding {
 		height: 530px;
@@ -67,7 +71,7 @@
   {%- endif %}
 {%- endcapture -%}
 
-<div class="color-{{ section.settings.color_scheme }} gradient">
+<div class="color-{{ section.settings.color_scheme }} gradient  {% if section.settings.wrap_to_page == "yes" %}page-width{% endif %}">
   <div class="video-section isolate{% unless section.settings.full_width %} page-width{% endunless %} section-{{ section.id }}-padding">
     <div
       {% if section.settings.full_width %}
@@ -158,6 +162,38 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+	{
+		"type": "radio",
+		"id": "wrap_to_page",
+		"label": "Wrap to page",
+		"options": [
+			{
+				"label": "Yes",
+				"value": "yes"
+			},
+			{
+				"label": "No",
+				"value": "no"
+			}
+		],
+		"default": "no"
+	},
+	{
+		"type": "radio",
+		"id": "border_video",
+		"label": "Add Video Border",
+		"options": [
+			{
+				"label": "Yes",
+				"value": "yes"
+			},
+			{
+				"label": "No",
+				"value": "no"
+			}
+		],
+		"default": "no"
+	},
     {
       "type": "inline_richtext",
       "id": "heading",

@@ -1,4 +1,7 @@
 {{ 'section-nw-basic-banner.css' | asset_url | stylesheet_tag }}
+
+{% assign title_length = collection.title | size %}
+
 {% style %}
 	{{ section.settings.utility_font_picker | font_face: font_display: 'swap' }}
 	#nw-basic-banner {
@@ -28,15 +31,22 @@
 	}
 	#nw-basic-banner h1 {
 		text-transform: uppercase;
-		font-size: {{ section.settings.text_size | append: "px" }};
+		font-size: {% if title_length > 30 %} 55px {% else %} {{ section.settings.text_size | append: "px" }} {% endif %};
 		color: {{ section.settings.text_color }};
 		font-family: {{ section.settings.heading_font.family }};
 		font-weight: {{ section.settings.text_weight }};
-		margin-bottom: {{ section.settings.bottom_gap | append: "px" }};
+		margin-bottom: {% if title_length > 30 %} 0px {% else %}  {{ section.settings.bottom_gap | append: "px" }} {% endif %};
 		padding: 0px;
-		line-height: 78px;
+		line-height: {% if title_length > 30 %} normal {% else %} 78px {% endif %};
 		text-align: {{ section.settings.text_align }};
 		z-index: 1;
+		word-break: keep-all;
+		width: {% if title_length > 30 %} 60% {% else %} 100% {% endif %};
+	}
+	@media screen and (width >= 1600px) {
+		#nw-basic-banner h1 {
+			font-size: {% if title_length > 30 %} 74px {% else %} {{ section.settings.text_size | append: "px" }} {% endif %};
+		}
 	}
 	@media screen and (width >= 1441px) {
 		#nw-basic-banner {
@@ -44,15 +54,25 @@
 			height: 525px; /** forced to this height **/
 		}
 	}
+	@media screen and (max-width: 1024px) {
+		#nw-basic-banner h1 {
+			width: 100%;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		#nw-basic-banner h1 {
+			font-size: 40px;
+		}
+	}
 	@media screen and (max-width: 480px) {
 		#nw-basic-banner {
 			background-image: url({{ collection.metafields.custom.collection_thumbnail.value | image_url }});
 			height: {{ section.settings.background_height_mobile | append: "px" }};
 			padding: 65px;
-			margin-bottom: {{ section.settings.mobile_margin_top | append: "px" }};
+			margin-bottom: {% if title_length > 30 %} 0px {% else %}  {{ section.settings.mobile_margin_top | append: "px" }} {% endif %};
 
 			background-size: cover;
-			margin-top: 45px;
+			margin-top:  {% if title_length > 30 %} 0px {% else %} 45px {% endif %};
 			background-position: top center;
 			min-height: 360px;
 		}
@@ -60,14 +80,21 @@
 			font-size: 54px;
 			line-height: 58px;
 			margin-bottom: 0px;
+			word-break: break-word;
 		}
 		.nw-custom-collection .collection-list-wrapper {
 			padding-top: 0px !important;
 		}
 	}
+	@media screen and (max-width: 420px) {
+		#nw-basic-banner h1 {
+        	font-size: clamp(25px, 4vw, 40px);
+			line-height: normal;
+   	 	}
+	}
 	@media screen and (max-width: 360px) {
 		#nw-basic-banner h1 {
-        	font-size: clamp(30px, 4vw, 36px);
+			font-size: clamp(25px, 4vw, 40px);
 			line-height: normal;
    	 	}
 	}

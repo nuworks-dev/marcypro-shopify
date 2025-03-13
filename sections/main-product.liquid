@@ -26,39 +26,87 @@
   {%- endif -%}
 
   {%- style -%}
-  .product__title{
-   h1{
-    font-size: 1.8rem;
-   }
-  }
-  .price--large{
-    font-size: 2rem !important;
-  }
+	.product__title h1 {
+		font-size: 1.8rem;
+	}
+	.price--large{
+		font-size: 2rem !important;
+	}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+		padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+		padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
     .accordion__plus-icon {
-  font-size: 1.5em; 
-  font-weight: bold;
-  vertical-align: middle;
-  transition: transform 0.3s ease; 
-  content: '+'; /* Default icon */
-}
+		font-size: 1.5em; 
+		font-weight: bold;
+		vertical-align: middle;
+		transition: transform 0.3s ease; 
+		content: '+'; /* Default icon */
+	}
 
-details[open] .accordion__plus-icon {
-    transform: rotate(45deg); /*rotate the + sign to an X when the details is open.*/
-    content: '-'; /* Change icon to - when open */
-}
+	{%comment %}
+	details[open] .accordion__plus-icon {
+		transform: rotate(45deg); /*rotate the + sign to an X when the details is open.*/
+		content: '-'; /* Change icon to - when open */
+	}
+	{% endcomment %}
+
+	.accordion__title {
+		font-size: 16px;
+		font-family: Montserrat;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.accordion summary {
+		align-items: center;
+		vertical-align: middle;
+	}
+
+	.expand-button {
+		width: 21px;
+    	height: 21px;
+	}
 
     @media screen and (min-width: 750px) {
-      .section-{{ section.id }}-padding {
-        padding-top: {{ section.settings.padding_top }}px;
-        padding-bottom: {{ section.settings.padding_bottom }}px;
-      }
+		.section-{{ section.id }}-padding {
+			padding-top: {{ section.settings.padding_top }}px;
+			padding-bottom: {{ section.settings.padding_bottom }}px;
+		}
     }
   {%- endstyle -%}
+
+  <script>
+	document.addEventListener("DOMContentLoaded", function () {
+		document.querySelectorAll("details").forEach((detail) => {
+		  detail.addEventListener("toggle", function () {
+			if (this.hasAttribute("open")) {
+			  // Close other open <details> elements
+			  document.querySelectorAll("details[open]").forEach((openDetail) => {
+				if (openDetail !== this) {
+				  openDetail.removeAttribute("open");
+				}
+			  });
+			}
+	  
+			const img = this.querySelector(".expand-button"); // Select the image
+			const openImg = "{{ 'icon-minus.svg' | asset_url }}";
+			const closeImg = "{{ 'icon-plus-white.svg' | asset_url }}";
+	  
+			if (img) {
+			  if (this.hasAttribute("open")) {
+				img.src = openImg;
+				img.style.filter = "none"; // Remove filter when open
+			  } else {
+				img.src = closeImg;
+				img.style.filter = "invert(1)"; // Re-add filter when closed
+			  }
+			}
+		  });
+		});
+	});	  
+  </script>
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -228,7 +276,9 @@ details[open] .accordion__plus-icon {
                       <details>
                           <summary style="display: flex; justify-content: space-between;">
                               <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.description' | t }}</h2>
-                              <span class="accordion__plus-icon">+</span>
+                              <span class="accordion__plus-icon">
+								<img src="{{ 'icon-plus-white.svg' | asset_url }}" width="24px" height="24px" style="filter: invert(1);" class="expand-button" />
+							  </span>
                           </summary>
                           <div class="product__description rte">
                               {{ product.description }}
@@ -241,7 +291,9 @@ details[open] .accordion__plus-icon {
                     <details>
                         <summary style="display: flex; justify-content: space-between;">
                             <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.specification' | t }}</h2>
-                            <span class="accordion__plus-icon">+</span>
+                            <span class="accordion__plus-icon">
+								<img src="{{ 'icon-plus-white.svg' | asset_url }}" width="24px" height="24px" style="filter: invert(1);" class="expand-button" />
+							</span>
                         </summary>
                         <div class="product__specification rte">
                             {{ product.metafields.custom.product_specification | metafield_tag }}
@@ -254,7 +306,9 @@ details[open] .accordion__plus-icon {
                     <details>
                         <summary style="display: flex; justify-content: space-between;">
                             <h2 class="h4 accordion__title" style="font-weight: 600;">{{ 'products.product.manuals_and_workout_charts' | t }}</h2>
-                            <span class="accordion__plus-icon">+</span>
+                            <span class="accordion__plus-icon">
+								<img src="{{ 'icon-plus-white.svg' | asset_url }}" width="24px" height="24px" style="filter: invert(1);" class="expand-button" />
+							</span>
                         </summary>
                         <div class="product__manuals rte">
                             <ul>
