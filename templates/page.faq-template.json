@@ -250,7 +250,7 @@
           "settings": {
             "heading": "Do you ship to my Country?",
             "icon": "none",
-            "row_content": "<strong>For item orders</strong>, we only ship within the Contiguous United States (we do not ship to Hawaii, Alaska, military bases, and U.S. territories / Possessions) and we do not ship internationally.\n<br>\n<br>\n<strong>For Parts orders</strong>, we ship to Mexico and Canada when the order is placed through our ticket system at <a style=\"color:red;\"  href=\"/support\">https://marcypro.freshdesk.com/support/tickets/new </a>",
+            "row_content": "<strong>For item orders</strong>, we only ship within the Contiguous United States (we do not ship to Hawaii, Alaska, military bases, and U.S. territories / Possessions) and we do not ship internationally.\n<br>\n<br>\n<strong>For Parts orders</strong>, we ship to Mexico and Canada when the order is placed through our ticket system at <a style=\"color:red;\"  href=\"/support\">https://marcypro.freshdesk.com/support/tickets/new</a>",
             "page": ""
           }
         }
