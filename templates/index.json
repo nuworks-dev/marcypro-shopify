@@ -213,7 +213,7 @@
         "description": "<p>Kick off your fitness journey with these Marcy Fitness community favorites</p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "best-selling-products",
+        "collection": "category-name-home-gyms-category-path-shop-all",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
